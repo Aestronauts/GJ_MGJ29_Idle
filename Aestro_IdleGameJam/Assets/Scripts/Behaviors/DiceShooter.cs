@@ -55,9 +55,12 @@ public class DiceShooter : MonoBehaviour
 
     private IEnumerator DiceRollHandler(GameObject _diceObj, string _numberToShow)
     {
+        PlayerCameraManager.instance.SwitchToDieCam();
         yield return new WaitForSeconds(3);
+        PlayerCameraManager.instance.SwitchToMainCam();
+        Game_Manager.instance.Attack(Game_Manager.instance.CalculateOutgoingDamage(int.Parse(_numberToShow)));
 
-        foreach(Transform _child in _diceObj.transform.GetChild(0))
+        foreach (Transform _child in _diceObj.transform.GetChild(0))
         {
             if (_child.GetComponent<TMP_Text>())
                 _child.GetComponent<TMP_Text>().text = _numberToShow;
