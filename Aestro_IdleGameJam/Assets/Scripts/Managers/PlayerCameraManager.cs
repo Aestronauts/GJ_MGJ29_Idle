@@ -11,7 +11,6 @@ using Cinemachine;
         // Start is called before the first frame update
         public static PlayerCameraManager instance { get; private set; }
         public CinemachineVirtualCamera VirtualCamera { get; private set; }
-        public Plane CameraPlane { get; private set; }
 
         private float shakeTimer;
         private float shakeDuration;
@@ -30,7 +29,7 @@ using Cinemachine;
             }
 
             VirtualCamera = GetComponent<CinemachineVirtualCamera>();
-            CameraPlane = new Plane(Vector3.up, Vector3.zero);
+
         }
 
         void Update()
