@@ -8,20 +8,24 @@ using UnityEngine.Events;
 /// </summary>
 public class BossBehavior : MonoBehaviour
 {
-    public string readableName;
-    [SerializeField] private int healthPoints = 100;
+    public string readableName = "myNameJeoff";
+    [SerializeField] private float healthPoints = 100;
     [SerializeField] private bool dyingTriggered = false;
 
+    // events that can hold addition outcomes
     public UnityEvent LinkedEvents_OnHit;
     public UnityEvent LinkedEvents_OnHeal;
     public UnityEvent LinkedEvents_OnDeath;
 
+  
+
+
     // on call, the caller can change the HP of this unit/script.
     // _amount = how much to change
     // _setInstead = when true the hp is set to the new amount
-    public void ChangeHP(int _amount, bool _setInstead)
+    public void ChangeHP(float _amount, bool _setInstead)
     {
-        int healthWas = healthPoints;
+        float healthWas = healthPoints;
 
         if (_setInstead)
             healthPoints = _amount;
@@ -67,6 +71,7 @@ public class BossBehavior : MonoBehaviour
         print("gimme dat cash muneeee");
     }// end of GiveReward()
 
+   
     // all actions related to dying
     private void DeathCall()
     {
