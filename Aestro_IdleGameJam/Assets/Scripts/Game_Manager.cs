@@ -19,9 +19,6 @@ public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager instance;
 
-    [Header("Public Player Stats")]
-    public float ChargePerFrame;
-    public float AttackBonus;
 
     [Header("Exposed Private Vars")]
 
@@ -58,7 +55,7 @@ public class Game_Manager : MonoBehaviour
     {
         if (GameState == GAMESTATE.INCOMBAT)
         {
-            AttackCharge += ChargePerFrame;
+            AttackCharge += PersistentData.instance.ChargePerFrame;
             UI_Manager.instance.UpdateAttackCharge(AttackCharge);
             if (AttackCharge >= 100)
             {
@@ -82,9 +79,14 @@ public class Game_Manager : MonoBehaviour
         }
         else if (s== GAMESTATE.POSTCOMBAT)
         {
-            PersistentData.instance.IncreaseLevelNumber();
-            SceneManager.LoadScene(1);
+            UI_Manager.instance.SpawnUpgrades();
         }
+    }
+
+    public void LoadNextScene()
+    {
+        PersistentData.instance.IncreaseLevelNumber();
+        SceneManager.LoadScene(1);
     }
 
     public void Tick()
@@ -104,7 +106,7 @@ public class Game_Manager : MonoBehaviour
         Debug.Log("Throw a dice!");
         int RollResult = RNG_Manager.instance.RNG(6);
         Debug.Log("Value is:" + RollResult);
-        DiceShooter.ThrowDice(1, 1, RollResult);
+        DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
         Attack(CalculateOutgoingDamage(RollResult));
 
     }
@@ -112,7 +114,7 @@ public class Game_Manager : MonoBehaviour
     public float CalculateOutgoingDamage(int RNG_Value)
     {
         float final_value = (float)RNG_Value;
-        final_value += AttackBonus;
+        final_value += PersistentData.instance.AttackBonus;
 
         return final_value;
     }

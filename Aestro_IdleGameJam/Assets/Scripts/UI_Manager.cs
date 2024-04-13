@@ -9,6 +9,10 @@ public class UI_Manager : MonoBehaviour
     public TMPro.TextMeshProUGUI HPText;
     public Image HPBar;
     public Image AttackChargeBar;
+    public TMPro.TextMeshProUGUI AttackBonusStat;
+    public TMPro.TextMeshProUGUI AttackSpeedStat;
+    public GameObject UpgradePanel;
+    public GameObject UpgradeCardPrefab;
     private void Awake()
     {
         if (instance == null)
@@ -19,6 +23,12 @@ public class UI_Manager : MonoBehaviour
         {
             Destroy(this);
         }
+    }
+
+    private void Start()
+    {
+        AttackSpeedStat.text = PersistentData.instance.ChargePerFrame.ToString();
+        AttackBonusStat.text = PersistentData.instance.AttackBonus.ToString();
     }
 
     // Update is called once per frame
@@ -36,5 +46,30 @@ public class UI_Manager : MonoBehaviour
     public void UpdateAttackCharge(float Charge)
     {
         AttackChargeBar.fillAmount = Charge/100;
+    }
+
+    public void SpawnUpgrades()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject g = Instantiate(UpgradeCardPrefab, UpgradePanel.transform);
+        }
+    }
+
+    public void SelectUpgrade(Upgrade info)
+    {
+        if (info.ID == 0)
+        {
+            PersistentData.instance.AttackBonus += 2;
+        }
+        else if (info.ID == 1)
+        {
+            PersistentData.instance.ChargePerFrame *= 1.25f;
+        }
+        else if (info.ID == 2)
+        {
+            PersistentData.instance.Dice += 1;
+        }
+        Game_Manager.instance.LoadNextScene();
     }
 }
