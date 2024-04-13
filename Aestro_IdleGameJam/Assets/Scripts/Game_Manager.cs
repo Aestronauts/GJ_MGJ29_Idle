@@ -9,6 +9,7 @@ public class Game_Manager : MonoBehaviour
 
     [Header("Public Player Stats")]
     public float ChargePerFrame;
+    public float AttackBonus;
 
     [Header("Exposed Private Vars")]
 
@@ -53,6 +54,23 @@ public class Game_Manager : MonoBehaviour
     public void ThrowADice()
     {
         Debug.Log("Throw a dice!");
-        Debug.Log("Value is:" + RNG_Manager.instance.RNG(6));
+        int RollResult = RNG_Manager.instance.RNG(6);
+        Debug.Log("Value is:" + RollResult);
+
+        Attack(CalculateOutgoingDamage(RollResult));
+
+    }
+
+    public float CalculateOutgoingDamage(int RNG_Value)
+    {
+        float final_value = (float)RNG_Value;
+        final_value += AttackBonus;
+
+        return final_value;
+    }
+
+    public void Attack(float Outgoing_Damage)
+    {
+
     }
 }
