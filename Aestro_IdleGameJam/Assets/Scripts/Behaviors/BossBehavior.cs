@@ -32,6 +32,12 @@ public class BossBehavior : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        UI_Manager.instance.UpdateHPText(healthPoints, MaxHP);
+
+    }
+
     // on call, the caller can change the HP of this unit/script.
     // _amount = how much to change
     // _setInstead = when true the hp is set to the new amount

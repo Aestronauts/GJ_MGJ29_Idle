@@ -32,6 +32,7 @@ public class Game_Manager : MonoBehaviour
     void Update()
     {
         AttackCharge += ChargePerFrame;
+        UI_Manager.instance.UpdateAttackCharge(AttackCharge);
         if (AttackCharge >= 100) 
         {
             Tick();
