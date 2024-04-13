@@ -77,6 +77,6 @@ public class Game_Manager : MonoBehaviour
 
     public void Attack(float Outgoing_Damage)
     {
-
+        BossBehavior.instance.ChangeHP(-Outgoing_Damage, false);
     }
 }
