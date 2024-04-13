@@ -1,16 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoneyManager : MonoBehaviour
 {
-    [SerializeField] private int Money;
-    
-    // a signal to send when a player clicks on this object. It will call any Actors listening
-    // for more on events and signal/listers see <https://youtu.be/TdiN18PR4zk?si=xeBVjO72MGBHy51P&t=177>
-    public delegate void TradeMoney(int _moneyTraded);
-    public static event TradeMoney tradeMoney;
+    private static MoneyManager _instance;
+    public static MoneyManager Instance_MoneyManager { get { return _instance; } }
 
+    public static int PlayerMoney;
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
 
 
 }// end of MoneyManager class

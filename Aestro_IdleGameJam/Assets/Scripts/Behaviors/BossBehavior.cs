@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class BossBehavior : MonoBehaviour
 {
     public string readableName = "myNameJeoff";
+    public int moneyValueOnHit = 50;
     [SerializeField] private float healthPoints = 100;
     [SerializeField] private bool dyingTriggered = false;
 
@@ -16,7 +17,6 @@ public class BossBehavior : MonoBehaviour
     public UnityEvent LinkedEvents_OnHit;
     public UnityEvent LinkedEvents_OnHeal;
     public UnityEvent LinkedEvents_OnDeath;
-
   
 
 
@@ -69,6 +69,7 @@ public class BossBehavior : MonoBehaviour
     private void GiveReward() // maybe add a multiplier option
     {
         print("gimme dat cash muneeee");
+        MoneyManager.PlayerMoney += moneyValueOnHit;
     }// end of GiveReward()
 
    
