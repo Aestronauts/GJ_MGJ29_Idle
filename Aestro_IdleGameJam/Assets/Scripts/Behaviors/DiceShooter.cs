@@ -20,7 +20,7 @@ public class DiceShooter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ThrowDice(manualDiceSettings.x, manualDiceSettings.y, 1);
+            //ThrowDice(manualDiceSettings.x, manualDiceSettings.y, 1);
         }
     }
 

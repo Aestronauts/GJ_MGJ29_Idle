@@ -2,6 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
+
+
+
+public enum GAMESTATE
+{
+    PRECOMBAT,
+    INCOMBAT,
+    PAUSECOMBAT,
+    POSTCOMBAT
+};
 
 public class Game_Manager : MonoBehaviour
 {
@@ -13,13 +25,14 @@ public class Game_Manager : MonoBehaviour
 
     [Header("Exposed Private Vars")]
 
+    public GAMESTATE GameState;
     [SerializeField]
     private float AttackCharge = 1;
 
     [Header("References")]
     public DiceShooter DiceShooter;
     public Animator PlayerAnimator;
-    public Animator BossAnimator;
+    //public Animator BossAnimator;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,23 +45,46 @@ public class Game_Manager : MonoBehaviour
         {
             Destroy(this);
         }
+        GameState = GAMESTATE.INCOMBAT;
+
+    }
+
+    private void Start()
+    {
+        BossBehavior.instance.InitiateBossData(PersistentData.instance.ReturnBossData());
     }
 
     void Update()
     {
-        AttackCharge += ChargePerFrame;
-        UI_Manager.instance.UpdateAttackCharge(AttackCharge);
-        if (AttackCharge >= 100) 
+        if (GameState == GAMESTATE.INCOMBAT)
         {
-            Tick();
-            AttackCharge = 0;
-        }
+            AttackCharge += ChargePerFrame;
+            UI_Manager.instance.UpdateAttackCharge(AttackCharge);
+            if (AttackCharge >= 100)
+            {
+                Tick();
+                AttackCharge = 0;
+            }
 
-        if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
+            {
+                Click();
+            }
+        }
+    }
+
+    public void ChangeGameState(GAMESTATE s)
+    {
+        GameState = s;
+        if (s == GAMESTATE.INCOMBAT)
         {
-            Click();
-        }
 
+        }
+        else if (s== GAMESTATE.POSTCOMBAT)
+        {
+            PersistentData.instance.IncreaseLevelNumber();
+            SceneManager.LoadScene(1);
+        }
     }
 
     public void Tick()
@@ -60,7 +96,7 @@ public class Game_Manager : MonoBehaviour
     public void Click()
     {
         Debug.Log("Click!");
-        ThrowADice();
+        //ThrowADice();
     }
 
     public void ThrowADice()
@@ -84,7 +120,7 @@ public class Game_Manager : MonoBehaviour
     public void Attack(float Outgoing_Damage)
     {
         PlayerAnimator.SetTrigger("Attack");
-        BossAnimator.SetTrigger("Attack");
+        //BossAnimator.SetTrigger("Attack");
         BossBehavior.instance.ChangeHP(-Outgoing_Damage, false);
     }
 }

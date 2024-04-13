@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+
+
+
+
+
 /// <summary>
 /// <para>
 /// Handles any possible information and functions the boss may need to consider as well as communicating results
@@ -11,9 +16,8 @@ public class BossBehavior : MonoBehaviour
     public static BossBehavior instance;
     public string readableName = "myNameJeoff";
     public int moneyValueOnHit = 50;
-    [SerializeField] private float healthPoints = 100;
-    [SerializeField] private float MaxHP = 100;
-    [SerializeField] private bool dyingTriggered = false;
+    private float healthPoints;
+    private float MaxHP;
 
     // events that can hold addition outcomes
     public UnityEvent LinkedEvents_OnHit;
@@ -30,12 +34,20 @@ public class BossBehavior : MonoBehaviour
         {
             Destroy(this);
         }
+
     }
 
     private void Start()
     {
         UI_Manager.instance.UpdateHPText(healthPoints, MaxHP);
 
+    }
+
+    public void InitiateBossData(Boss data)
+    {
+        Instantiate(data.BossMeshPrefab,this.transform);
+        MaxHP = data.MaxHP;
+        healthPoints = data.MaxHP;
     }
 
     // on call, the caller can change the HP of this unit/script.
@@ -80,6 +92,7 @@ public class BossBehavior : MonoBehaviour
 
         if(healthPoints <= 0)
         {
+            DeathCall();
             //trigger death
             //give extra reward?
         }
@@ -98,6 +111,7 @@ public class BossBehavior : MonoBehaviour
     private void DeathCall()
     {
         print($"This {readableName} character died");
+        Game_Manager.instance.ChangeGameState(GAMESTATE.POSTCOMBAT);
         // call any functions related
         LinkedEvents_OnDeath.Invoke();
         // play death animation
