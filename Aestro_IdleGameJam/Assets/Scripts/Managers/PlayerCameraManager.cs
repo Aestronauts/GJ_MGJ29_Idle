@@ -4,8 +4,8 @@ using UnityEngine;
 using Cinemachine;
 
 
-namespace com.IronLadle.MechTreks.Core.Camera
-{
+
+
     public class PlayerCameraManager : MonoBehaviour
     {
         // Start is called before the first frame update
@@ -69,4 +69,3 @@ namespace com.IronLadle.MechTreks.Core.Camera
         }
     }
 
-}
