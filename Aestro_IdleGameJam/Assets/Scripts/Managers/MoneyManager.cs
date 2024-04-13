@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/// <summary>
+/// <para>
+/// An instance to track and manage money in0game
+/// </para>
+/// </summary>
 public class MoneyManager : MonoBehaviour
 {
     private static MoneyManager _instance;
