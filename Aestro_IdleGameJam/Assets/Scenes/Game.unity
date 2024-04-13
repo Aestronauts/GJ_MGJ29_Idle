@@ -2184,8 +2184,9 @@ MonoBehaviour:
     Name: Upgrade Dice
     Description: Upgrade Your Dice!
   LevelNumber: 1
-  ChargePerFrame: 0
+  ChargePerFrame: 0.5
   AttackBonus: 0
+  Dice: 1
 --- !u!4 &2042627524
 Transform:
   m_ObjectHideFlags: 0

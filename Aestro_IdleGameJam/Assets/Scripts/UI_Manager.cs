@@ -53,6 +53,7 @@ public class UI_Manager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             GameObject g = Instantiate(UpgradeCardPrefab, UpgradePanel.transform);
+            g.GetComponent<UI_Upgrade>().LoadInfo(PersistentData.instance.UpgradeConfig[i]);
         }
     }
 
