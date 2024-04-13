@@ -19,6 +19,7 @@ public class Game_Manager : MonoBehaviour
     [Header("References")]
     public DiceShooter DiceShooter;
     public Animator PlayerAnimator;
+    public Animator BossAnimator;
 
     // Start is called before the first frame update
     void Awake()
@@ -83,6 +84,7 @@ public class Game_Manager : MonoBehaviour
     public void Attack(float Outgoing_Damage)
     {
         PlayerAnimator.SetTrigger("Attack");
+        BossAnimator.SetTrigger("Attack");
         BossBehavior.instance.ChangeHP(-Outgoing_Damage, false);
     }
 }
