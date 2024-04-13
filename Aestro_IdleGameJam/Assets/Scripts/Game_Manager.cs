@@ -16,6 +16,9 @@ public class Game_Manager : MonoBehaviour
     [SerializeField]
     private float AttackCharge = 1;
 
+    [Header("References")]
+    public DiceShooter DiceShooter;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -63,7 +66,7 @@ public class Game_Manager : MonoBehaviour
         Debug.Log("Throw a dice!");
         int RollResult = RNG_Manager.instance.RNG(6);
         Debug.Log("Value is:" + RollResult);
-
+        DiceShooter.ThrowDice(1, 1);
         Attack(CalculateOutgoingDamage(RollResult));
 
     }
