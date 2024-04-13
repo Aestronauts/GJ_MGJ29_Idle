@@ -1,10 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
 /// <para>
-/// Shoots and handles the dice
+/// Shoots and handles the dice information
 /// </para>
 /// </summary>
 public class DiceShooter : MonoBehaviour
@@ -19,11 +20,11 @@ public class DiceShooter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ThrowDice(manualDiceSettings.x, manualDiceSettings.y);
+            ThrowDice(manualDiceSettings.x, manualDiceSettings.y, 1);
         }
     }
 
-    public void ThrowDice(int _diceID, int _numberOfDice)// can add parameter to set what the dice will say
+    public void ThrowDice(int _diceID, int _numberOfDice, int _diceLandsOn)// can add parameter to set what the dice will say
     {
         if (_numberOfDice < 1)
             _numberOfDice = 1;
@@ -45,11 +46,23 @@ public class DiceShooter : MonoBehaviour
                 randomForceZ = Random.Range(0, 250);
 
                 diceThrown.transform.GetComponent<Rigidbody>().AddForce(transform.forward * diceForce);
-                Destroy(diceThrown, 10);
+                StartCoroutine(DiceRollHandler(diceThrown, _diceLandsOn.ToString())); // dice details
             }
         }
 
     }// end of ThrowDice();
+
+
+    private IEnumerator DiceRollHandler(GameObject _diceObj, string _numberToShow)
+    {
+        yield return new WaitForSeconds(3);
+
+        foreach(Transform _child in _diceObj.transform.GetChild(0))
+        {
+            if (_child.GetComponent<TMP_Text>())
+                _child.GetComponent<TMP_Text>().text = _numberToShow;
+        }
+    }
 
 
 }// end of dice shooter

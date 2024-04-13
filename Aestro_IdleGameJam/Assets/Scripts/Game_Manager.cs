@@ -66,7 +66,7 @@ public class Game_Manager : MonoBehaviour
         Debug.Log("Throw a dice!");
         int RollResult = RNG_Manager.instance.RNG(6);
         Debug.Log("Value is:" + RollResult);
-        DiceShooter.ThrowDice(1, 1);
+        DiceShooter.ThrowDice(1, 1, RollResult);
         Attack(CalculateOutgoingDamage(RollResult));
 
     }
