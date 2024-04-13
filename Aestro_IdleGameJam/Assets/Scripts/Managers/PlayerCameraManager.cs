@@ -6,65 +6,61 @@ using Cinemachine;
 
 
 
-    public class PlayerCameraManager : MonoBehaviour
+public class PlayerCameraManager : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public static PlayerCameraManager instance { get; private set; }
+
+    public CinemachineVirtualCamera MainCamera;
+    //public CinemachineVirtualCamera MainCameraShake;
+
+    public CinemachineVirtualCamera DieCamera;
+
+    void Awake()
     {
-        // Start is called before the first frame update
-        public static PlayerCameraManager instance { get; private set; }
-        public CinemachineVirtualCamera VirtualCamera { get; private set; }
-
-        private float shakeTimer;
-        private float shakeDuration;
-        private float shakeAmplitude;
-        private float shakeFrequency;
-
-        void Awake()
+        if (instance == null)
         {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else if (instance != null)
-            {
-                Destroy(gameObject);
-            }
-
-            VirtualCamera = GetComponent<CinemachineVirtualCamera>();
-
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
         }
 
-        void Update()
+
+
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            UpdateCameraShake();
+            SwitchToMainCam();
+         
         }
 
-        // Method to start camera shake with specified duration, amplitude, and frequency
-        public void ShakeCamera(float duration, float amplitude, float frequency)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            shakeTimer = duration;
-            shakeDuration = duration;
-            shakeAmplitude = amplitude;
-            shakeFrequency = frequency;
-        }
-
-        private void UpdateCameraShake()
-        {
-            if (shakeTimer > 0)
-            {
-                // Update the CinemachineBasicMultiChannelPerlin settings during the shake duration
-                VirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain =
-                    shakeAmplitude;
-                VirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain =
-                    shakeFrequency;
-
-                // Reduce the shake timer over time
-                shakeTimer -= Time.deltaTime;
-            }
-            else
-            {
-                // Reset the shake values once the duration is over
-                VirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0f;
-                VirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 0f;
-            }
+           SwitchToDieCam();
         }
     }
+
+    public void SwitchToMainCam()
+    {
+        MainCamera.Priority = 10;
+        DieCamera.Priority = 0;
+    }
+
+    public void SwitchToDieCam()
+    {
+        DieCamera.Priority = 10;
+        MainCamera.Priority = 0;    
+    }
+}
+
+  
+  
+      
+
+     
 
