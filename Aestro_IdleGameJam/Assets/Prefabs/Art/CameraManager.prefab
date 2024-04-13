@@ -241,7 +241,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4737800857084785152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -398,7 +398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5591367387548675440
 Transform:
   m_ObjectHideFlags: 0
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 8123875605397344738}
   - component: {fileID: 3517622447406213473}
   m_Layer: 0
-  m_Name: VCAM_Player
+  m_Name: VCAM_ThirdPerson
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,7 +456,7 @@ Transform:
   m_GameObject: {fileID: 8114782371193355676}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00034606078, y: 0.9703697, z: 0.071721405, w: 0.23073487}
-  m_LocalPosition: {x: -10.163732, y: 6.2844963, z: 7.758775}
+  m_LocalPosition: {x: -8.97, y: 6.2, z: 8.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
