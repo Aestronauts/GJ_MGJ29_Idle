@@ -8,17 +8,29 @@ using UnityEngine.Events;
 /// </summary>
 public class BossBehavior : MonoBehaviour
 {
+    public static BossBehavior instance;
     public string readableName = "myNameJeoff";
     public int moneyValueOnHit = 50;
     [SerializeField] private float healthPoints = 100;
+    [SerializeField] private float MaxHP = 100;
     [SerializeField] private bool dyingTriggered = false;
 
     // events that can hold addition outcomes
     public UnityEvent LinkedEvents_OnHit;
     public UnityEvent LinkedEvents_OnHeal;
     public UnityEvent LinkedEvents_OnDeath;
-  
 
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     // on call, the caller can change the HP of this unit/script.
     // _amount = how much to change
@@ -40,7 +52,10 @@ public class BossBehavior : MonoBehaviour
     private void HPChangeReact(bool _lostHP)
     {
         if (_lostHP)
+        {
             print("boss lost hp"); // can set animation & sound too // LinkedEvents_OnHit.Invoke()
+            UI_Manager.instance.UpdateHPText(healthPoints, MaxHP);
+        }
         else
             print("boss gained hp"); // can set animation & sound too // LinkedEvents_OnHeal.Invoke()
 
