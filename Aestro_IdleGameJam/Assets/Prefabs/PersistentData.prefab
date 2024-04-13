@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4233073671440830412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3812958738877144396}
+  - component: {fileID: 2935680234077810474}
+  m_Layer: 0
+  m_Name: PersistentData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3812958738877144396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4233073671440830412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8098278, y: 0.8688903, z: -3.5065565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2935680234077810474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4233073671440830412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eccffb2f91e75468e4517a50674f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelBossConfig:
+  - Name: Boss 1
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
+      type: 3}
+    MaxHP: 20
+  - Name: Boss 2
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
+      type: 3}
+    MaxHP: 50
+  - Name: Boss 3
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
+      type: 3}
+    MaxHP: 100
+  UpgradeConfig:
+  - ID: 0
+    Name: Gimme Damage
+    Description: Increase Attack Bonus by 2
+  - ID: 1
+    Name: Gimme Speed
+    Description: Increase Attack Speed by 25%
+  - ID: 2
+    Name: Upgrade Dice
+    Description: Upgrade Your Dice!
+  LevelNumber: 1
+  ChargePerFrame: 0.5
+  AttackBonus: 0
+  Dice: 1
