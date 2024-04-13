@@ -37,6 +37,12 @@ public class Game_Manager : MonoBehaviour
             Tick();
             AttackCharge = 0;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Click();
+        }
+
     }
 
     public void Tick()
