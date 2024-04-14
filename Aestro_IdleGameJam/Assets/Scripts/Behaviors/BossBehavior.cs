@@ -30,6 +30,7 @@ public class BossBehavior : MonoBehaviour
     public UnityEvent LinkedEvents_OnHit;
     public UnityEvent LinkedEvents_OnHeal;
     public UnityEvent LinkedEvents_OnDeath;
+    public UnityEvent LinkedEvents_OnAttack;
 
     void Awake()
     {
@@ -87,6 +88,7 @@ public class BossBehavior : MonoBehaviour
             Result = Mathf.Min(Result, RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides));
         }
         BossAnimator.SetTrigger("Attack");
+        LinkedEvents_OnAttack.Invoke();
         StartCoroutine(BossDiceStop(Result.ToString()));
     }
 
@@ -103,12 +105,13 @@ public class BossBehavior : MonoBehaviour
     {
         if (_lostHP)
         {
-            print("boss lost hp"); // can set animation & sound too // LinkedEvents_OnHit.Invoke()
+            print("boss lost hp"); // can set animation & sound too 
+            LinkedEvents_OnHit.Invoke();
             UI_Manager.instance.UpdateBossHPText(healthPoints, MaxHP);
             BossAnimator.SetTrigger("TakeHit");
         }
         else
-            print("boss gained hp"); // can set animation & sound too // LinkedEvents_OnHeal.Invoke()
+            LinkedEvents_OnHeal.Invoke();
 
         // play animations
         // play sounds
