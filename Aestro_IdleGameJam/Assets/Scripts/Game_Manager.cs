@@ -35,6 +35,7 @@ public class Game_Manager : MonoBehaviour
     [Header("References")]
     public DiceShooter DiceShooter;
     public UI_3D_Dice PlayerDiceUI;
+    public UI_3D_Dice BossDiceUI;
     public Animator PlayerAnimator;
     //public Animator BossAnimator;
 
@@ -56,8 +57,13 @@ public class Game_Manager : MonoBehaviour
     private void Start()
     {
         BossBehavior.instance.InitiateBossData(PersistentData.instance.ReturnBossData());
+        BossDiceUI.Dice = Instantiate(PersistentData.instance.DiceConfig[BossBehavior.instance.AttackDice].Prefab, BossDiceUI.transform).transform;
+        //BossDiceUI.Dice.gameObject.layer = 7;
         HP = PersistentData.instance.MaxHP;
+        PlayerDiceUI.Dice = Instantiate(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].Prefab, PlayerDiceUI.transform).transform;
+        //PlayerDiceUI.Dice.gameObject.layer = 7;
         PlayerDiceUI.Rolling = true;
+        BossDiceUI.Rolling = true;
         UI_Manager.instance.UpdatePlayerHPText(HP, HP);
     }
 
@@ -165,4 +171,5 @@ public class Game_Manager : MonoBehaviour
         yield return new WaitForSeconds(1);
         PlayerDiceUI.Rolling = true;
     }
+
 }

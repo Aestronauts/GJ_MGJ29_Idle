@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -75,7 +77,7 @@ public class BossBehavior : MonoBehaviour
     public void BossRollDice()
     {
         int Result = RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides);
-        DealDamageToPlayer(Result + AttackBonus);
+        StartCoroutine(BossDiceStop(Result.ToString()));
     }
 
     public void DealDamageToPlayer(float Damage)
@@ -135,6 +137,21 @@ public class BossBehavior : MonoBehaviour
         // play death animation
         // announce game finish function
 
+    }
+
+
+    private IEnumerator BossDiceStop(string _numberToShow)
+    {
+        Game_Manager.instance.BossDiceUI.Rolling = false;
+        /*foreach (Transform _child in Game_Manager.instance.BossDiceUI.transform.GetChild(0).transform.GetChild(0))
+        {
+            if (_child.GetComponent<TMP_Text>())
+                _child.GetComponent<TMP_Text>().text = _numberToShow;
+        }*/
+        yield return new WaitForSeconds(1);
+        DealDamageToPlayer(int.Parse(_numberToShow) + AttackBonus);
+        yield return new WaitForSeconds(1);
+        Game_Manager.instance.BossDiceUI.Rolling = true;
     }
 
 }// end of BossBehavior class
