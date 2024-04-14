@@ -41,7 +41,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557454741487386842}
   serializedVersion: 8
-  lengthInSec: 0.75
+  lengthInSec: 5
   simulationSpeed: 1.2
   stopAction: 0
   cullingMode: 0
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -170,7 +170,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 3
-      minScalar: 2
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -288,7 +288,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.75
-      minScalar: 0.25
+      minScalar: 0.75
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -808,7 +808,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 0
       mode: 0
       spread: 0
       speed:
@@ -870,7 +870,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -973,8 +973,66 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 1
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
     enabled: 1
     curve:
@@ -3949,7 +4007,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4910,7 +4968,7 @@ Transform:
   m_GameObject: {fileID: 5286138623332053424}
   serializedVersion: 2
   m_LocalRotation: {x: -0.40840834, y: -0.061597448, z: 0.7202076, w: 0.5574133}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.73, y: 0, z: 0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4924,7 +4982,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5286138623332053424}
   serializedVersion: 8
-  lengthInSec: 0.75
+  lengthInSec: 5
   simulationSpeed: 1.2
   stopAction: 0
   cullingMode: 0
@@ -4999,7 +5057,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5053,7 +5111,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 3
-      minScalar: 2
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5171,7 +5229,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.75
-      minScalar: 0.25
+      minScalar: 0.75
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5691,7 +5749,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 0
       mode: 0
       spread: 0
       speed:
@@ -5753,7 +5811,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5856,8 +5914,66 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 1
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
     enabled: 1
     curve:
@@ -8832,7 +8948,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9773,7 +9889,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7715006330544549956}
   serializedVersion: 8
-  lengthInSec: 0.75
+  lengthInSec: 5
   simulationSpeed: 1.2
   stopAction: 0
   cullingMode: 0
@@ -9848,7 +9964,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9902,7 +10018,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 3
-      minScalar: 2
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -10020,7 +10136,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.75
-      minScalar: 0.25
+      minScalar: 0.75
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -10540,7 +10656,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 0
       mode: 0
       spread: 0
       speed:
@@ -10602,7 +10718,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10705,8 +10821,66 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 1
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
     enabled: 1
     curve:
@@ -13681,7 +13855,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
