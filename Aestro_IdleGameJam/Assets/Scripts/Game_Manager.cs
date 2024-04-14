@@ -174,13 +174,7 @@ public class Game_Manager : MonoBehaviour
         UI_Manager.instance.UpdatePlayerHPText(HP, PersistentData.instance.MaxHP);
         if (HP < 0)
         {
-            //Player Dies
-<<<<<<< Updated upstream
             StartCoroutine(DieSequence());
-=======
-            HP = 0;
-            StartCoroutine(EndOfLevelSequence());
->>>>>>> Stashed changes
         }
     }
 
