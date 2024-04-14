@@ -3099,7 +3099,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Main Menu
 
-    (start over)'
+    (progress stored temporarily)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21763919e1bd1bc4386d71a44ab5bf60, type: 2}
   m_sharedMaterial: {fileID: -3478703767168567653, guid: 21763919e1bd1bc4386d71a44ab5bf60,
