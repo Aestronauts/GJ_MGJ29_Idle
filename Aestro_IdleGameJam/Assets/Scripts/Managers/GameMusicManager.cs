@@ -26,16 +26,19 @@ public class GameMusicManager : MonoBehaviour
     {
         currentSongId = -1;
         lastGameState = refGameManager.GameState;
-        ChangeSong();
+        lastUpdateTime = Time.time + 3;        
+        ChangeSong(); // play our first song
+        changingSongNow = true;
     }
 
     public void LateUpdate()
     {
-        if (Time.time < lastUpdateTime + 3 || changingSongNow)
+        if (Time.time <= lastUpdateTime + 3 || changingSongNow)
             return;
 
         if (lastGameState != refGameManager.GameState)
         {
+            print("game state not aligning");
             changingSongNow = true;
             ChangeSong();
         }
@@ -119,6 +122,8 @@ public class GameMusicManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
+        lastGameState = refGameManager.GameState;
+        print("Music Done Transitioning");
         yield return new WaitForSeconds(2f); // forced time before song will be allowed to be changed
         changingSongNow = false;
     }// end of FadeMusic()
