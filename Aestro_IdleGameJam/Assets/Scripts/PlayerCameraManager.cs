@@ -16,6 +16,8 @@ public class PlayerCameraManager : MonoBehaviour
 
     public CinemachineVirtualCamera DieCamera;
 
+    public CinemachineVirtualCamera CaveCamera;
+
     void Awake()
     {
         if (instance == null)
@@ -35,13 +37,16 @@ public class PlayerCameraManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SwitchToMainCam();
-         
+            SwitchToMainCam(); 
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
            SwitchToDieCam();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SwitchToCaveCam();
         }
     }
 
@@ -49,14 +54,24 @@ public class PlayerCameraManager : MonoBehaviour
     {
         MainCamera.Priority = 10;
         DieCamera.Priority = 0;
+        CaveCamera.Priority = 0;
     }
 
     public void SwitchToDieCam()
     {
         DieCamera.Priority = 10;
         MainCamera.Priority = 0;    
+        CaveCamera.Priority = 0;
+    }
+
+    public void SwitchToCaveCam()
+    {
+        CaveCamera.Priority = 10;
+        DieCamera.Priority = 0;
+        MainCamera.Priority = 0;
     }
 }
+
 
   
   
