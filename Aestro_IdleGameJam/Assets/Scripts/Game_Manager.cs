@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 
@@ -32,6 +33,7 @@ public class Game_Manager : MonoBehaviour
 
     [Header("References")]
     public DiceShooter DiceShooter;
+    public UI_3D_Dice PlayerDiceUI;
     public Animator PlayerAnimator;
     //public Animator BossAnimator;
 
@@ -54,6 +56,7 @@ public class Game_Manager : MonoBehaviour
     {
         BossBehavior.instance.InitiateBossData(PersistentData.instance.ReturnBossData());
         HP = PersistentData.instance.MaxHP;
+        PlayerDiceUI.Rolling = true;
     }
 
     void Update()
@@ -127,8 +130,8 @@ public class Game_Manager : MonoBehaviour
         Debug.Log("Throw a dice!");
         int RollResult = RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].NumberOfSides);
         Debug.Log("Value is:" + RollResult);
-        DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
-
+        //DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
+        StartCoroutine(DiceStop(RollResult.ToString()));
     }
 
     public float CalculateOutgoingDamage(int RNG_Value)
@@ -144,5 +147,19 @@ public class Game_Manager : MonoBehaviour
         PlayerAnimator.SetTrigger("Attack");
         //BossAnimator.SetTrigger("Attack");
         BossBehavior.instance.ChangeHP(-Outgoing_Damage, false);
+    }
+
+    private IEnumerator DiceStop(string _numberToShow)
+    {
+        PlayerDiceUI.Rolling = false;
+        foreach (Transform _child in PlayerDiceUI.transform.GetChild(0).transform.GetChild(0))
+        {
+            if (_child.GetComponent<TMP_Text>())
+                _child.GetComponent<TMP_Text>().text = _numberToShow;
+        }
+        yield return new WaitForSeconds(1);
+        Attack(CalculateOutgoingDamage(int.Parse(_numberToShow)));
+        yield return new WaitForSeconds(1);
+        PlayerDiceUI.Rolling = true;
     }
 }
