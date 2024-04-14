@@ -62,8 +62,8 @@ public class PersistentData : MonoBehaviour
     public void Initialize()
     {
         MaxHP = 50;
-        ChargePerFrame = 0.05f;
-        AttackBonus = 0;
+        ChargePerFrame = 0.075f;
+        AttackBonus = 2;
     }
 
     public Boss ReturnBossData()

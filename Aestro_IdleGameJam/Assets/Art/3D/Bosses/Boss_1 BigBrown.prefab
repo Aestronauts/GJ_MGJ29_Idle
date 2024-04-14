@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5987657173439270316}
   - component: {fileID: -9189709648583771315}
   m_Layer: 0
-  m_Name: Boss_2
+  m_Name: Boss_1 BigBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9131364003911410694}
@@ -205,12 +205,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cda00952112dadb44851ba9e8295270f, type: 2}
+      objectReference: {fileID: 2100000, guid: 472dc12f266202f47a4d3873bda660db, type: 2}
     - target: {fileID: -4901011632894537318, guid: 8cdb5ebb71577514b908b9da752c7ba5,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 389633a45b945df4380c0ea6dad73f86, type: 2}
+      objectReference: {fileID: 2100000, guid: 1335e470ee9f878468095ae800c956ab, type: 2}
     - target: {fileID: -4901011632894537318, guid: 8cdb5ebb71577514b908b9da752c7ba5,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
