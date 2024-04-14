@@ -84,7 +84,7 @@ public class BossBehavior : MonoBehaviour
         int Result = 0;
         for (int i = 0; i < 1 + PersistentData.instance.RollwithDisadvantage; i++)
         {
-            Result = Mathf.Min(Result, RNG_Manager.instance.RNG(RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides)));
+            Result = Mathf.Min(Result, RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides));
         }
         BossAnimator.SetTrigger("Attack");
         StartCoroutine(BossDiceStop(Result.ToString()));
