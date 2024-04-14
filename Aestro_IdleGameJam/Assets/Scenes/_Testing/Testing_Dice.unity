@@ -618,7 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 0
   midPoint: {fileID: 0}
-  endPoint: {fileID: 0}
+  endPoint: {fileID: 1492645710}
 --- !u!4 &799001518
 Transform:
   m_ObjectHideFlags: 0
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 0
   midPoint: {fileID: 0}
-  endPoint: {fileID: 0}
+  endPoint: {fileID: 1492645710}
 --- !u!4 &1191054498
 Transform:
   m_ObjectHideFlags: 0
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 0
   midPoint: {fileID: 0}
-  endPoint: {fileID: 0}
+  endPoint: {fileID: 1492645710}
 --- !u!4 &1491100111
 Transform:
   m_ObjectHideFlags: 0
@@ -1229,6 +1229,12 @@ Transform:
   - {fileID: 130729458}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 30.977, z: -45.527}
+--- !u!4 &1492645710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5987657173439270316, guid: 84fdba8836a6292438061cf3a182558f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1166547016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1539230389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 0
   midPoint: {fileID: 0}
-  endPoint: {fileID: 0}
+  endPoint: {fileID: 1492645710}
 --- !u!4 &1539230391
 Transform:
   m_ObjectHideFlags: 0

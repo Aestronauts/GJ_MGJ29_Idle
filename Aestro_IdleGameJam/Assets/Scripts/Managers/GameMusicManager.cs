@@ -46,7 +46,7 @@ public class GameMusicManager : MonoBehaviour
 
     public void ChangeSong()
     {
-        Vector2Int songRange = new Vector2Int(0, 1);
+        Vector2Int songRange = new Vector2Int(-1, 1);
         AudioClip nextClip = null;
         int maxCount = 0;
         switch (refGameManager.GameState)
@@ -56,6 +56,8 @@ public class GameMusicManager : MonoBehaviour
                 print($"number: {maxCount}");
                 songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);
+                if (nextSongId <= 0)
+                    nextSongId = 0;
                 nextClip = clips_incombat[nextSongId];
                 break;
             case GAMESTATE.POSTCOMBAT:
@@ -63,6 +65,8 @@ public class GameMusicManager : MonoBehaviour
                 print($"number: {maxCount}");
                 songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);
+                if (nextSongId <= 0)
+                    nextSongId = 0;
                 nextClip = clips_postcombat[nextSongId];
                 break;
             case GAMESTATE.PRECOMBAT:
@@ -70,19 +74,21 @@ public class GameMusicManager : MonoBehaviour
                 print($"number: {maxCount}");
                 songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);
+                if (nextSongId <= 0)
+                    nextSongId = 0;
                 nextClip = clips_precombat[nextSongId];
                 break;
             default:
                 break;
         }
 
-        if(nextSongId == currentSongId)
+        if (nextSongId == currentSongId)
         {
             ChangeSong();
             return;
         }
-
-        StartCoroutine(FadeMusic(nextClip));
+        else
+            StartCoroutine(FadeMusic(nextClip));
     }// end of ChangeSong()
 
 
@@ -113,6 +119,7 @@ public class GameMusicManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
+        yield return new WaitForSeconds(2f); // forced time before song will be allowed to be changed
         changingSongNow = false;
     }// end of FadeMusic()
 

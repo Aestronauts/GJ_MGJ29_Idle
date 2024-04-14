@@ -11,6 +11,8 @@ public class LerpInAnArc : MonoBehaviour
     private void OnEnable()
     {
         startPointPos = transform.position;
+        if (endPoint)
+            midPoint.position = startPointPos + endPoint.position / 2 + new Vector3(0, Random.Range(-10, 10), 0);
     }
 
     void Update()
