@@ -96,14 +96,33 @@ MonoBehaviour:
     ChargePerFrame: 0.25
   UpgradeConfig:
   - ID: 0
-    Name: Gimme Damage
-    Description: Increase Attack Bonus by 2
+    Name: Sharpen Your Weapon
+    Description: Your weapon is sharpened. All attack will have +1 bonus
   - ID: 1
     Name: Gimme Speed
     Description: Increase Attack Speed by 25%
   - ID: 2
     Name: Upgrade Dice
-    Description: Upgrade Your Dice!
+    Description: Your dice are upgraded.
+  - ID: 3
+    Name: Vampire
+    Description: You are bit by a bat in the cave. Heal for +5% of all outgoing damage
+  - ID: 4
+    Name: A Weird Mushroom
+    Description: You've eaten a weird mushroom. Doesn't seem to do anything
+  - ID: 5
+    Name: Get Some Armor
+    Description: You've found a helmet. Reduce +5% of incoming damage
+  - ID: 6
+    Name: Spikes
+    Description: Spikes grew out on your body. Return +5% of all incoming damage
+  - ID: 7
+    Name: Cheater
+    Description: All your rolls gain +1 advantage (can stack.)
+  - ID: 8
+    Name: Sleepy Monster
+    Description: Your enemy feels sleepy. All their rolls gain +1 disadvantage (can
+      stack.)
   DiceConfig:
   - NumberOfSides: 4
     Prefab: {fileID: 6731961743414908288, guid: 9ce7babf59712064bbb5ac284a831ad3,
@@ -126,3 +145,9 @@ MonoBehaviour:
   ChargePerFrame: 0.65
   AttackBonus: 0
   Dice: 1
+  Vamp: 0
+  SizeBuff: 0
+  Armor: 0
+  ReturnDamage: 0
+  RollwithAdvantage: 0
+  RollwithDisadvantage: 0

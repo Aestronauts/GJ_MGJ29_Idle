@@ -62,26 +62,58 @@ public class UI_Manager : MonoBehaviour
 
     public void SpawnUpgrades()
     {
+        if (UpgradePanel.transform.childCount > 0)
+        {
+            foreach (GameObject g in UpgradePanel.transform)
+            {
+                Destroy(g);
+            }
+        }
         for (int i = 0; i < 3; i++)
         {
             GameObject g = Instantiate(UpgradeCardPrefab, UpgradePanel.transform);
-            g.GetComponent<UI_Upgrade>().LoadInfo(PersistentData.instance.UpgradeConfig[i]);
+            g.GetComponent<UI_Upgrade>().LoadInfo(PersistentData.instance.UpgradeConfig[Random.Range(0,8)]);
         }
     }
 
     public void SelectUpgrade(Upgrade info)
     {
-        if (info.ID == 0)
+        if (info.ID == 0) // attack bonus
         {
-            PersistentData.instance.AttackBonus += 2;
+            PersistentData.instance.AttackBonus += 1;
         }
-        else if (info.ID == 1)
+        else if (info.ID == 1) // attack speed bonus
         {
             PersistentData.instance.ChargePerFrame *= 1.25f;
         }
-        else if (info.ID == 2)
+        else if (info.ID == 2) // level up dice
         {
             PersistentData.instance.Dice += 1;
+        }
+        else if (info.ID == 3) // vamp
+        {
+            PersistentData.instance.Vamp += 0.1f;
+        }
+        else if (info.ID == 4) // Big Boi
+        {
+            PersistentData.instance.SizeBuff *= 2.5f;
+            PersistentData.instance.MaxHP *= 1.25f;
+        }
+        else if (info.ID == 5) // Armor
+        {
+            PersistentData.instance.Armor += 0.05f;
+        }
+        else if (info.ID == 6) // Spikes
+        {
+            PersistentData.instance.ReturnDamage += 0.05f;
+        }
+        else if (info.ID == 7) // RollwithAdvantage
+        {
+            PersistentData.instance.RollwithAdvantage += 1;
+        }
+        else if (info.ID == 8) // RollwithAdvantage
+        {
+            PersistentData.instance.RollwithDisadvantage += 1;
         }
         Game_Manager.instance.LoadNextScene();
     }

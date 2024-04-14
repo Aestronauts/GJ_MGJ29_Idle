@@ -43,7 +43,13 @@ public class PersistentData : MonoBehaviour
     public float MaxHP;
     public float ChargePerFrame;
     public float AttackBonus;
-    public int Dice = 0;
+    public int Dice;
+    public float Vamp;
+    public float SizeBuff;
+    public float Armor;
+    public float ReturnDamage;
+    public int RollwithAdvantage;
+    public int RollwithDisadvantage;
 
     private void Awake()
     {
@@ -61,9 +67,16 @@ public class PersistentData : MonoBehaviour
 
     public void Initialize()
     {
-        MaxHP = 50;
-        ChargePerFrame = 0.075f;
-        AttackBonus = 2;
+        MaxHP = 50;//
+        ChargePerFrame = 0.075f;//
+        AttackBonus = 2;//
+        Dice = 0;//
+        Vamp = 0;//
+        SizeBuff = 1;//
+        Armor = 0;//
+        ReturnDamage = 0;//
+        RollwithAdvantage = 0;
+        RollwithDisadvantage = 0;
     }
 
     public Boss ReturnBossData()

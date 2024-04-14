@@ -46,7 +46,6 @@ public class BossBehavior : MonoBehaviour
 
     private void Start()
     {
-        UI_Manager.instance.UpdateBossHPText(healthPoints, MaxHP);
 
     }
 
@@ -59,6 +58,7 @@ public class BossBehavior : MonoBehaviour
         AttackDice = data.AttackDice;
         AttackBonus = data.AttackBonus;
         ChargePerFrame = data.ChargePerFrame;
+        UI_Manager.instance.UpdateBossHPText(healthPoints, MaxHP);
     }
 
     // on call, the caller can change the HP of this unit/script.
@@ -79,7 +79,12 @@ public class BossBehavior : MonoBehaviour
 
     public void BossRollDice()
     {
-        int Result = RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides);
+
+        int Result = 0;
+        for (int i = 0; i < 1 + PersistentData.instance.RollwithDisadvantage; i++)
+        {
+            Result = Mathf.Min(Result, RNG_Manager.instance.RNG(RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides)));
+        }
         BossAnimator.SetTrigger("Attack");
         StartCoroutine(BossDiceStop(Result.ToString()));
     }
@@ -151,11 +156,11 @@ public class BossBehavior : MonoBehaviour
     private IEnumerator BossDiceStop(string _numberToShow)
     {
         Game_Manager.instance.BossDiceUI.Rolling = false;
-        /*foreach (Transform _child in Game_Manager.instance.BossDiceUI.transform.GetChild(0).transform.GetChild(0))
+        foreach (Transform _child in Game_Manager.instance.BossDiceUI.transform.GetChild(0).transform.GetChild(0))
         {
             if (_child.GetComponent<TMP_Text>())
                 _child.GetComponent<TMP_Text>().text = _numberToShow;
-        }*/
+        }
         yield return new WaitForSeconds(1);
         DealDamageToPlayer(int.Parse(_numberToShow) + AttackBonus);
         yield return new WaitForSeconds(1);

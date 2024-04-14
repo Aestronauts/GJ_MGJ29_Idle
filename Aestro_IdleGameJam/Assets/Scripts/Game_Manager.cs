@@ -76,6 +76,8 @@ public class Game_Manager : MonoBehaviour
         PlayerDiceUI.Rolling = true;
         BossDiceUI.Rolling = true;
         UI_Manager.instance.UpdatePlayerHPText(HP, HP);
+        //size
+        PlayerAnimator.gameObject.transform.localScale = Vector3.one * PersistentData.instance.SizeBuff;
     }
 
     void Update()
@@ -155,7 +157,11 @@ public class Game_Manager : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         Debug.Log("Receive Damage!");
-        HP -= Damage;
+        if (PersistentData.instance.ReturnDamage > 0)
+        {
+            Attack(Damage* PersistentData.instance.ReturnDamage);
+        }
+        HP -= (Damage*(1-PersistentData.instance.Armor));
         UI_Manager.instance.UpdatePlayerHPText(HP, PersistentData.instance.MaxHP);
         if (HP < 0)
         {
@@ -177,7 +183,11 @@ public class Game_Manager : MonoBehaviour
     public void ThrowADice()
     {
         Debug.Log("Throw a dice!");
-        int RollResult = RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].NumberOfSides);
+        int RollResult = 0;
+        for (int i = 0;  i < 1+PersistentData.instance.RollwithAdvantage; i++)
+        {
+            RollResult = Mathf.Max(RollResult, RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].NumberOfSides));
+        }
         Debug.Log("Value is:" + RollResult);
         //DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
         StartCoroutine(DiceStop(RollResult.ToString()));
@@ -195,17 +205,19 @@ public class Game_Manager : MonoBehaviour
     {
         PlayerAnimator.SetTrigger("Attack");
         //BossAnimator.SetTrigger("Attack");
+        //Vamp
+        HP += Outgoing_Damage * PersistentData.instance.Vamp;
         BossBehavior.instance.ChangeHP(-Outgoing_Damage, false);
     }
 
     private IEnumerator DiceStop(string _numberToShow)
     {
         PlayerDiceUI.Rolling = false;
-        /*foreach (Transform _child in PlayerDiceUI.transform.GetChild(0).transform.GetChild(0))
+        foreach (Transform _child in PlayerDiceUI.transform.GetChild(0).transform.GetChild(0))
         {
             if (_child.GetComponent<TMP_Text>())
                 _child.GetComponent<TMP_Text>().text = _numberToShow;
-        }*/
+        }
         yield return new WaitForSeconds(1);
         StartCoroutine(AttackSequence(int.Parse(_numberToShow)));
         Attack(CalculateOutgoingDamage(int.Parse(_numberToShow)));
