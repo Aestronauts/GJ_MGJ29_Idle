@@ -89,7 +89,7 @@ public class GameMusicManager : MonoBehaviour
         AMG_Master.GetFloat("VolumeMusic", out currentVolume);
 
         //loop to lower volume
-        for (float i = currentVolume; i >= -50; i--)
+        for (float i = currentVolume; i >= -30; i--)
         {
             AMG_Master.SetFloat("VolumeMaster", i);
             yield return new WaitForSeconds(0.05f);
