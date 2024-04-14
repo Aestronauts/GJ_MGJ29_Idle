@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8277272474561135713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5064063028854230373}
+  - component: {fileID: 570293724102376782}
+  m_Layer: 0
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5064063028854230373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277272474561135713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.26785243, z: -0, w: -0.96345997}
+  m_LocalPosition: {x: 10.09, y: 0, z: -23.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 328.927, z: 0}
+--- !u!114 &570293724102376782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277272474561135713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64c93825f9086f4aa4d3b471737df19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  readableName: 
+  moneyValueOnHit: 50
+  AttackDice: 0
+  AttackBonus: 0
+  ChargePerFrame: 0
+  BossAnimator: {fileID: 0}
+  LinkedEvents_OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  LinkedEvents_OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  LinkedEvents_OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
