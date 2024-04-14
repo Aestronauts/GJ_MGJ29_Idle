@@ -171,12 +171,8 @@ public class Game_Manager : MonoBehaviour
         UI_Manager.instance.UpdatePlayerHPText(HP, PersistentData.instance.MaxHP);
         if (HP < 0)
         {
-           //Player Dies
-            
-           PlayerAnimator.gameObject.SetActive(false);
-       
-           PlayerDeathSequenceObject.SetActive(true);
-           PlayerDeathSequenceObject.GetComponent<PlayableDirector>().Play();
+            //Player Dies
+            StartCoroutine(EndOfLevelSequence());
         }
     }
 
@@ -252,5 +248,16 @@ public class Game_Manager : MonoBehaviour
             g.GetComponent<Dice_Projectile>().Initiate(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].Prefab, BossBehavior.instance.transform);
             yield return new WaitForSeconds(0.2f);
         }
+    }
+
+    private IEnumerator DieSequence()
+    {
+        PlayerAnimator.gameObject.SetActive(false);
+        PlayerDeathSequenceObject.SetActive(true);
+        PlayerDeathSequenceObject.GetComponent<PlayableDirector>().Play();
+        GameState = GAMESTATE.PAUSECOMBAT;
+        yield return new WaitForSeconds(4f);
+        PersistentData.instance.Initialize();
+        SceneManager.LoadScene(0);
     }
 }
