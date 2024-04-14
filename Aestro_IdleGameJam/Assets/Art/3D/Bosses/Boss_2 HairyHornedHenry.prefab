@@ -111,7 +111,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9131364003911410694}
@@ -220,6 +220,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boss_Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436805663696350335, guid: 8cdb5ebb71577514b908b9da752c7ba5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436805663696350335, guid: 8cdb5ebb71577514b908b9da752c7ba5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436805663696350335, guid: 8cdb5ebb71577514b908b9da752c7ba5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
