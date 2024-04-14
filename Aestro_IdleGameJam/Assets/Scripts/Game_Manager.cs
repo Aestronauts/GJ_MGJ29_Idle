@@ -151,7 +151,10 @@ public class Game_Manager : MonoBehaviour
     public void LoadNextScene()
     {
         PersistentData.instance.IncreaseLevelNumber();
-        SceneManager.LoadScene(1);
+        if (PersistentData.instance.LevelNumber > PersistentData.instance.LevelBossConfig.Count)
+            PlayerWinState();
+        else
+            SceneManager.LoadScene(1);
     }
 
     public void Tick()
@@ -172,8 +175,29 @@ public class Game_Manager : MonoBehaviour
         if (HP < 0)
         {
             //Player Dies
+<<<<<<< Updated upstream
             StartCoroutine(DieSequence());
+=======
+            HP = 0;
+            StartCoroutine(EndOfLevelSequence());
+>>>>>>> Stashed changes
         }
+    }
+
+    public void PlayerDeathState()
+    {
+        // reset all persistent data
+        PersistentData.instance.Initialize();
+        // load main menu
+        SceneLoader("MainMenu");
+    }
+
+    public void PlayerWinState()
+    {
+        // reset boss persistent progress
+        PersistentData.instance.LevelNumber = 1;
+        // load main menu
+        SceneLoader("MainMenu");
     }
 
     public void Click()
@@ -237,6 +261,7 @@ public class Game_Manager : MonoBehaviour
         SequenceObject.SetActive(true);
         SequenceObject.GetComponent<PlayableDirector>().Play();
         yield return new WaitForSeconds(11);
+        PlayerDeathState();
         UI_Manager.instance.SpawnUpgrades();
     }
 
@@ -259,5 +284,12 @@ public class Game_Manager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         PersistentData.instance.Initialize();
         SceneManager.LoadScene(0);
+    }
+
+    public void SceneLoader(string _sceneToLoad) // NOTE - May want to wait for animation timeline to finish first
+    {
+        Time.timeScale = 1;
+        // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        SceneManager.LoadScene(_sceneToLoad);
     }
 }
