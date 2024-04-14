@@ -204,7 +204,7 @@ PrefabInstance:
     - target: {fileID: 2935680234077810474, guid: d01356d6893e45043b68f0c88854d6df,
         type: 3}
       propertyPath: LevelBossConfig.Array.data[6].MaxHP
-      value: 20
+      value: 222
       objectReference: {fileID: 0}
     - target: {fileID: 2935680234077810474, guid: d01356d6893e45043b68f0c88854d6df,
         type: 3}

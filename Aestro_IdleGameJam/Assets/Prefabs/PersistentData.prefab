@@ -45,27 +45,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelBossConfig:
-  - Name: Boss 1
+  - Name: Boss 1 - Big Brown
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
+      type: 3}
+    MaxHP: 8
+    AttackDice: 2
+    AttackBonus: -2
+    ChargePerFrame: 0.025
+  - Name: Boss 2 - Hairy Horned Henry
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: e058394a61216724a84bdf2bb6131370,
+      type: 3}
+    MaxHP: 10
+    AttackDice: 3
+    AttackBonus: -4
+    ChargePerFrame: 0.018
+  - Name: Boss 3 - The Metadron
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 9478b71f68c0fbc44a07d1160aca6b3e,
       type: 3}
     MaxHP: 20
-    AttackDice: 2
-    AttackBonus: -1
-    ChargePerFrame: 0.025
-  - Name: Boss 2
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
-      type: 3}
-    MaxHP: 50
-    AttackDice: 3
-    AttackBonus: -2
-    ChargePerFrame: 0.018
-  - Name: Boss 3
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
-      type: 3}
-    MaxHP: 100
     AttackDice: 4
     AttackBonus: -3
+    ChargePerFrame: 0.035
+  - Name: Boss 4 - Strawberry Milk
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: c674d4483da5d29478533e689e04fae7,
+      type: 3}
+    MaxHP: 35
+    AttackDice: 4
+    AttackBonus: -3
+    ChargePerFrame: 0.05
+  - Name: Boss 5 - Chcoloate Bear
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 6e938f3baa3f01443a909d617b40b9ea,
+      type: 3}
+    MaxHP: 40
+    AttackDice: 4
+    AttackBonus: -4
+    ChargePerFrame: 0.075
+  - Name: Boss 6 - The Dark One
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
+      type: 3}
+    MaxHP: 100
+    AttackDice: 6
+    AttackBonus: -10
     ChargePerFrame: 0.1
+  - Name: Boss 7 - The Truth
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
+      type: 3}
+    MaxHP: 222
+    AttackDice: 4
+    AttackBonus: -3
+    ChargePerFrame: 0.25
   UpgradeConfig:
   - ID: 0
     Name: Gimme Damage
