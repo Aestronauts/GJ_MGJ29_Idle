@@ -172,7 +172,7 @@ public class Game_Manager : MonoBehaviour
         if (HP < 0)
         {
             //Player Dies
-            StartCoroutine(EndOfLevelSequence());
+            StartCoroutine(DieSequence());
         }
     }
 
