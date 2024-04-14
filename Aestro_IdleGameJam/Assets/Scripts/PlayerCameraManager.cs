@@ -18,6 +18,8 @@ public class PlayerCameraManager : MonoBehaviour
 
     public CinemachineVirtualCamera CaveCamera;
 
+    public GameObject hiddencave;
+
     void Awake()
     {
         if (instance == null)
@@ -52,6 +54,7 @@ public class PlayerCameraManager : MonoBehaviour
 
     public void SwitchToMainCam()
     {
+        hiddencave.SetActive(false);
         MainCamera.Priority = 10;
         DieCamera.Priority = 0;
         CaveCamera.Priority = 0;
@@ -59,6 +62,8 @@ public class PlayerCameraManager : MonoBehaviour
 
     public void SwitchToDieCam()
     {
+        hiddencave.SetActive(false);
+
         DieCamera.Priority = 10;
         MainCamera.Priority = 0;    
         CaveCamera.Priority = 0;
@@ -66,6 +71,8 @@ public class PlayerCameraManager : MonoBehaviour
 
     public void SwitchToCaveCam()
     {
+        hiddencave.SetActive(true);
+
         CaveCamera.Priority = 10;
         DieCamera.Priority = 0;
         MainCamera.Priority = 0;

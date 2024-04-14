@@ -336,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 7012976435762769072, guid: 6f3b704fa7bd29a4cbe276f422d9e738,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.89290804
+      value: 0.892908
       objectReference: {fileID: 0}
     - target: {fileID: 7012976435762769072, guid: 6f3b704fa7bd29a4cbe276f422d9e738,
         type: 3}
@@ -346,12 +346,12 @@ PrefabInstance:
     - target: {fileID: 7012976435762769072, guid: 6f3b704fa7bd29a4cbe276f422d9e738,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.31717646
+      value: 0.31717658
       objectReference: {fileID: 0}
     - target: {fileID: 7012976435762769072, guid: 6f3b704fa7bd29a4cbe276f422d9e738,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.10696302
+      value: -0.106963135
       objectReference: {fileID: 0}
     - target: {fileID: 7840927748271132456, guid: 6f3b704fa7bd29a4cbe276f422d9e738,
         type: 3}
@@ -363,6 +363,11 @@ PrefabInstance:
       propertyPath: MainCamera
       value: 
       objectReference: {fileID: 2042391467}
+    - target: {fileID: 7840927748271132456, guid: 6f3b704fa7bd29a4cbe276f422d9e738,
+        type: 3}
+      propertyPath: hiddencave
+      value: 
+      objectReference: {fileID: 835691837}
     - target: {fileID: 8036552444206405949, guid: 6f3b704fa7bd29a4cbe276f422d9e738,
         type: 3}
       propertyPath: m_Name
@@ -1531,8 +1536,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713320431}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.05477565, y: 0.85263467, z: 0.09129916, w: 0.511545}
-  m_LocalPosition: {x: -12.75, y: 1.24, z: -5.81}
+  m_LocalRotation: {x: -0.032140777, y: 0.9569316, z: 0.1171581, w: 0.263672}
+  m_LocalPosition: {x: -10.159856, y: 1.5900002, z: 14.046608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1927,6 +1932,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784183766}
   m_CullTransparentMesh: 1
+--- !u!1 &835691837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9000708268404940977, guid: 4166a7408b952d4459f846f06fdd8257,
+    type: 3}
+  m_PrefabInstance: {fileID: 751852001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &836478962
 GameObject:
   m_ObjectHideFlags: 0
