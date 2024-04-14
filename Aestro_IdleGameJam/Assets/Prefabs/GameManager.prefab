@@ -190,7 +190,8 @@ MonoBehaviour:
   SequenceObject: {fileID: 0}
   PlayerDeathSequenceObject: {fileID: 0}
   FakeCave: {fileID: 0}
-  DiceProjectilePrefab: {fileID: 0}
+  DiceProjectilePrefab: {fileID: 2069574165382237109, guid: d252db09971ded348a8cbce49f1dfce4,
+    type: 3}
   Staff: {fileID: 0}
   Hat: {fileID: 0}
 --- !u!114 &4023383831086137527

@@ -2853,7 +2853,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1610364641 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1482691413736987064, guid: 24fc7d115192df44b8fcddb53d798208,
+  m_CorrespondingSourceObject: {fileID: 3762786093594346501, guid: 24fc7d115192df44b8fcddb53d798208,
     type: 3}
   m_PrefabInstance: {fileID: 1610364639}
   m_PrefabAsset: {fileID: 0}
