@@ -8,6 +8,8 @@ public class UI_Manager : MonoBehaviour
     public static UI_Manager instance;
     [Header("BossUI")]
     public TMPro.TextMeshProUGUI HPText;
+    public TMPro.TextMeshProUGUI BossNameText;
+    public TMPro.TextMeshProUGUI LevelNumberText;
     public Image HPBar;
     public Image BossAttackChargeBar;
     [Header("PlayerUI")]
@@ -34,12 +36,20 @@ public class UI_Manager : MonoBehaviour
     {
         AttackSpeedStat.text = PersistentData.instance.ChargePerFrame.ToString();
         AttackBonusStat.text = PersistentData.instance.AttackBonus.ToString();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void UpdateLevelNameandBossName(int Level, string BossName)
+    {
+
+        BossNameText.text = BossName;
+        LevelNumberText.text = Level.ToString();
     }
 
     public void UpdateBossHPText(float HP, float MaxHP)

@@ -97,30 +97,39 @@ MonoBehaviour:
   UpgradeConfig:
   - ID: 0
     Name: Sharpen Your Weapon
+    Icon: {fileID: 85840256, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: Your weapon is sharpened. All attack will have +1 bonus
   - ID: 1
     Name: Gimme Speed
+    Icon: {fileID: -1616631636, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: Increase Attack Speed by 25%
   - ID: 2
     Name: Upgrade Dice
+    Icon: {fileID: 630667254, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: Your dice are upgraded.
   - ID: 3
     Name: Vampire
+    Icon: {fileID: 733748956, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: You are bit by a bat in the cave. Heal for +5% of all outgoing damage
   - ID: 4
     Name: A Weird Mushroom
+    Icon: {fileID: -1458347826, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: You've eaten a weird mushroom. Doesn't seem to do anything
   - ID: 5
     Name: Get Some Armor
+    Icon: {fileID: 968716148, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: You've found a helmet. Reduce +5% of incoming damage
   - ID: 6
     Name: Spikes
+    Icon: {fileID: 384808641, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: Spikes grew out on your body. Return +5% of all incoming damage
   - ID: 7
     Name: Cheater
+    Icon: {fileID: 1585433060, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: All your rolls gain +1 advantage (can stack.)
   - ID: 8
     Name: Sleepy Monster
+    Icon: {fileID: 21300000, guid: 6b34387e6afd02a4880bfcad9c853f26, type: 3}
     Description: Your enemy feels sleepy. All their rolls gain +1 disadvantage (can
       stack.)
   DiceConfig:

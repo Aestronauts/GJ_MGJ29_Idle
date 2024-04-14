@@ -19,6 +19,7 @@ public class Upgrade
 {
     public int ID;
     public string Name;
+    public Sprite Icon;
     public string Description;
 }
 
@@ -37,7 +38,7 @@ public class PersistentData : MonoBehaviour
     public List<Dice> DiceConfig;
     public static PersistentData instance;
     [SerializeField]
-    private int LevelNumber = 1;
+    public int LevelNumber = 1;
 
     [Header("Public Player Stats")]
     public float MaxHP;
@@ -69,7 +70,7 @@ public class PersistentData : MonoBehaviour
     {
         MaxHP = 50;//
         ChargePerFrame = 0.075f;//
-        AttackBonus = 2;//
+        AttackBonus = 0;//
         Dice = 0;//
         Vamp = 0;//
         SizeBuff = 1;//

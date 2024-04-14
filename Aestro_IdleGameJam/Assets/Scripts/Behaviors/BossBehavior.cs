@@ -59,6 +59,7 @@ public class BossBehavior : MonoBehaviour
         AttackBonus = data.AttackBonus;
         ChargePerFrame = data.ChargePerFrame;
         UI_Manager.instance.UpdateBossHPText(healthPoints, MaxHP);
+        UI_Manager.instance.UpdateLevelNameandBossName(PersistentData.instance.LevelNumber, data.Name);
     }
 
     // on call, the caller can change the HP of this unit/script.

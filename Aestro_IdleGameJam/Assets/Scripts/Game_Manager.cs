@@ -49,6 +49,8 @@ public class Game_Manager : MonoBehaviour
 
     public GameObject FakeCave;
     public GameObject DiceProjectilePrefab;
+    public GameObject Staff;
+    public GameObject Hat;
 
     // Start is called before the first frame update
     void Awake()
@@ -78,6 +80,9 @@ public class Game_Manager : MonoBehaviour
         UI_Manager.instance.UpdatePlayerHPText(HP, HP);
         //size
         PlayerAnimator.gameObject.transform.localScale = Vector3.one * PersistentData.instance.SizeBuff;
+        PlayerAnimator.speed *= 1+ PersistentData.instance.ChargePerFrame;
+        Staff.transform.localScale *= 1+PersistentData.instance.AttackBonus/2;
+        Hat.transform.localScale *= 1 + PersistentData.instance.Armor*5;
     }
 
     void Update()

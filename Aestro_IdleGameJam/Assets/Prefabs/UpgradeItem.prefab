@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 52.8}
+  m_AnchoredPosition: {x: 0, y: 184}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5258964570730114306
@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Title: {fileID: 4759127324614947245}
+  Icon: {fileID: 9169516060181753093}
   Description: {fileID: 5755066823491646021}
 --- !u!1 &7145760604849254468
 GameObject:
@@ -259,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -64.642006}
-  m_SizeDelta: {x: 167.4629, y: 136.9038}
+  m_AnchoredPosition: {x: -5.9537, y: -78.5848}
+  m_SizeDelta: {x: 282.3713, y: 381.5665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3222272552866893074
 CanvasRenderer:
@@ -318,7 +319,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.65
+  m_fontSize: 60
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
