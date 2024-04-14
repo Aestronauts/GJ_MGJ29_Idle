@@ -18,6 +18,9 @@ public class BossBehavior : MonoBehaviour
     public int moneyValueOnHit = 50;
     private float healthPoints;
     private float MaxHP;
+    public int AttackDice;
+    public float AttackBonus;
+    public float ChargePerFrame;
 
     // events that can hold addition outcomes
     public UnityEvent LinkedEvents_OnHit;
@@ -48,6 +51,9 @@ public class BossBehavior : MonoBehaviour
         Instantiate(data.BossMeshPrefab,this.transform);
         MaxHP = data.MaxHP;
         healthPoints = data.MaxHP;
+        AttackDice = data.AttackDice;
+        AttackBonus = data.AttackBonus;
+        ChargePerFrame = data.ChargePerFrame;
     }
 
     // on call, the caller can change the HP of this unit/script.
@@ -65,6 +71,18 @@ public class BossBehavior : MonoBehaviour
         // react to health change
         HPChangeReact(healthPoints < healthWas);
     }// end of ChangeHP()
+
+    public void BossRollDice()
+    {
+        int Result = RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides);
+        DealDamageToPlayer(Result + AttackBonus);
+    }
+
+    public void DealDamageToPlayer(float Damage)
+    {
+        Game_Manager.instance.TakeDamage(Damage);
+    }
+
 
     // decide if we gained health or lost it and what to do
     private void HPChangeReact(bool _lostHP)

@@ -19,12 +19,16 @@ public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager instance;
 
+    [Header("Player Stats")]
+    public float HP;
 
     [Header("Exposed Private Vars")]
 
     public GAMESTATE GameState;
     [SerializeField]
     private float AttackCharge = 1;
+    [SerializeField]
+    private float BossAttackCharge = 1;
 
     [Header("References")]
     public DiceShooter DiceShooter;
@@ -49,6 +53,7 @@ public class Game_Manager : MonoBehaviour
     private void Start()
     {
         BossBehavior.instance.InitiateBossData(PersistentData.instance.ReturnBossData());
+        HP = PersistentData.instance.MaxHP;
     }
 
     void Update()
@@ -57,10 +62,16 @@ public class Game_Manager : MonoBehaviour
         {
             AttackCharge += PersistentData.instance.ChargePerFrame;
             UI_Manager.instance.UpdateAttackCharge(AttackCharge);
+            BossAttackCharge += BossBehavior.instance.ChargePerFrame;
             if (AttackCharge >= 100)
             {
                 Tick();
                 AttackCharge = 0;
+            }
+            if (BossAttackCharge >= 100)
+            {
+                BossBehavior.instance.BossRollDice();
+                BossAttackCharge = 0;
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -95,6 +106,16 @@ public class Game_Manager : MonoBehaviour
         ThrowADice();
     }
 
+    public void TakeDamage(float Damage)
+    {
+        Debug.Log("Receive Damage!");
+        HP -= Damage;
+        if (HP < 0)
+        {
+            //Player Die
+        }
+    }
+
     public void Click()
     {
         Debug.Log("Click!");
@@ -104,7 +125,7 @@ public class Game_Manager : MonoBehaviour
     public void ThrowADice()
     {
         Debug.Log("Throw a dice!");
-        int RollResult = RNG_Manager.instance.RNG(6);
+        int RollResult = RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].NumberOfSides);
         Debug.Log("Value is:" + RollResult);
         DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
 

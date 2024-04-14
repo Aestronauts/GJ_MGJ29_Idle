@@ -12,7 +12,6 @@ public class DiceShooter : MonoBehaviour
 {
     public float diceForce = 250;
     public Vector2Int manualDiceSettings = new Vector2Int(0, 1);
-    public List<GameObject> DiceList = new List<GameObject>();
     float randomForceX, randomForceY, randomForceZ = 0;
 
     // Update is called once per frame
@@ -31,10 +30,10 @@ public class DiceShooter : MonoBehaviour
 
         for (int i = 0; i < _numberOfDice; i++)
         {
-            if (DiceList.Count > 0 && DiceList.Count >= _diceID)
+            if (PersistentData.instance.DiceConfig.Count > 0 && PersistentData.instance.DiceConfig.Count >= _diceID)
             {
                 Vector3 offset = transform.position + (transform.forward * (i + 1));
-                GameObject diceThrown = Instantiate(DiceList[_diceID], transform.position, transform.rotation);
+                GameObject diceThrown = Instantiate(PersistentData.instance.DiceConfig[_diceID].Prefab, transform.position, transform.rotation);
                 if (!diceThrown.transform.GetComponent<Rigidbody>())
                 {
                     diceThrown.AddComponent<Rigidbody>();

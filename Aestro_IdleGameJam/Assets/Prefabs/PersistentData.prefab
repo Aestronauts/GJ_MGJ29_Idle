@@ -49,14 +49,20 @@ MonoBehaviour:
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 20
+    AttackDice: 3
+    ChargePerFrame: 0.05
   - Name: Boss 2
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 50
+    AttackDice: 3
+    ChargePerFrame: 0.08
   - Name: Boss 3
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 100
+    AttackDice: 4
+    ChargePerFrame: 0.1
   UpgradeConfig:
   - ID: 0
     Name: Gimme Damage
@@ -67,7 +73,25 @@ MonoBehaviour:
   - ID: 2
     Name: Upgrade Dice
     Description: Upgrade Your Dice!
+  DiceConfig:
+  - NumberOfSides: 4
+    Prefab: {fileID: 6731961743414908288, guid: 9ce7babf59712064bbb5ac284a831ad3,
+      type: 3}
+  - NumberOfSides: 6
+    Prefab: {fileID: 471703649023812193, guid: cea6546c75a21ca4d8e53a07823d665e, type: 3}
+  - NumberOfSides: 8
+    Prefab: {fileID: 2574780572168006038, guid: 5050e0f990d4ae94e8129aa24aaa7b1d,
+      type: 3}
+  - NumberOfSides: 10
+    Prefab: {fileID: 2709101202379397562, guid: 498211e9089ef41478d336844e7bb9fa,
+      type: 3}
+  - NumberOfSides: 12
+    Prefab: {fileID: 4235348378811493224, guid: eebe9ee08d52a37448c98085fd931c60,
+      type: 3}
+  - NumberOfSides: 20
+    Prefab: {fileID: 332649561189206568, guid: 3a92407d58cb0394f97f8ec51b8c9fe5, type: 3}
   LevelNumber: 1
+  MaxHP: 0
   ChargePerFrame: 0.5
   AttackBonus: 0
   Dice: 1
