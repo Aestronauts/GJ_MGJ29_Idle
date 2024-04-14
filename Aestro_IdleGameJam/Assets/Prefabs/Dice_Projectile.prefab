@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5931523747849788100}
   - component: {fileID: 6328759138178125579}
   - component: {fileID: 8511066098747028216}
+  - component: {fileID: -6060968036801411170}
   m_Layer: 0
   m_Name: Dice_Projectile
   m_TagString: Untagged
@@ -68,3 +69,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6060968036801411170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069574165382237109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  crashSpeed: 20
+  timeToRise: 1
+  curveInfluence: 0.005
+  target: {fileID: 0}
