@@ -18,12 +18,27 @@ public class LerpInAnArc : MonoBehaviour
 
     private bool goUp = true;
 
+    private Dice_Projectile refDice_Proj;
+
     void Awake()
     {
         // Position the cube at the origin.
         startPos = transform.position;    
-        dist_total =  Vector3.Distance(target.position, startPos);
-        print($"Dist_Total: {dist_total}");
+        
+
+        if (!GameObject.FindGameObjectWithTag("BossTarget"))
+        {
+            refDice_Proj = transform.GetComponent<Dice_Projectile>();
+            refDice_Proj.enabled = true;
+            this.enabled = false;
+        }
+        else
+        {
+            target = GameObject.FindGameObjectWithTag("BossTarget").transform;
+            refDice_Proj = transform.GetComponent<Dice_Projectile>();
+            refDice_Proj.enabled = false;
+            dist_total = Vector3.Distance(target.position, startPos);
+        }
     }
 
     private void OnEnable()
@@ -77,8 +92,18 @@ public class LerpInAnArc : MonoBehaviour
     public void OnTriggerEnter(Collider trig)
     {
         // if boss enemy
-        // explode vfx
-        // turn off look at
+        if(trig.tag == "BossTarget")
+        {
+            print("EXPLODE ON BOSS");
+            // explode vfx
+
+
+            // turn off look at
+            goUp = false;
+            transform.LookAt(target);
+            Destroy(this, 1.5f);
+        }
+
     }
 
 }// end of LerpInAnArc class
