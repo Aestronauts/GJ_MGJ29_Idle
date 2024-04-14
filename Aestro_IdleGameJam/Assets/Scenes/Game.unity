@@ -699,7 +699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!320 &219664964
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1826,8 +1826,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713320431}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0677833, y: -0.94856536, z: -0.11492327, w: -0.28709206}
-  m_LocalPosition: {x: -4.864, y: 0.299, z: -3.987}
+  m_LocalRotation: {x: -0.05477565, y: 0.85263467, z: 0.09129916, w: 0.511545}
+  m_LocalPosition: {x: -12.75, y: 1.24, z: -5.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3665,7 +3665,7 @@ PrefabInstance:
     - target: {fileID: 5613349510134190687, guid: 24fc7d115192df44b8fcddb53d798208,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4001,7 +4001,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 7d5f3cb4aef60fa42a57baa8991a0d92, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -4947,6 +4947,11 @@ PrefabInstance:
       propertyPath: SequenceObject
       value: 
       objectReference: {fileID: 336697470}
+    - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
+        type: 3}
+      propertyPath: PlayerDeathSequenceObject
+      value: 
+      objectReference: {fileID: 1774131031}
     - target: {fileID: 5076350558090599853, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
         type: 3}
       propertyPath: m_Name

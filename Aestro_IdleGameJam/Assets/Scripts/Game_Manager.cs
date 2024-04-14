@@ -45,6 +45,7 @@ public class Game_Manager : MonoBehaviour
     //public Animator BossAnimator;
 
     public GameObject SequenceObject;
+    public GameObject PlayerDeathSequenceObject;
 
     // Start is called before the first frame update
     void Awake()
@@ -155,7 +156,10 @@ public class Game_Manager : MonoBehaviour
         UI_Manager.instance.UpdatePlayerHPText(HP, PersistentData.instance.MaxHP);
         if (HP < 0)
         {
-            //Player Die
+            PlayerAnimator.gameObject.SetActive(false);
+       
+           PlayerDeathSequenceObject.SetActive(true);
+           PlayerDeathSequenceObject.GetComponent<PlayableDirector>().Play();
         }
     }
 
