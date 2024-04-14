@@ -81,7 +81,7 @@ public class BossBehavior : MonoBehaviour
     public void BossRollDice()
     {
 
-        int Result = 0;
+        int Result = 1000;
         for (int i = 0; i < 1 + PersistentData.instance.RollwithDisadvantage; i++)
         {
             Result = Mathf.Min(Result, RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides));
