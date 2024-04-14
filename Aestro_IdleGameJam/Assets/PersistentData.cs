@@ -75,7 +75,7 @@ public class PersistentData : MonoBehaviour
         Dice = 0;//
         Vamp = 0;//
         SizeBuff = 1;//
-        Armor = 0;//
+        Armor = 0.2f;//
         ReturnDamage = 0;//
         RollwithAdvantage = 0;
         RollwithDisadvantage = 0;
