@@ -13,10 +13,10 @@ public class PlayerCameraManager : MonoBehaviour
 
     public CinemachineVirtualCamera MainCamera;
     //public CinemachineVirtualCamera MainCameraShake;
-
     public CinemachineVirtualCamera DieCamera;
-
     public CinemachineVirtualCamera CaveCamera;
+    public CinemachineVirtualCamera FrontofPlayerCamera;
+    public CinemachineVirtualCamera WideCamera;
 
     public GameObject hiddencave;
 
@@ -30,8 +30,6 @@ public class PlayerCameraManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
 
     }
 
@@ -50,6 +48,14 @@ public class PlayerCameraManager : MonoBehaviour
         {
             SwitchToCaveCam();
         }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SwitchToWideCamera();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            SwitchToFrontofPlayerCamera();  
+        }
     }
 
     public void SwitchToMainCam()
@@ -58,6 +64,8 @@ public class PlayerCameraManager : MonoBehaviour
         MainCamera.Priority = 10;
         DieCamera.Priority = 0;
         CaveCamera.Priority = 0;
+        WideCamera.Priority = 0;
+        FrontofPlayerCamera.Priority = 0;
     }
 
     public void SwitchToDieCam()
@@ -67,6 +75,8 @@ public class PlayerCameraManager : MonoBehaviour
         DieCamera.Priority = 10;
         MainCamera.Priority = 0;    
         CaveCamera.Priority = 0;
+        WideCamera.Priority = 0;
+        FrontofPlayerCamera.Priority = 0;
     }
 
     public void SwitchToCaveCam()
@@ -74,6 +84,29 @@ public class PlayerCameraManager : MonoBehaviour
         hiddencave.SetActive(true);
 
         CaveCamera.Priority = 10;
+        DieCamera.Priority = 0;
+        MainCamera.Priority = 0;
+        WideCamera.Priority = 0;
+        FrontofPlayerCamera.Priority = 0;
+    }
+
+    public void SwitchToFrontofPlayerCamera()
+    {
+        hiddencave.SetActive(false);
+       
+        FrontofPlayerCamera.Priority = 10;
+        CaveCamera.Priority = 0;
+        DieCamera.Priority = 0;
+        MainCamera.Priority = 0;
+        WideCamera.Priority = 0;
+    }
+    public void SwitchToWideCamera()
+    {
+        hiddencave.SetActive(false);
+
+        WideCamera.Priority = 10;
+        FrontofPlayerCamera.Priority = 0;
+        CaveCamera.Priority = 0;
         DieCamera.Priority = 0;
         MainCamera.Priority = 0;
     }
