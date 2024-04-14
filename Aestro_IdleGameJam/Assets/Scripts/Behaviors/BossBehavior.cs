@@ -89,10 +89,7 @@ public class BossBehavior : MonoBehaviour
         Game_Manager.instance.TakeDamage(Damage);
     }
 
-    public void BossDeath()
-    {
-        BossAnimator.SetTrigger("Die");
-    }
+  
 
 
     // decide if we gained health or lost it and what to do
