@@ -181,7 +181,7 @@ public class Game_Manager : MonoBehaviour
         BossBehavior.instance.gameObject.SetActive(false);
         SequenceObject.SetActive(true);
         SequenceObject.GetComponent<PlayableDirector>().Play();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(11);
         UI_Manager.instance.SpawnUpgrades();
     }
 }
