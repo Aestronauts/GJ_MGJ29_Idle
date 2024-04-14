@@ -33,10 +33,10 @@ public class GameMusicManager : MonoBehaviour
 
     public void LateUpdate()
     {
-        if (Time.time <= lastUpdateTime + 3 || changingSongNow)
+        if (Time.time <= lastUpdateTime + 3 || changingSongNow) // check for song finished
             return;
 
-        if (lastGameState != refGameManager.GameState)
+        if (lastGameState != refGameManager.GameState || !aSource_Music.isPlaying)
         {
             print("game state not aligning");
             changingSongNow = true;
@@ -113,7 +113,8 @@ public class GameMusicManager : MonoBehaviour
             yield return new WaitForSeconds(0.025f);
         }
         //change song
-        aSource_Music.Stop();       
+        if(!aSource_Music.isPlaying)
+            aSource_Music.Stop();       
         aSource_Music.clip = _nextClip;
         aSource_Music.Play();
 

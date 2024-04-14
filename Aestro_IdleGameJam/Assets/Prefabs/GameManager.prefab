@@ -45,7 +45,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: f8301d480b7e09143a9f15f13203f4b3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -180,11 +180,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 0
   GameState: 0
+  pauseMenuObj: {fileID: 0}
   AttackCharge: 1
   BossAttackCharge: 1
   DiceShooter: {fileID: 0}
   PlayerDiceUI: {fileID: 0}
+  BossDiceUI: {fileID: 0}
   PlayerAnimator: {fileID: 0}
+  SequenceObject: {fileID: 0}
 --- !u!114 &4023383831086137527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,9 +223,11 @@ MonoBehaviour:
   clips_incombat:
   - {fileID: 8300000, guid: eee8d474b82438644b13ffe37c04d723, type: 3}
   - {fileID: 8300000, guid: 14f121ebd864c804aa46dd9bd30194e4, type: 3}
+  - {fileID: 8300000, guid: 9034686e193aa82449ef5c400f457eb3, type: 3}
   clips_postcombat:
   - {fileID: 8300000, guid: a451fbebf59d5594d8719561c2b0cdbc, type: 3}
   - {fileID: 8300000, guid: 5f52ed30cc3b9fb4f8fde449b2f3a21a, type: 3}
+  - {fileID: 8300000, guid: dc13190d7f6890a4ca03511a6fd3cf3c, type: 3}
 --- !u!1 &5882496501526790901
 GameObject:
   m_ObjectHideFlags: 0

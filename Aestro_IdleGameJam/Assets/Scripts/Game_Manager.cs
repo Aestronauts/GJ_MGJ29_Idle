@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService; // doesnt build
 using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.Mathematics;
