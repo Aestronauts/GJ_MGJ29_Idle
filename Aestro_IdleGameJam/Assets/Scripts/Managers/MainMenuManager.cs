@@ -24,6 +24,20 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
+    public void UpdateSliderVisuals()
+    {
+        float outVolume = 0;
+
+        AMG_Master.GetFloat("VolumeMusic", out outVolume);
+        sliderVol_Music.value = outVolume;
+
+        AMG_Master.GetFloat("VolumeSfx", out outVolume);
+        sliderVol_Sfx.value = outVolume;
+
+        AMG_Master.GetFloat("VolumeAtmospheric", out outVolume);
+        sliderVol_Atmosphere.value = outVolume;
+    }
+
 
     public void ChangeSliderVolume(Slider _sliderObj)
     {

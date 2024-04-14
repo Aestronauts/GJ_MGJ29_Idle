@@ -3890,6 +3890,41 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2774424699646685579, guid: 65c1b0e5cc529a947947078dabb73e3a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774424699646685579, guid: 65c1b0e5cc529a947947078dabb73e3a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774424699646685579, guid: 65c1b0e5cc529a947947078dabb73e3a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1163590245660170617}
+    - target: {fileID: 2774424699646685579, guid: 65c1b0e5cc529a947947078dabb73e3a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774424699646685579, guid: 65c1b0e5cc529a947947078dabb73e3a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TogglePause
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774424699646685579, guid: 65c1b0e5cc529a947947078dabb73e3a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Game_Manager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774424699646685579, guid: 65c1b0e5cc529a947947078dabb73e3a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2958138064501880010, guid: 65c1b0e5cc529a947947078dabb73e3a,
         type: 3}
       propertyPath: m_IsActive
@@ -4018,7 +4053,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7555466549491187813, guid: 65c1b0e5cc529a947947078dabb73e3a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109996236}
   m_SourcePrefab: {fileID: 100100000, guid: 65c1b0e5cc529a947947078dabb73e3a, type: 3}
 --- !u!1 &2109996234 stripped
 GameObject:
@@ -4026,6 +4065,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2109996233}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2109996235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7555466549491187813, guid: 65c1b0e5cc529a947947078dabb73e3a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2109996233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2109996236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109996235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.49056602, g: 0.39122322, b: 0.14115341, a: 1}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1163590245660170616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4124,6 +4184,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9f69fb20964d742a4cd272dd8e62fd, type: 3}
+--- !u!114 &1163590245660170617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1163590245660170616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f72fe646360e294f99884eefb7cd95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
