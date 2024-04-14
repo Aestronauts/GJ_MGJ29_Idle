@@ -5,17 +5,16 @@ using UnityEngine;
 public class LerpInAnArc : MonoBehaviour
 {
     // Adjust the speed for the application.
-    public float speed = 5.0f;
-    public float crashSpeed = 5.0f;
+    public float speed = 1.0f;
+    public float crashSpeed = 20.0f;
     public float timeToRise = 1f;
-    public float curveInfluence = 0.025f;
+    public float curveInfluence = 0.005f;
 
     // The target (cylinder) position.
     public Transform target;
     private Vector3 startPos;
     private float dist_total, dist_current; // NOTE - get distance, then do some weird math to arc up when close to the middle
     private float curve = 0;
-    private float curveHighest = 0;
 
     private bool goUp = true;
 
@@ -46,7 +45,6 @@ public class LerpInAnArc : MonoBehaviour
         {
             print("first half");
             curve = (dist_total - dist_current) * curveInfluence;
-            curveHighest = curve;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
             transform.position += new Vector3(0, curve, 0);
         }
