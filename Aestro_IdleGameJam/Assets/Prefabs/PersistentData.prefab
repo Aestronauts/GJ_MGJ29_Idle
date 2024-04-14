@@ -51,96 +51,154 @@ MonoBehaviour:
     MaxHP: 8
     AttackDice: 2
     AttackBonus: 0
-    ChargePerFrame: 0.025
+    ChargePerFrame: 0.03
   - Name: Hairy Horned Henry
     BossMeshPrefab: {fileID: 6167768994667879822, guid: e058394a61216724a84bdf2bb6131370,
       type: 3}
     MaxHP: 12
     AttackDice: 3
     AttackBonus: 1
-    ChargePerFrame: 0.018
+    ChargePerFrame: 0.06
   - Name: The Metadron
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 9478b71f68c0fbc44a07d1160aca6b3e,
       type: 3}
     MaxHP: 25
     AttackDice: 4
-    AttackBonus: 1
-    ChargePerFrame: 0.035
+    AttackBonus: 2
+    ChargePerFrame: 0.09
   - Name: Strawberry Milk
     BossMeshPrefab: {fileID: 6167768994667879822, guid: c674d4483da5d29478533e689e04fae7,
       type: 3}
     MaxHP: 50
     AttackDice: 4
-    AttackBonus: 2
-    ChargePerFrame: 0.05
+    AttackBonus: 4
+    ChargePerFrame: 0.12
   - Name: Chcoloate Bear
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 6e938f3baa3f01443a909d617b40b9ea,
       type: 3}
     MaxHP: 100
     AttackDice: 4
-    AttackBonus: 2
-    ChargePerFrame: 0.075
+    AttackBonus: 6
+    ChargePerFrame: 0.2
   - Name: The Dark One
     BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
       type: 3}
     MaxHP: 200
     AttackDice: 5
-    AttackBonus: 3
-    ChargePerFrame: 0.1
+    AttackBonus: 8
+    ChargePerFrame: 0.4
   - Name: The Truth
     BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
       type: 3}
     MaxHP: 400
     AttackDice: 5
-    AttackBonus: 3
-    ChargePerFrame: 0.25
+    AttackBonus: 10
+    ChargePerFrame: 0.6
   UpgradeConfig:
   - ID: 0
+    Grade: 1
     Name: Attack Bonus
     Icon: {fileID: 85840256, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: Attune your determination to your staff. All attack will have +1
+    Description: Attune your determination to your staff. All attack will have +2
       bonus
   - ID: 1
+    Grade: 1
     Name: Speed
     Icon: {fileID: -1616631636, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: You found a magic fungi in your bag. Should you eat it? Increase
       Attack Speed by 50%
   - ID: 2
+    Grade: 1
     Name: Upgrade Dice
     Icon: {fileID: 630667254, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: You consume the magic power within the crystals.Your dice are upgraded.
   - ID: 3
+    Grade: 1
     Name: Vampire
     Icon: {fileID: 733748956, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: You found edible crystals along the journey. Heal for +20% of all
       outgoing damage
   - ID: 4
-    Name: A Weird Mushroom
+    Grade: 1
+    Name: Pray to the goddess
     Icon: {fileID: -1458347826, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: You've eaten a weird mushroom. Doesn't seem to do anything
+    Description: The Mushroom Goddess has heard your cries and prayers. Increase
+      MaxHP by 50%
   - ID: 5
+    Grade: 0
     Name: Get Some Armor
     Icon: {fileID: 968716148, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: Your hat begins crystalizing. Reduce +10% of incoming damage
   - ID: 6
+    Grade: 1
     Name: Spikes
     Icon: {fileID: 384808641, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: You learned the dragons pattern of attack. Return +10% of all incoming
       damage
   - ID: 7
+    Grade: 1
     Name: Cheater
     Icon: {fileID: 1585433060, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
     Description: The mushrooms you save start chanting your name. All your rolls
       gain +1 advantage (can stack.)
   - ID: 8
+    Grade: 1
     Name: Disadvantage
     Icon: {fileID: 21300000, guid: 6b34387e6afd02a4880bfcad9c853f26, type: 3}
     Description: The captured mushrooms will start jumping on the boss. All their
       rolls gain +1 disadvantage (can stack.)
   - ID: 9
+    Grade: 2
     Name: The Ultimate Force
     Icon: {fileID: 21300000, guid: 6b34387e6afd02a4880bfcad9c853f26, type: 3}
     Description: Get a little bit of everything
+  - ID: 10
+    Grade: 0
+    Name: Attack Bonus
+    Icon: {fileID: 85840256, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
+    Description: Attune your determination to your staff. All attack will have +1
+      bonus
+  - ID: 11
+    Grade: 0
+    Name: Speed
+    Icon: {fileID: -1616631636, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
+    Description: You found a magic fungi in your bag. Should you eat it? Increase
+      Attack Speed by 25%
+  - ID: 12
+    Grade: 0
+    Name: Vampire
+    Icon: {fileID: 733748956, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
+    Description: You found edible crystals along the journey. Heal for +10% of all
+      outgoing damage
+  - ID: 13
+    Grade: 1
+    Name: Pray to the goddess
+    Icon: {fileID: -1458347826, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
+    Description: The Mushroom Goddess has heard your cries and prayers. Increase
+      MaxHP by 25%
+  - ID: 14
+    Grade: 2
+    Name: Pray to the goddess
+    Icon: {fileID: -1458347826, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
+    Description: The Mushroom Goddess has heard your cries and prayers. Increase
+      MaxHP by 100%
+  - ID: 15
+    Grade: 2
+    Name: Attack Bonus
+    Icon: {fileID: 85840256, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
+    Description: Attune your determination to your staff. All attack will have +4
+      bonus
+  - ID: 16
+    Grade: 1
+    Name: Get Some Armor
+    Icon: {fileID: 968716148, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
+    Description: Your hat begins crystalizing. Reduce +20% of incoming damage
+  - ID: 17
+    Grade: 2
+    Name: Speed
+    Icon: {fileID: -1616631636, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
+    Description: You found a magic fungi in your bag. Should you eat it? Increase
+      Attack Speed by 100%
   DiceConfig:
   - NumberOfSides: 4
     Prefab: {fileID: 6731961743414908288, guid: 9ce7babf59712064bbb5ac284a831ad3,
@@ -160,7 +218,7 @@ MonoBehaviour:
     Prefab: {fileID: 332649561189206568, guid: 3a92407d58cb0394f97f8ec51b8c9fe5, type: 3}
   LevelNumber: 1
   MaxHP: 0
-  ChargePerFrame: 0.65
+  ChargePerFrame: 0.5
   AttackBonus: 0
   Dice: 1
   Vamp: 0

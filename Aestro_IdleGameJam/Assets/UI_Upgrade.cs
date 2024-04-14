@@ -9,11 +9,13 @@ public class UI_Upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI Title;
     public Image Icon;
     public TMPro.TextMeshProUGUI Description;
+    public List<GameObject> Grades;
 
     public void LoadInfo(Upgrade _info)
     {
         info = _info;
         Title.text = info.Name;
+        Grades[_info.Grade].SetActive(true);
         Icon.sprite = info.Icon;
         Description.text = info.Description;
     }

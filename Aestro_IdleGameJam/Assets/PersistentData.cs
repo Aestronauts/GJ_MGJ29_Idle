@@ -18,6 +18,7 @@ public class Boss
 public class Upgrade
 {
     public int ID;
+    public int Grade;
     public string Name;
     public Sprite Icon;
     public string Description;

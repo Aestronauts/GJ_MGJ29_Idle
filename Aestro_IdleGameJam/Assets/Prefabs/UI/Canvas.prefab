@@ -2079,6 +2079,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPText: {fileID: 895549050181636652}
+  BossNameText: {fileID: 0}
+  LevelNumberText: {fileID: 0}
   HPBar: {fileID: 6093413820080956320}
   BossAttackChargeBar: {fileID: 6783766636339074749}
   PlayerHPText: {fileID: 8512978080813113848}

@@ -116,8 +116,8 @@ public class UI_Manager : MonoBehaviour
         }
         else if (info.ID == 4) // Big Boi
         {
-            PersistentData.instance.SizeBuff *= 2.5f;
-            PersistentData.instance.MaxHP *= 1.25f;
+            PersistentData.instance.SizeBuff *= 1.5f;
+            PersistentData.instance.MaxHP *= 1.5f;
         }
         else if (info.ID == 5) // Armor
         {
@@ -137,13 +137,47 @@ public class UI_Manager : MonoBehaviour
         }
         else if (info.ID == 9) // RollwithAdvantage
         {
-            PersistentData.instance.SizeBuff *= 1.5f;
+            PersistentData.instance.SizeBuff *= 1.25f;
             PersistentData.instance.MaxHP *= 1.15f;
             PersistentData.instance.Vamp += 0.1f;
             PersistentData.instance.ChargePerFrame *= 1.2f;
             PersistentData.instance.AttackBonus += 0.5f;
             PersistentData.instance.Armor += 0.05f;
             PersistentData.instance.ReturnDamage += 0.05f;
+        }
+        else if (info.ID == 10)
+        {
+            PersistentData.instance.AttackBonus += 1;
+        }
+        else if (info.ID == 11) // attack speed bonus
+        {
+            PersistentData.instance.ChargePerFrame *= 1.25f;
+        }
+        else if (info.ID == 12) // vamp
+        {
+            PersistentData.instance.Vamp += 0.1f;
+        }
+        else if (info.ID == 13) // Big Boi
+        {
+            PersistentData.instance.SizeBuff *= 1.25f;
+            PersistentData.instance.MaxHP *= 1.25f;
+        }
+        else if (info.ID == 14) // Big Boi
+        {
+            PersistentData.instance.SizeBuff *= 5;
+            PersistentData.instance.MaxHP *= 2;
+        }
+        if (info.ID == 15) // attack bonus
+        {
+            PersistentData.instance.AttackBonus += 4;
+        }
+        else if (info.ID == 16) // Armor
+        {
+            PersistentData.instance.Armor += 0.2f;
+        }
+        else if (info.ID == 17) // Armor
+        {
+            PersistentData.instance.ChargePerFrame *= 2;
         }
         Game_Manager.instance.LoadNextScene();
     }
