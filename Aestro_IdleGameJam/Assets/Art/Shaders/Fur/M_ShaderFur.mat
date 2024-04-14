@@ -109,7 +109,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _FurJoint: 3
-    - _FurLength: 0.09
+    - _FurLength: 0.276
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -128,8 +128,8 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _TessFactor: 22.8
-    - _TessMaxDist: 1
-    - _TessMinDist: 0.5
+    - _TessMaxDist: 4
+    - _TessMinDist: 2
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

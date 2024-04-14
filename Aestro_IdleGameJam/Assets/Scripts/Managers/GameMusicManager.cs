@@ -16,7 +16,7 @@ public class GameMusicManager : MonoBehaviour
     [Space]
     public AudioSource aSource_Music;
     public AudioMixer AMG_Master;
-    public int currentSongId = 0, nextSongId = 0;
+    public int currentSongId = -1, nextSongId = 0;
     public List<AudioClip> clips_precombat, clips_incombat, clips_postcombat;
     private GAMESTATE lastGameState;
     private bool changingSongNow = false;
@@ -24,13 +24,14 @@ public class GameMusicManager : MonoBehaviour
 
     private void OnEnable()
     {
+        currentSongId = -1;
         lastGameState = refGameManager.GameState;
         ChangeSong();
     }
 
     public void LateUpdate()
     {
-        if (lastUpdateTime > Time.time + 3 || changingSongNow)
+        if (Time.time < lastUpdateTime + 3 || changingSongNow)
             return;
 
         if (lastGameState != refGameManager.GameState)
@@ -47,21 +48,27 @@ public class GameMusicManager : MonoBehaviour
     {
         Vector2Int songRange = new Vector2Int(0, 1);
         AudioClip nextClip = null;
-
+        int maxCount = 0;
         switch (refGameManager.GameState)
         {
             case GAMESTATE.INCOMBAT:
-                songRange.y = Random.Range(songRange.x, clips_incombat.Count-1);
+                maxCount = clips_incombat.Count-1;
+                print($"number: {maxCount}");
+                songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);
                 nextClip = clips_incombat[nextSongId];
                 break;
             case GAMESTATE.POSTCOMBAT:
-                songRange.y = Random.Range(songRange.x, clips_postcombat.Count-1);
+                maxCount = clips_incombat.Count-1;
+                print($"number: {maxCount}");
+                songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);
                 nextClip = clips_postcombat[nextSongId];
                 break;
             case GAMESTATE.PRECOMBAT:
-                songRange.y = Random.Range(songRange.x, clips_precombat.Count-1);
+                maxCount = clips_incombat.Count-1;
+                print($"number: {maxCount}");
+                songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);
                 nextClip = clips_precombat[nextSongId];
                 break;
