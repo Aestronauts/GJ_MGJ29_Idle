@@ -616,9 +616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  midPoint: {fileID: 0}
-  endPoint: {fileID: 1492645710}
+  speed: 2
+  target: {fileID: 1492645710}
 --- !u!4 &799001518
 Transform:
   m_ObjectHideFlags: 0
@@ -914,9 +913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  midPoint: {fileID: 0}
-  endPoint: {fileID: 1492645710}
+  speed: 2
+  target: {fileID: 1492645710}
 --- !u!4 &1191054498
 Transform:
   m_ObjectHideFlags: 0
@@ -1210,9 +1208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  midPoint: {fileID: 0}
-  endPoint: {fileID: 1492645710}
+  speed: 2
+  target: {fileID: 1492645710}
 --- !u!4 &1491100111
 Transform:
   m_ObjectHideFlags: 0
@@ -1264,9 +1261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  midPoint: {fileID: 0}
-  endPoint: {fileID: 1492645710}
+  speed: 2
+  target: {fileID: 1492645710}
 --- !u!4 &1539230391
 Transform:
   m_ObjectHideFlags: 0
@@ -1317,6 +1313,7 @@ MonoBehaviour:
   AttackDice: 0
   AttackBonus: 0
   ChargePerFrame: 0
+  BossAnimator: {fileID: 0}
   LinkedEvents_OnHit:
     m_PersistentCalls:
       m_Calls: []

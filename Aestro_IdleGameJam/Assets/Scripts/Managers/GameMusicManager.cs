@@ -108,7 +108,7 @@ public class GameMusicManager : MonoBehaviour
         for (float i = currentVolume; i >= -30; i--)
         {
             AMG_Master.SetFloat("VolumeMaster", i);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
         //change song
         aSource_Music.Stop();       
@@ -119,7 +119,7 @@ public class GameMusicManager : MonoBehaviour
         for (float i = -50; i <= currentVolume; i++)
         {
             AMG_Master.SetFloat("VolumeMaster", i);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
 
         lastGameState = refGameManager.GameState;

@@ -4,28 +4,32 @@ using UnityEngine;
 
 public class LerpInAnArc : MonoBehaviour
 {
-    public float count;
-    public Transform midPoint, endPoint;
-    private Vector3 startPointPos;
+    // Adjust the speed for the application.
+    public float speed = 2.0f;
 
-    private void OnEnable()
+    // The target (cylinder) position.
+    public Transform target;
+    private Vector3 startPos;
+    private float distance; // NOTE - get distance, then do some weird math to arc up when close to the middle
+
+    void Awake()
     {
-        startPointPos = transform.position;
-        if (endPoint)
-            midPoint.position = startPointPos + endPoint.position / 2 + new Vector3(0, Random.Range(-10, 10), 0);
+        // Position the cube at the origin.
+        startPos = transform.position;         
     }
 
     void Update()
     {
-        if (count < 1.0f)
-        {
-            count += 1.0f * Time.deltaTime;
+        // Move our position a step closer to the target.
+        var step = speed * Time.deltaTime; // calculate distance to move
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-            Vector3 m1 = Vector3.Lerp(startPointPos, midPoint.position, count);
-            Vector3 m2 = Vector3.Lerp(midPoint.position, endPoint.position, count);
-            transform.position = Vector3.Lerp(m1, m2, count);
+        // Check if the position of the cube and sphere are approximately equal.
+        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        {
+            // Swap the position of the cylinder.
+            target.position *= -1.0f;
         }
     }
-
 
 }// end of LerpInAnArc class
