@@ -31,8 +31,13 @@ public class GameMusicManager : MonoBehaviour
         changingSongNow = true;
     }
 
-    public void LateUpdate()
+    public void FixedUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.RightBracket))
+            Time.timeScale += 1;
+        if (Input.GetKeyDown(KeyCode.RightBracket))
+            Time.timeScale -= 1;
+
         if (Time.time <= lastUpdateTime + 3 || changingSongNow) // check for song finished
             return;
 
@@ -55,7 +60,7 @@ public class GameMusicManager : MonoBehaviour
         switch (refGameManager.GameState)
         {
             case GAMESTATE.INCOMBAT:
-                maxCount = clips_incombat.Count-1;
+                maxCount = clips_incombat.Count;
                 print($"number: {maxCount}");
                 songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);
@@ -64,7 +69,7 @@ public class GameMusicManager : MonoBehaviour
                 nextClip = clips_incombat[nextSongId];
                 break;
             case GAMESTATE.POSTCOMBAT:
-                maxCount = clips_incombat.Count-1;
+                maxCount = clips_incombat.Count;
                 print($"number: {maxCount}");
                 songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);
@@ -73,7 +78,7 @@ public class GameMusicManager : MonoBehaviour
                 nextClip = clips_postcombat[nextSongId];
                 break;
             case GAMESTATE.PRECOMBAT:
-                maxCount = clips_incombat.Count-1;
+                maxCount = clips_incombat.Count;
                 print($"number: {maxCount}");
                 songRange.y = Random.Range(songRange.x, maxCount);
                 nextSongId = Random.Range(songRange.x, songRange.y);

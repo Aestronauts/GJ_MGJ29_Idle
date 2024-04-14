@@ -33,7 +33,7 @@ public class LerpInAnArc : MonoBehaviour
         ActivateArc();
     }
 
-    void Update()
+    void FixedUpdate()
     {              
         // Move our position a step closer to the target.
         var step = speed * Time.deltaTime; // calculate distance to move        

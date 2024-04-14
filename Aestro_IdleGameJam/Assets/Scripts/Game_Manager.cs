@@ -32,6 +32,7 @@ public class Game_Manager : MonoBehaviour
     private GAMESTATE GameState_BeforePause;
     private float timescale_beforePause = 1;
     public GameObject pauseMenuObj;
+    private int clickCharge = 0;
     [SerializeField]
     private float AttackCharge = 1;
     [SerializeField]
@@ -181,6 +182,7 @@ public class Game_Manager : MonoBehaviour
 
     public void Click()
     {
+        clickCharge++;
         Debug.Log("Click!");
         //ThrowADice();
     }
@@ -212,7 +214,8 @@ public class Game_Manager : MonoBehaviour
         //BossAnimator.SetTrigger("Attack");
         //Vamp
         HP += Outgoing_Damage * PersistentData.instance.Vamp;
-        BossBehavior.instance.ChangeHP(-Outgoing_Damage, false);
+        BossBehavior.instance.ChangeHP(-(Outgoing_Damage + clickCharge), false);
+        clickCharge = 0;
     }
 
     private IEnumerator DiceStop(string _numberToShow)
