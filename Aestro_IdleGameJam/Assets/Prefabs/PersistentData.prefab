@@ -84,14 +84,14 @@ MonoBehaviour:
     BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
       type: 3}
     MaxHP: 100
-    AttackDice: 6
+    AttackDice: 5
     AttackBonus: -10
     ChargePerFrame: 0.1
   - Name: Boss 7 - The Truth
     BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
       type: 3}
     MaxHP: 222
-    AttackDice: 4
+    AttackDice: 5
     AttackBonus: -3
     ChargePerFrame: 0.25
   UpgradeConfig:

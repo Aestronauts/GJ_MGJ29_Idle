@@ -3329,6 +3329,12 @@ PrefabInstance:
       objectReference: {fileID: 336697470}
     - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
         type: 3}
+      propertyPath: DiceProjectilePrefab
+      value: 
+      objectReference: {fileID: 2069574165382237109, guid: d252db09971ded348a8cbce49f1dfce4,
+        type: 3}
+    - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
+        type: 3}
       propertyPath: PlayerDeathSequenceObject
       value: 
       objectReference: {fileID: 1774131031}

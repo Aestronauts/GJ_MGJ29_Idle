@@ -48,6 +48,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject PlayerDeathSequenceObject;
 
     public GameObject FakeCave;
+    public GameObject DiceProjectilePrefab;
 
     // Start is called before the first frame update
     void Awake()
@@ -206,6 +207,7 @@ public class Game_Manager : MonoBehaviour
                 _child.GetComponent<TMP_Text>().text = _numberToShow;
         }*/
         yield return new WaitForSeconds(1);
+        StartCoroutine(AttackSequence(int.Parse(_numberToShow)));
         Attack(CalculateOutgoingDamage(int.Parse(_numberToShow)));
         yield return new WaitForSeconds(1);
         PlayerDiceUI.Rolling = true;
@@ -220,5 +222,15 @@ public class Game_Manager : MonoBehaviour
         SequenceObject.GetComponent<PlayableDirector>().Play();
         yield return new WaitForSeconds(11);
         UI_Manager.instance.SpawnUpgrades();
+    }
+
+    private IEnumerator AttackSequence(int i)
+    {
+        for(int j = 0; j < i; j++)
+        {
+            GameObject g = Instantiate(DiceProjectilePrefab, transform.position, quaternion.identity);
+            g.GetComponent<Dice_Projectile>().Initiate(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].Prefab, BossBehavior.instance.transform);
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 }
