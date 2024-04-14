@@ -21,6 +21,7 @@ public enum GAMESTATE
 public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager instance;
+    public static bool GameIsPaused = false;
 
     [Header("Player Stats")]
     public float HP;
@@ -28,6 +29,9 @@ public class Game_Manager : MonoBehaviour
     [Header("Exposed Private Vars")]
 
     public GAMESTATE GameState;
+    private GAMESTATE GameState_BeforePause;
+    private float timescale_beforePause = 1;
+    public GameObject pauseMenuObj;
     [SerializeField]
     private float AttackCharge = 1;
     [SerializeField]
@@ -92,6 +96,30 @@ public class Game_Manager : MonoBehaviour
             {
                 Click();
             }
+        }
+        // at the end of update
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+            TogglePause();
+    }
+
+    public void TogglePause()
+    {
+        if (!GameIsPaused)
+        {
+            GameIsPaused = true;
+            GameState_BeforePause = GameState;
+            GameState = GAMESTATE.PAUSECOMBAT;
+            if(pauseMenuObj)
+                pauseMenuObj.SetActive(GameIsPaused);
+            timescale_beforePause = Time.timeScale;
+            Time.timeScale = 0;
+        }
+        else
+        {
+            GameIsPaused = false;
+            GameState = GameState_BeforePause;
+            pauseMenuObj.SetActive(GameIsPaused);
+            Time.timeScale = timescale_beforePause;
         }
     }
 

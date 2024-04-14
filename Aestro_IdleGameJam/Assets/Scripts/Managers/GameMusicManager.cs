@@ -82,6 +82,8 @@ public class GameMusicManager : MonoBehaviour
                 nextClip = clips_precombat[nextSongId];
                 break;
             default:
+                changingSongNow = false;
+                lastUpdateTime = Time.time;
                 break;
         }
 

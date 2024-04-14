@@ -49,19 +49,22 @@ MonoBehaviour:
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 20
-    AttackDice: 3
-    ChargePerFrame: 0.05
+    AttackDice: 2
+    AttackBonus: -1
+    ChargePerFrame: 0.025
   - Name: Boss 2
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 50
     AttackDice: 3
-    ChargePerFrame: 0.08
+    AttackBonus: -2
+    ChargePerFrame: 0.018
   - Name: Boss 3
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 100
     AttackDice: 4
+    AttackBonus: -3
     ChargePerFrame: 0.1
   UpgradeConfig:
   - ID: 0
@@ -92,6 +95,6 @@ MonoBehaviour:
     Prefab: {fileID: 332649561189206568, guid: 3a92407d58cb0394f97f8ec51b8c9fe5, type: 3}
   LevelNumber: 1
   MaxHP: 0
-  ChargePerFrame: 0.5
+  ChargePerFrame: 0.65
   AttackBonus: 0
   Dice: 1
