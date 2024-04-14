@@ -5,8 +5,10 @@ using UnityEngine;
 public class LerpInAnArc : MonoBehaviour
 {
     // Adjust the speed for the application.
-    public float speed = 2.0f;
-    public float crashSpeed = 2.0f;
+    public float speed = 5.0f;
+    public float crashSpeed = 5.0f;
+    public float timeToRise = 1f;
+    public float curveInfluence = 0.025f;
 
     // The target (cylinder) position.
     public Transform target;
@@ -14,6 +16,8 @@ public class LerpInAnArc : MonoBehaviour
     private float dist_total, dist_current; // NOTE - get distance, then do some weird math to arc up when close to the middle
     private float curve = 0;
     private float curveHighest = 0;
+
+    private bool goUp = true;
 
     void Awake()
     {
@@ -23,32 +27,60 @@ public class LerpInAnArc : MonoBehaviour
         print($"Dist_Total: {dist_total}");
     }
 
+    private void OnEnable()
+    {
+        goUp = true;
+        transform.LookAt(null);
+        ActivateArc();
+    }
+
     void Update()
     {              
         // Move our position a step closer to the target.
-        var step = speed * Time.deltaTime; // calculate distance to move
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        var step = speed * Time.deltaTime; // calculate distance to move        
         dist_current = Vector2.Distance(target.position, transform.position);        
-        //print($"Dist_Curr: {dist_current}");
+        
 
         // move the dice out if they are close to the middle of distance
-        if (dist_current > (dist_total*0.5f))
+        if (goUp)
         {
             print("first half");
-            curve = dist_total - dist_current;
+            curve = (dist_total - dist_current) * curveInfluence;
             curveHighest = curve;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            transform.position += new Vector3(0, curve, 0);
         }
         else
         {
-            print("second half");
-            if (curve > 0)
-                curve -= Time.deltaTime * crashSpeed;
-            else
-                curve = 0;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step* crashSpeed);
         }
 
-        transform.position += new Vector3(0, curve, 0);
 
+        if (Input.GetKeyDown(KeyCode.Space))
+            ActivateArc();
+    }
+
+    public void ActivateArc()
+    {
+        goUp = true;
+        transform.LookAt(null);
+        transform.position = startPos;
+        StartCoroutine(StartArc());
+    }
+
+    private IEnumerator StartArc()
+    {
+        yield return new WaitForSeconds(timeToRise);
+        goUp = false;
+        transform.LookAt(target);        
+       
+    }
+
+    public void OnTriggerEnter(Collider trig)
+    {
+        // if boss enemy
+        // explode vfx
+        // turn off look at
     }
 
 }// end of LerpInAnArc class

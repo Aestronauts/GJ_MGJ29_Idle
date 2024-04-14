@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.40016848, g: 0.95992714, b: 1.0910577, a: 1}
+  m_IndirectSpecularColor: {r: 0.40001953, g: 0.95981234, b: 1.0910186, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -616,7 +616,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
+  crashSpeed: 20
+  timeToRise: 1
+  curveInfluence: 0.05
   target: {fileID: 1492645710}
 --- !u!4 &799001518
 Transform:
@@ -627,7 +630,7 @@ Transform:
   m_GameObject: {fileID: 799001516}
   serializedVersion: 2
   m_LocalRotation: {x: 0.098537795, y: 0.66029704, z: -0.37416887, w: 0.6436582}
-  m_LocalPosition: {x: 0.39130202, y: 0.19691056, z: -18.223719}
+  m_LocalPosition: {x: -0.088698, y: 0.19691056, z: -17.983719}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1050,7 +1053,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
+  crashSpeed: 20
+  timeToRise: 1
+  curveInfluence: 0.05
   target: {fileID: 1492645710}
 --- !u!4 &1191054498
 Transform:
@@ -1061,7 +1067,7 @@ Transform:
   m_GameObject: {fileID: 1191054496}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.36, y: 4.9, z: -14.08}
+  m_LocalPosition: {x: -13.84, y: 4.9, z: -13.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1390,7 +1396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
+  crashSpeed: 20
+  timeToRise: 1
+  curveInfluence: 0.05
   target: {fileID: 1492645710}
 --- !u!4 &1491100111
 Transform:
@@ -1401,7 +1410,7 @@ Transform:
   m_GameObject: {fileID: 1491100109}
   serializedVersion: 2
   m_LocalRotation: {x: -0.103327245, y: 0.24624619, z: -0.37287465, w: 0.888623}
-  m_LocalPosition: {x: -8.04, y: 0.74, z: -13.16}
+  m_LocalPosition: {x: -8.52, y: 0.74, z: -12.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1443,7 +1452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da5ecf1d47e2f646bd684c89e905739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
+  crashSpeed: 20
+  timeToRise: 1
+  curveInfluence: 0.05
   target: {fileID: 1492645710}
 --- !u!4 &1539230391
 Transform:
@@ -1454,7 +1466,7 @@ Transform:
   m_GameObject: {fileID: 1539230389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.37, y: 1.678, z: -17.1}
+  m_LocalPosition: {x: -6.85, y: 1.678, z: -16.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
