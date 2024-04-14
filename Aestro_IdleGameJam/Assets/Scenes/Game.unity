@@ -1612,12 +1612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784183766}
   m_CullTransparentMesh: 1
---- !u!95 &819494334 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2421386271911139459, guid: 24fc7d115192df44b8fcddb53d798208,
-    type: 3}
-  m_PrefabInstance: {fileID: 1610364639}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &836478962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,21 +2504,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 88261684489464452, guid: 24fc7d115192df44b8fcddb53d798208,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 88261684489464452, guid: 24fc7d115192df44b8fcddb53d798208,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 88261684489464452, guid: 24fc7d115192df44b8fcddb53d798208,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 88261684489464452, guid: 24fc7d115192df44b8fcddb53d798208,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.69
       objectReference: {fileID: 0}
@@ -2572,11 +2551,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421386271911139459, guid: 24fc7d115192df44b8fcddb53d798208,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5613349510134190687, guid: 24fc7d115192df44b8fcddb53d798208,
         type: 3}
@@ -2917,6 +2891,7 @@ MonoBehaviour:
   AttackDice: 0
   AttackBonus: 0
   ChargePerFrame: 0
+  BossAnimator: {fileID: 0}
   LinkedEvents_OnHit:
     m_PersistentCalls:
       m_Calls: []
@@ -2941,6 +2916,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 200, z: 0}
+--- !u!95 &1862465312 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7461705940001007698, guid: 24fc7d115192df44b8fcddb53d798208,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610364639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1869654788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3313,7 +3294,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayerAnimator
       value: 
-      objectReference: {fileID: 819494334}
+      objectReference: {fileID: 1862465312}
     - target: {fileID: 5076350558090599853, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
         type: 3}
       propertyPath: m_Name

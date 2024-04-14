@@ -24,6 +24,8 @@ public class BossBehavior : MonoBehaviour
     public float AttackBonus;
     public float ChargePerFrame;
 
+    public Animator BossAnimator;
+
     // events that can hold addition outcomes
     public UnityEvent LinkedEvents_OnHit;
     public UnityEvent LinkedEvents_OnHeal;
@@ -50,7 +52,8 @@ public class BossBehavior : MonoBehaviour
 
     public void InitiateBossData(Boss data)
     {
-        Instantiate(data.BossMeshPrefab,this.transform);
+        GameObject g = Instantiate(data.BossMeshPrefab,this.transform);
+        BossAnimator = g.GetComponent<Animator>();
         MaxHP = data.MaxHP;
         healthPoints = data.MaxHP;
         AttackDice = data.AttackDice;
@@ -77,6 +80,7 @@ public class BossBehavior : MonoBehaviour
     public void BossRollDice()
     {
         int Result = RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides);
+        BossAnimator.SetTrigger("Attack");
         StartCoroutine(BossDiceStop(Result.ToString()));
     }
 
@@ -93,6 +97,7 @@ public class BossBehavior : MonoBehaviour
         {
             print("boss lost hp"); // can set animation & sound too // LinkedEvents_OnHit.Invoke()
             UI_Manager.instance.UpdateBossHPText(healthPoints, MaxHP);
+            BossAnimator.SetTrigger("TakeHit");
         }
         else
             print("boss gained hp"); // can set animation & sound too // LinkedEvents_OnHeal.Invoke()
@@ -112,6 +117,7 @@ public class BossBehavior : MonoBehaviour
 
         if(healthPoints <= 0)
         {
+            BossAnimator.SetTrigger("Die");
             DeathCall();
             //trigger death
             //give extra reward?
