@@ -6,6 +6,7 @@ using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.Mathematics;
+using UnityEngine.Playables;
 
 
 
@@ -38,6 +39,8 @@ public class Game_Manager : MonoBehaviour
     public UI_3D_Dice BossDiceUI;
     public Animator PlayerAnimator;
     //public Animator BossAnimator;
+
+    public GameObject SequenceObject;
 
     // Start is called before the first frame update
     void Awake()
@@ -101,7 +104,7 @@ public class Game_Manager : MonoBehaviour
         }
         else if (s== GAMESTATE.POSTCOMBAT)
         {
-            UI_Manager.instance.SpawnUpgrades();
+            StartCoroutine(EndOfLevelSequence());
         }
     }
 
@@ -161,15 +164,24 @@ public class Game_Manager : MonoBehaviour
     private IEnumerator DiceStop(string _numberToShow)
     {
         PlayerDiceUI.Rolling = false;
-        foreach (Transform _child in PlayerDiceUI.transform.GetChild(0).transform.GetChild(0))
+        /*foreach (Transform _child in PlayerDiceUI.transform.GetChild(0).transform.GetChild(0))
         {
             if (_child.GetComponent<TMP_Text>())
                 _child.GetComponent<TMP_Text>().text = _numberToShow;
-        }
+        }*/
         yield return new WaitForSeconds(1);
         Attack(CalculateOutgoingDamage(int.Parse(_numberToShow)));
         yield return new WaitForSeconds(1);
         PlayerDiceUI.Rolling = true;
     }
 
+    private IEnumerator EndOfLevelSequence()
+    {
+        PlayerAnimator.gameObject.SetActive(false);
+        BossBehavior.instance.gameObject.SetActive(false);
+        SequenceObject.SetActive(true);
+        SequenceObject.GetComponent<PlayableDirector>().Play();
+        yield return new WaitForSeconds(2);
+        UI_Manager.instance.SpawnUpgrades();
+    }
 }
