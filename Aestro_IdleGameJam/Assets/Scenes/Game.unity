@@ -1024,31 +1024,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 512860455032261752, guid: 0d27fdbaee087e94191def16f031a9fd,
         type: 3}
-      propertyPath: m_WrapMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 512860455032261752, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_InitialState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 512860455032261752, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_SceneBindings.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 512860455032261752, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_SceneBindings.Array.data[3].key
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 512860455032261752, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_SceneBindings.Array.data[4].key
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 512860455032261752, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
       objectReference: {fileID: 1610364640}
@@ -1057,26 +1032,6 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
       objectReference: {fileID: 713320437}
-    - target: {fileID: 512860455032261752, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_SceneBindings.Array.data[3].value
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 512860455032261752, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_SceneBindings.Array.data[4].value
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 932875723269897313, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.17103712
-      objectReference: {fileID: 0}
-    - target: {fileID: 932875723269897313, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.97455215
-      objectReference: {fileID: 0}
     - target: {fileID: 1322525650806578186, guid: 0d27fdbaee087e94191def16f031a9fd,
         type: 3}
       propertyPath: m_Name
@@ -1087,54 +1042,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3545929416560374436, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.109395
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545929416560374436, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545929416560374436, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.565414
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545929416560374436, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.17587714
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545929416560374436, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.018832719
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545929416560374436, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9786375
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545929416560374436, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.104791395
-      objectReference: {fileID: 0}
-    - target: {fileID: 4350250104666633296, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5835677370147964298, guid: 0d27fdbaee087e94191def16f031a9fd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5835677370147964298, guid: 0d27fdbaee087e94191def16f031a9fd, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d27fdbaee087e94191def16f031a9fd, type: 3}

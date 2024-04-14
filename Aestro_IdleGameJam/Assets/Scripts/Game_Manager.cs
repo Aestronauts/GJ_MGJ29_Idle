@@ -156,7 +156,9 @@ public class Game_Manager : MonoBehaviour
         UI_Manager.instance.UpdatePlayerHPText(HP, PersistentData.instance.MaxHP);
         if (HP < 0)
         {
-            PlayerAnimator.gameObject.SetActive(false);
+           //Player Dies
+            
+           PlayerAnimator.gameObject.SetActive(false);
        
            PlayerDeathSequenceObject.SetActive(true);
            PlayerDeathSequenceObject.GetComponent<PlayableDirector>().Play();
@@ -210,7 +212,8 @@ public class Game_Manager : MonoBehaviour
     private IEnumerator EndOfLevelSequence()
     {
         PlayerAnimator.gameObject.SetActive(false);
-        BossBehavior.instance.gameObject.SetActive(false);
+        BossBehavior.instance.BossAnimator.SetTrigger("Die");
+        
         SequenceObject.SetActive(true);
         SequenceObject.GetComponent<PlayableDirector>().Play();
         yield return new WaitForSeconds(11);
