@@ -18,6 +18,9 @@ public class UI_Manager : MonoBehaviour
     public Image AttackChargeBar;
     public TMPro.TextMeshProUGUI AttackBonusStat;
     public TMPro.TextMeshProUGUI AttackSpeedStat;
+    public TMPro.TextMeshProUGUI LifeStealStat;
+    public TMPro.TextMeshProUGUI ArmorStat;
+    public TMPro.TextMeshProUGUI CounterStat;
     public GameObject UpgradePanel;
     public GameObject UpgradeCardPrefab;
     private void Awake()
@@ -34,8 +37,11 @@ public class UI_Manager : MonoBehaviour
 
     private void Start()
     {
-        AttackSpeedStat.text = PersistentData.instance.ChargePerFrame.ToString();
-        AttackBonusStat.text = PersistentData.instance.AttackBonus.ToString();
+        AttackSpeedStat.text = PersistentData.instance.ChargePerFrame.ToString("F2");
+        AttackBonusStat.text = PersistentData.instance.AttackBonus.ToString("F2");
+        LifeStealStat.text = PersistentData.instance.Vamp.ToString("F2");
+        ArmorStat.text = PersistentData.instance.Armor.ToString("F2");
+        CounterStat.text = PersistentData.instance.ReturnDamage.ToString("F2");
 
     }
 
@@ -54,13 +60,13 @@ public class UI_Manager : MonoBehaviour
 
     public void UpdateBossHPText(float HP, float MaxHP)
     {
-        HPText.text = HP.ToString() + " / " + MaxHP.ToString();
+        HPText.text = HP.ToString("F2") + " / " + MaxHP.ToString("F2");
         HPBar.fillAmount = HP / MaxHP;
     }
 
     public void UpdatePlayerHPText(float HP, float MaxHP)
     {
-        PlayerHPText.text = HP.ToString() + " / " + MaxHP.ToString();
+        PlayerHPText.text = HP.ToString("F2") + " / " + MaxHP.ToString("F2");
         PlayerHPBar.fillAmount = HP / MaxHP;
     }
 

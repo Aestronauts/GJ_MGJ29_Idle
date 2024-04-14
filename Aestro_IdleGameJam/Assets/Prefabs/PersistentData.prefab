@@ -49,51 +49,51 @@ MonoBehaviour:
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 8
-    AttackDice: 2
+    AttackDice: 3
     AttackBonus: 0
-    ChargePerFrame: 0.03
+    ChargePerFrame: 0.06
   - Name: Hairy Horned Henry
     BossMeshPrefab: {fileID: 6167768994667879822, guid: e058394a61216724a84bdf2bb6131370,
       type: 3}
     MaxHP: 12
     AttackDice: 3
     AttackBonus: 1
-    ChargePerFrame: 0.06
+    ChargePerFrame: 0.12
   - Name: The Metadron
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 9478b71f68c0fbc44a07d1160aca6b3e,
       type: 3}
     MaxHP: 25
     AttackDice: 4
     AttackBonus: 2
-    ChargePerFrame: 0.09
+    ChargePerFrame: 0.25
   - Name: Strawberry Milk
     BossMeshPrefab: {fileID: 6167768994667879822, guid: c674d4483da5d29478533e689e04fae7,
       type: 3}
     MaxHP: 50
     AttackDice: 4
     AttackBonus: 4
-    ChargePerFrame: 0.12
+    ChargePerFrame: 0.5
   - Name: Chcoloate Bear
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 6e938f3baa3f01443a909d617b40b9ea,
       type: 3}
     MaxHP: 100
-    AttackDice: 4
+    AttackDice: 5
     AttackBonus: 6
-    ChargePerFrame: 0.2
+    ChargePerFrame: 0.75
   - Name: The Dark One
     BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
       type: 3}
     MaxHP: 200
     AttackDice: 5
     AttackBonus: 8
-    ChargePerFrame: 0.4
+    ChargePerFrame: 1
   - Name: The Truth
     BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
       type: 3}
     MaxHP: 400
     AttackDice: 5
     AttackBonus: 10
-    ChargePerFrame: 0.6
+    ChargePerFrame: 2
   UpgradeConfig:
   - ID: 0
     Grade: 1
