@@ -1,0 +1,1513 @@
+fileFormatVersion: 2
+guid: c48e8c34b5da1c64db03d2179549d06d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Faces_Textures_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 443
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6b3e0d1b39cd14ebd84760051fae35
+      internalID: 1850216370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 448
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58ba5d5daaae7445ab9ace73f7619ec
+      internalID: -1519014917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_2
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 446
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34210aff483197a45ae6b1e2fb02b506
+      internalID: -1620800251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 443
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10335ae37136f2d4587019c8a75854f5
+      internalID: 11185553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_4
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 443
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed9dc18c56dd46458fa4da610515ec4
+      internalID: -2142250636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_5
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 448
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b6ee08045c61d458dc47ccbbdedc31
+      internalID: -1579855533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_6
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 448
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180e32e4b4c27f24cb798eafe4145898
+      internalID: -955590204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 382
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf119e4f32454742bbc9d0a321bc060
+      internalID: -1673383032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 382
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15d403290bb0614489083ce378891b2
+      internalID: -929239448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_9
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 387
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139ef97d4d1b09646b60c36a7a678ae1
+      internalID: -549880096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_10
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 392
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2713e5df0bf9b419b9c8fda71ecfb8
+      internalID: 2133435793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_11
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 392
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38118e8ffd1340049be5c064c3a50ba3
+      internalID: 1174226961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_12
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 392
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37531f08c442cb64bb03d4c8460b2398
+      internalID: 1517965168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_13
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 394
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33add0a8a7399c428b83a3a113a3be9
+      internalID: 1029753314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_14
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 329
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc1ffccd36c0844ea5017d30b8a0296
+      internalID: -884883576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 329
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d428e7a5d930b46936fa442154f538
+      internalID: 1760204351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_16
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 332
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c26a9020a5788c4f9126cd3cc8730a9
+      internalID: 1465237114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_17
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 332
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c262887f4129f419bf82d4bf0956c9
+      internalID: 982801092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_18
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 336
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601e7b4459b67974bb3366caae09a4bc
+      internalID: 2037332542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_19
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 333
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843a4aee726e2e44ea766d4ee0243ab3
+      internalID: -972068601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_20
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 333
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5335abb012fb384449a41c33bbdea6f5
+      internalID: -1202702129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_21
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 277
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63112db29e23d0f44aad69c5296d6049
+      internalID: -840959471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_22
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 277
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9967949ff5e03c749843b57c76e11f4e
+      internalID: -1454558472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_23
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 283
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4d2e576f601664ea3ddef4324e92dc
+      internalID: 293919561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_24
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 287
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba32c6d1d6bfcc249beb1be64b19e538
+      internalID: -1745641805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_25
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 287
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8284dd166918344db5af87124dd7dd2
+      internalID: -1174858524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_26
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 287
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0124d8e46d4ca44a82ab59cbe9f0337
+      internalID: -1462229780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_27
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 287
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a0659b9b4eea041b4e599e147aced3
+      internalID: -1238959937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_28
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 231
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc73eea7590949f4eb348d2a87a2d7c3
+      internalID: 1307768536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_29
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 231
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beedd8b1342156c4eb3bb67e256ccc84
+      internalID: 1686827720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_30
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 234
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d900b1d05e0ebcd4cb97ee8e0aa3bd29
+      internalID: -592583760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_31
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 232
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe4809f2f9e8254f979aa0838f24e8d
+      internalID: -353584730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_32
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 232
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fe59af2d38c81458e67852a0d74c7d
+      internalID: 1110632102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_33
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 232
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7a30e526c258c4fb49a792d401f784
+      internalID: 1699862403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_34
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 233
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3b44592890e0748bd8666b4fda356e
+      internalID: -1667851191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_35
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 186
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3975795b2d14b6049b0fde8097bd0309
+      internalID: -437898879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_36
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 186
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3777ad6d623420a43ab0d2f271c8e660
+      internalID: -2061633775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_37
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 186
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8074dc1b84d6e794885959602e515b41
+      internalID: -339904022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_38
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 186
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95429c8cf6c4e2e4ebda5f165d70fa80
+      internalID: -1852138503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_39
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 186
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de5163fb2caf4e479d519cde6b063a0
+      internalID: -324282034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_40
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 186
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958d145b1f2a56740a5c21bbfc2a0ef2
+      internalID: -981622725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_41
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 186
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62234989e12d2944b92c07b2d7cb53d
+      internalID: -2080861780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 128
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71a728d0f69d90468872a68d7ee005d
+      internalID: -819687425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_43
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 130
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f320b5488cacca241858c4d24cc095ae
+      internalID: -139392286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_44
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 135
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5802a438ae9382a44b17ef80cd4279bd
+      internalID: -139520637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_45
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 133
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee5873be5e6393499579b09f802eb4e
+      internalID: 1304782573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_46
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 133
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b9995f08aaf624f8d6babf2778c489
+      internalID: 338968645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_47
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 133
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa7ba82eeaa2c14489cd5cc8cddf359
+      internalID: -400142284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_48
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 135
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabd0be4892b3fc49b73eb5797ee4747
+      internalID: 1428668922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_49
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 84
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56613976eebf3c4ca1ebd3c8eb8355d
+      internalID: 1144199488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_50
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 84
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d4828cdc2bf8045ae53efa86d85692
+      internalID: 934221789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_51
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 80
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffe3d5acdd6caf4b890f5e1a0b28ec6
+      internalID: -196706340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_52
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 83
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42edb7d41104ac4a8efe4ac9b197b50
+      internalID: 932139534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_53
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 83
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6416a8a5208833f4496fa1b2a1d00d8e
+      internalID: -1757257742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_54
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 80
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f75993a2bf6cc4dbb2c40e4d10b8c8
+      internalID: -1600839457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_55
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 80
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8208cdaf5e9a38340942bbe6aa2137f8
+      internalID: 915824239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d692a16615351447b7bbe56f36249ad
+      internalID: -1041318080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_57
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1649b12bd59a8479565cee4373d7e0
+      internalID: -242592550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_58
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 32
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7dbfa94e11e824ba0af9c00415ca12
+      internalID: 1156318576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_59
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 32
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9157adc08242c4ab066db03968d015
+      internalID: -519146769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_60
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 32
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516d8cf3c60ec774f8da7df451a33a75
+      internalID: -1242486581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_61
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 32
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692bde6ede0c6374f91a7f31067bc94a
+      internalID: 1802115144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faces_Textures_62
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 32
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d1cf5a3db6964498de9f635d78752c
+      internalID: -1247555247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6b9cdca20d47c0e45a24b0f51e063577
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Faces_Textures_0: 1850216370
+      Faces_Textures_1: -1519014917
+      Faces_Textures_10: 2133435793
+      Faces_Textures_11: 1174226961
+      Faces_Textures_12: 1517965168
+      Faces_Textures_13: 1029753314
+      Faces_Textures_14: -884883576
+      Faces_Textures_15: 1760204351
+      Faces_Textures_16: 1465237114
+      Faces_Textures_17: 982801092
+      Faces_Textures_18: 2037332542
+      Faces_Textures_19: -972068601
+      Faces_Textures_2: -1620800251
+      Faces_Textures_20: -1202702129
+      Faces_Textures_21: -840959471
+      Faces_Textures_22: -1454558472
+      Faces_Textures_23: 293919561
+      Faces_Textures_24: -1745641805
+      Faces_Textures_25: -1174858524
+      Faces_Textures_26: -1462229780
+      Faces_Textures_27: -1238959937
+      Faces_Textures_28: 1307768536
+      Faces_Textures_29: 1686827720
+      Faces_Textures_3: 11185553
+      Faces_Textures_30: -592583760
+      Faces_Textures_31: -353584730
+      Faces_Textures_32: 1110632102
+      Faces_Textures_33: 1699862403
+      Faces_Textures_34: -1667851191
+      Faces_Textures_35: -437898879
+      Faces_Textures_36: -2061633775
+      Faces_Textures_37: -339904022
+      Faces_Textures_38: -1852138503
+      Faces_Textures_39: -324282034
+      Faces_Textures_4: -2142250636
+      Faces_Textures_40: -981622725
+      Faces_Textures_41: -2080861780
+      Faces_Textures_42: -819687425
+      Faces_Textures_43: -139392286
+      Faces_Textures_44: -139520637
+      Faces_Textures_45: 1304782573
+      Faces_Textures_46: 338968645
+      Faces_Textures_47: -400142284
+      Faces_Textures_48: 1428668922
+      Faces_Textures_49: 1144199488
+      Faces_Textures_5: -1579855533
+      Faces_Textures_50: 934221789
+      Faces_Textures_51: -196706340
+      Faces_Textures_52: 932139534
+      Faces_Textures_53: -1757257742
+      Faces_Textures_54: -1600839457
+      Faces_Textures_55: 915824239
+      Faces_Textures_56: -1041318080
+      Faces_Textures_57: -242592550
+      Faces_Textures_58: 1156318576
+      Faces_Textures_59: -519146769
+      Faces_Textures_6: -955590204
+      Faces_Textures_60: -1242486581
+      Faces_Textures_61: 1802115144
+      Faces_Textures_62: -1247555247
+      Faces_Textures_7: -1673383032
+      Faces_Textures_8: -929239448
+      Faces_Textures_9: -549880096
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
