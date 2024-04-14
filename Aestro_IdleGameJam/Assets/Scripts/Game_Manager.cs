@@ -47,6 +47,8 @@ public class Game_Manager : MonoBehaviour
     public GameObject SequenceObject;
     public GameObject PlayerDeathSequenceObject;
 
+    public GameObject FakeCave;
+
     // Start is called before the first frame update
     void Awake()
     {
