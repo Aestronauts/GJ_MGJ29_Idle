@@ -178,14 +178,6 @@ public class Game_Manager : MonoBehaviour
         }
     }
 
-    public void PlayerDeathState()
-    {
-        // reset all persistent data
-        PersistentData.instance.Initialize();
-        // load main menu
-        SceneLoader("MainMenu");
-    }
-
     public void PlayerWinState()
     {
         // reset boss persistent progress
@@ -254,8 +246,7 @@ public class Game_Manager : MonoBehaviour
         
         SequenceObject.SetActive(true);
         SequenceObject.GetComponent<PlayableDirector>().Play();
-        yield return new WaitForSeconds(11);
-        PlayerDeathState();
+        yield return new WaitForSeconds(10);
         UI_Manager.instance.SpawnUpgrades();
     }
 
@@ -275,13 +266,14 @@ public class Game_Manager : MonoBehaviour
         PlayerDeathSequenceObject.SetActive(true);
         PlayerDeathSequenceObject.GetComponent<PlayableDirector>().Play();
         GameState = GAMESTATE.PAUSECOMBAT;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(10);
         PersistentData.instance.Initialize();
         SceneManager.LoadScene(0);
     }
 
     public void SceneLoader(string _sceneToLoad) // NOTE - May want to wait for animation timeline to finish first
     {
+        Debug.Log("BACK TO MAIN MENU");
         Time.timeScale = 1;
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene(_sceneToLoad);
