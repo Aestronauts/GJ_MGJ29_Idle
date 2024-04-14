@@ -80,7 +80,7 @@ public class Game_Manager : MonoBehaviour
         UI_Manager.instance.UpdatePlayerHPText(HP, HP);
         //size
         PlayerAnimator.gameObject.transform.localScale = Vector3.one * PersistentData.instance.SizeBuff;
-        PlayerAnimator.speed *= 1+ PersistentData.instance.ChargePerFrame;
+        PlayerAnimator.speed *= 1 + PersistentData.instance.ChargePerFrame*5;
         Staff.transform.localScale *= 1+PersistentData.instance.AttackBonus/2;
         Hat.transform.localScale *= 1 + PersistentData.instance.Armor*5;
     }

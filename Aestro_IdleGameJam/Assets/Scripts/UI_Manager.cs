@@ -79,10 +79,20 @@ public class UI_Manager : MonoBehaviour
                 Destroy(g);
             }
         }
-        for (int i = 0; i < 3; i++)
+        List<int> i = new List<int>();
+        while (i.Count < 3)
+        {
+            int j = Random.Range(0, 10);
+            if (!i.Contains(j))
+            {
+                i.Add(j);
+            }
+        }
+
+        for (int z = 0; z < 3; z++)
         {
             GameObject g = Instantiate(UpgradeCardPrefab, UpgradePanel.transform);
-            g.GetComponent<UI_Upgrade>().LoadInfo(PersistentData.instance.UpgradeConfig[Random.Range(0,8)]);
+            g.GetComponent<UI_Upgrade>().LoadInfo(PersistentData.instance.UpgradeConfig[i[z]]);
         }
     }
 
@@ -90,11 +100,11 @@ public class UI_Manager : MonoBehaviour
     {
         if (info.ID == 0) // attack bonus
         {
-            PersistentData.instance.AttackBonus += 1;
+            PersistentData.instance.AttackBonus += 2;
         }
         else if (info.ID == 1) // attack speed bonus
         {
-            PersistentData.instance.ChargePerFrame *= 1.25f;
+            PersistentData.instance.ChargePerFrame *= 1.5f;
         }
         else if (info.ID == 2) // level up dice
         {
@@ -102,7 +112,7 @@ public class UI_Manager : MonoBehaviour
         }
         else if (info.ID == 3) // vamp
         {
-            PersistentData.instance.Vamp += 0.1f;
+            PersistentData.instance.Vamp += 0.2f;
         }
         else if (info.ID == 4) // Big Boi
         {
@@ -111,11 +121,11 @@ public class UI_Manager : MonoBehaviour
         }
         else if (info.ID == 5) // Armor
         {
-            PersistentData.instance.Armor += 0.05f;
+            PersistentData.instance.Armor += 0.1f;
         }
         else if (info.ID == 6) // Spikes
         {
-            PersistentData.instance.ReturnDamage += 0.05f;
+            PersistentData.instance.ReturnDamage += 0.1f;
         }
         else if (info.ID == 7) // RollwithAdvantage
         {
@@ -124,6 +134,16 @@ public class UI_Manager : MonoBehaviour
         else if (info.ID == 8) // RollwithAdvantage
         {
             PersistentData.instance.RollwithDisadvantage += 1;
+        }
+        else if (info.ID == 9) // RollwithAdvantage
+        {
+            PersistentData.instance.SizeBuff *= 1.5f;
+            PersistentData.instance.MaxHP *= 1.15f;
+            PersistentData.instance.Vamp += 0.1f;
+            PersistentData.instance.ChargePerFrame *= 1.2f;
+            PersistentData.instance.AttackBonus += 0.5f;
+            PersistentData.instance.Armor += 0.05f;
+            PersistentData.instance.ReturnDamage += 0.05f;
         }
         Game_Manager.instance.LoadNextScene();
     }

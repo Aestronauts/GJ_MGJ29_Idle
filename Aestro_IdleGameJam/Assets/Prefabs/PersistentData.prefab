@@ -45,72 +45,75 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelBossConfig:
-  - Name: Boss 1 - Big Brown
+  - Name: Big Brown
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 8
     AttackDice: 2
-    AttackBonus: -2
+    AttackBonus: 0
     ChargePerFrame: 0.025
-  - Name: Boss 2 - Hairy Horned Henry
+  - Name: Hairy Horned Henry
     BossMeshPrefab: {fileID: 6167768994667879822, guid: e058394a61216724a84bdf2bb6131370,
       type: 3}
-    MaxHP: 10
+    MaxHP: 12
     AttackDice: 3
-    AttackBonus: -4
+    AttackBonus: 1
     ChargePerFrame: 0.018
-  - Name: Boss 3 - The Metadron
+  - Name: The Metadron
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 9478b71f68c0fbc44a07d1160aca6b3e,
       type: 3}
-    MaxHP: 20
+    MaxHP: 25
     AttackDice: 4
-    AttackBonus: -3
+    AttackBonus: 1
     ChargePerFrame: 0.035
-  - Name: Boss 4 - Strawberry Milk
+  - Name: Strawberry Milk
     BossMeshPrefab: {fileID: 6167768994667879822, guid: c674d4483da5d29478533e689e04fae7,
       type: 3}
-    MaxHP: 35
+    MaxHP: 50
     AttackDice: 4
-    AttackBonus: -3
+    AttackBonus: 2
     ChargePerFrame: 0.05
-  - Name: Boss 5 - Chcoloate Bear
+  - Name: Chcoloate Bear
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 6e938f3baa3f01443a909d617b40b9ea,
       type: 3}
-    MaxHP: 40
+    MaxHP: 100
     AttackDice: 4
-    AttackBonus: -4
+    AttackBonus: 2
     ChargePerFrame: 0.075
-  - Name: Boss 6 - The Dark One
+  - Name: The Dark One
     BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
       type: 3}
-    MaxHP: 100
+    MaxHP: 200
     AttackDice: 5
-    AttackBonus: -10
+    AttackBonus: 3
     ChargePerFrame: 0.1
-  - Name: Boss 7 - The Truth
+  - Name: The Truth
     BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
       type: 3}
-    MaxHP: 222
+    MaxHP: 400
     AttackDice: 5
-    AttackBonus: -3
+    AttackBonus: 3
     ChargePerFrame: 0.25
   UpgradeConfig:
   - ID: 0
-    Name: Sharpen Your Weapon
+    Name: Attack Bonus
     Icon: {fileID: 85840256, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: Your weapon is sharpened. All attack will have +1 bonus
+    Description: Attune your determination to your staff. All attack will have +1
+      bonus
   - ID: 1
-    Name: Gimme Speed
+    Name: Speed
     Icon: {fileID: -1616631636, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: Increase Attack Speed by 25%
+    Description: You found a magic fungi in your bag. Should you eat it? Increase
+      Attack Speed by 50%
   - ID: 2
     Name: Upgrade Dice
     Icon: {fileID: 630667254, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: Your dice are upgraded.
+    Description: You consume the magic power within the crystals.Your dice are upgraded.
   - ID: 3
     Name: Vampire
     Icon: {fileID: 733748956, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: You are bit by a bat in the cave. Heal for +5% of all outgoing damage
+    Description: You found edible crystals along the journey. Heal for +20% of all
+      outgoing damage
   - ID: 4
     Name: A Weird Mushroom
     Icon: {fileID: -1458347826, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
@@ -118,20 +121,26 @@ MonoBehaviour:
   - ID: 5
     Name: Get Some Armor
     Icon: {fileID: 968716148, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: You've found a helmet. Reduce +5% of incoming damage
+    Description: Your hat begins crystalizing. Reduce +10% of incoming damage
   - ID: 6
     Name: Spikes
     Icon: {fileID: 384808641, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: Spikes grew out on your body. Return +5% of all incoming damage
+    Description: You learned the dragons pattern of attack. Return +10% of all incoming
+      damage
   - ID: 7
     Name: Cheater
     Icon: {fileID: 1585433060, guid: 7a0bb300885f20d4494898c14b3a3444, type: 3}
-    Description: All your rolls gain +1 advantage (can stack.)
+    Description: The mushrooms you save start chanting your name. All your rolls
+      gain +1 advantage (can stack.)
   - ID: 8
-    Name: Sleepy Monster
+    Name: Disadvantage
     Icon: {fileID: 21300000, guid: 6b34387e6afd02a4880bfcad9c853f26, type: 3}
-    Description: Your enemy feels sleepy. All their rolls gain +1 disadvantage (can
-      stack.)
+    Description: The captured mushrooms will start jumping on the boss. All their
+      rolls gain +1 disadvantage (can stack.)
+  - ID: 9
+    Name: The Ultimate Force
+    Icon: {fileID: 21300000, guid: 6b34387e6afd02a4880bfcad9c853f26, type: 3}
+    Description: Get a little bit of everything
   DiceConfig:
   - NumberOfSides: 4
     Prefab: {fileID: 6731961743414908288, guid: 9ce7babf59712064bbb5ac284a831ad3,
