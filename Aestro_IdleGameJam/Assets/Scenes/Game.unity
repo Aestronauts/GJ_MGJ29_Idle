@@ -2853,7 +2853,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1610364641 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1482691413736987064, guid: 24fc7d115192df44b8fcddb53d798208,
+  m_CorrespondingSourceObject: {fileID: 3762786093594346501, guid: 24fc7d115192df44b8fcddb53d798208,
     type: 3}
   m_PrefabInstance: {fileID: 1610364639}
   m_PrefabAsset: {fileID: 0}
@@ -3087,65 +3087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1855954893
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1855954895}
-  - component: {fileID: 1855954894}
-  m_Layer: 0
-  m_Name: Boss
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1855954894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855954893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64c93825f9086f4aa4d3b471737df19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  readableName: 
-  moneyValueOnHit: 50
-  AttackDice: 0
-  AttackBonus: 0
-  ChargePerFrame: 0
-  BossAnimator: {fileID: 0}
-  LinkedEvents_OnHit:
-    m_PersistentCalls:
-      m_Calls: []
-  LinkedEvents_OnHeal:
-    m_PersistentCalls:
-      m_Calls: []
-  LinkedEvents_OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &1855954895
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855954893}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.26785243, z: -0, w: -0.96345997}
-  m_LocalPosition: {x: 10.09, y: 0, z: -23.87}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 328.927, z: 0}
 --- !u!1001 &1869654788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3720,12 +3661,6 @@ PrefabInstance:
       objectReference: {fileID: 336697470}
     - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
         type: 3}
-      propertyPath: DiceProjectilePrefab
-      value: 
-      objectReference: {fileID: 2069574165382237109, guid: d252db09971ded348a8cbce49f1dfce4,
-        type: 3}
-    - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
-        type: 3}
       propertyPath: PlayerDeathSequenceObject
       value: 
       objectReference: {fileID: 1774131031}
@@ -3733,11 +3668,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076350558090599853, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7348525906727502974, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
         type: 3}
@@ -3806,6 +3736,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f72fe646360e294f99884eefb7cd95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &7141239660197092965
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.96345997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.26785243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 328.927
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064063028854230373, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277272474561135713, guid: 7f4be55d3b9f04f48b1ce3f9f4547614,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f4be55d3b9f04f48b1ce3f9f4547614, type: 3}
 --- !u!1001 &7755484585548991066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4519,7 +4517,7 @@ SceneRoots:
   - {fileID: 713320434}
   - {fileID: 462081055}
   - {fileID: 1163590245660170616}
-  - {fileID: 1855954895}
+  - {fileID: 7141239660197092965}
   - {fileID: 7755484585548991066}
   - {fileID: 1526725572}
   - {fileID: 277033138}
