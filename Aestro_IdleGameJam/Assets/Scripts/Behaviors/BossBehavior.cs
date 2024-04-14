@@ -42,7 +42,7 @@ public class BossBehavior : MonoBehaviour
 
     private void Start()
     {
-        UI_Manager.instance.UpdateHPText(healthPoints, MaxHP);
+        UI_Manager.instance.UpdateBossHPText(healthPoints, MaxHP);
 
     }
 
@@ -90,7 +90,7 @@ public class BossBehavior : MonoBehaviour
         if (_lostHP)
         {
             print("boss lost hp"); // can set animation & sound too // LinkedEvents_OnHit.Invoke()
-            UI_Manager.instance.UpdateHPText(healthPoints, MaxHP);
+            UI_Manager.instance.UpdateBossHPText(healthPoints, MaxHP);
         }
         else
             print("boss gained hp"); // can set animation & sound too // LinkedEvents_OnHeal.Invoke()

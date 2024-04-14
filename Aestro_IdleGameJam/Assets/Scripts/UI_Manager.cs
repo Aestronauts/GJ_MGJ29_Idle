@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class UI_Manager : MonoBehaviour
 {
     public static UI_Manager instance;
+    [Header("BossUI")]
     public TMPro.TextMeshProUGUI HPText;
     public Image HPBar;
+    public Image BossAttackChargeBar;
+    [Header("PlayerUI")]
+    public TMPro.TextMeshProUGUI PlayerHPText;
+    public Image PlayerHPBar;
     public Image AttackChargeBar;
     public TMPro.TextMeshProUGUI AttackBonusStat;
     public TMPro.TextMeshProUGUI AttackSpeedStat;
@@ -37,15 +42,22 @@ public class UI_Manager : MonoBehaviour
         
     }
 
-    public void UpdateHPText(float HP, float MaxHP)
+    public void UpdateBossHPText(float HP, float MaxHP)
     {
         HPText.text = HP.ToString() + " / " + MaxHP.ToString();
         HPBar.fillAmount = HP / MaxHP;
     }
 
-    public void UpdateAttackCharge(float Charge)
+    public void UpdatePlayerHPText(float HP, float MaxHP)
     {
-        AttackChargeBar.fillAmount = Charge/100;
+        PlayerHPText.text = HP.ToString() + " / " + MaxHP.ToString();
+        PlayerHPBar.fillAmount = HP / MaxHP;
+    }
+
+    public void UpdateAttackCharge(float PlayerCharge, float BossCharge)
+    {
+        AttackChargeBar.fillAmount = PlayerCharge / 100;
+        BossAttackChargeBar.fillAmount = BossCharge / 100;
     }
 
     public void SpawnUpgrades()

@@ -5,6 +5,7 @@ using System;
 using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.Mathematics;
 
 
 
@@ -57,6 +58,7 @@ public class Game_Manager : MonoBehaviour
         BossBehavior.instance.InitiateBossData(PersistentData.instance.ReturnBossData());
         HP = PersistentData.instance.MaxHP;
         PlayerDiceUI.Rolling = true;
+        UI_Manager.instance.UpdatePlayerHPText(HP, HP);
     }
 
     void Update()
@@ -64,8 +66,8 @@ public class Game_Manager : MonoBehaviour
         if (GameState == GAMESTATE.INCOMBAT)
         {
             AttackCharge += PersistentData.instance.ChargePerFrame;
-            UI_Manager.instance.UpdateAttackCharge(AttackCharge);
             BossAttackCharge += BossBehavior.instance.ChargePerFrame;
+            UI_Manager.instance.UpdateAttackCharge(AttackCharge, BossAttackCharge);
             if (AttackCharge >= 100)
             {
                 Tick();
@@ -113,6 +115,7 @@ public class Game_Manager : MonoBehaviour
     {
         Debug.Log("Receive Damage!");
         HP -= Damage;
+        UI_Manager.instance.UpdatePlayerHPText(HP, PersistentData.instance.MaxHP);
         if (HP < 0)
         {
             //Player Die
