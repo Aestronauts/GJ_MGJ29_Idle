@@ -166,6 +166,7 @@ public class Game_Manager : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         Debug.Log("Receive Damage!");
+        PlayerAnimator.SetTrigger("Hit");
         if (PersistentData.instance.ReturnDamage > 0)
         {
             Attack(Damage* PersistentData.instance.ReturnDamage);
