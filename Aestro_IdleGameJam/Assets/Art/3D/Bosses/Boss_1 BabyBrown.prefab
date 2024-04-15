@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5987657173439270316}
   - component: {fileID: -9189709648583771315}
   m_Layer: 0
-  m_Name: Boss_1 BigBrown
+  m_Name: Boss_1 BabyBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

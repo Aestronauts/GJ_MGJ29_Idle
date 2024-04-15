@@ -45,15 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelBossConfig:
-  - Name: Big Brown
+  - Name: Baby Brown
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 8
     AttackDice: 3
     AttackBonus: 0
     ChargePerFrame: 0.06
-  - Name: Big Brown
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
+  - Name: Baby Gray
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 8446f5a7d0118544aa25eb4a7a5a8d13,
       type: 3}
     MaxHP: 12
     AttackDice: 3
@@ -66,8 +66,8 @@ MonoBehaviour:
     AttackDice: 3
     AttackBonus: 1
     ChargePerFrame: 0.1
-  - Name: Hairy Horned Henry
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: e058394a61216724a84bdf2bb6131370,
+  - Name: King Horns
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: b2271536251ece94a9aa20b205862459,
       type: 3}
     MaxHP: 20
     AttackDice: 3
@@ -80,15 +80,15 @@ MonoBehaviour:
     AttackDice: 4
     AttackBonus: 2
     ChargePerFrame: 0.1
-  - Name: The Metadron
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: 9478b71f68c0fbc44a07d1160aca6b3e,
+  - Name: Oh My GAWD Zilla
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: c490c3f07fad51849a2b68acc6c50d1f,
       type: 3}
     MaxHP: 25
     AttackDice: 4
     AttackBonus: 2
     ChargePerFrame: 0.12
-  - Name: Strawberry Milk
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: c674d4483da5d29478533e689e04fae7,
+  - Name: Baby Brown's Big Brother
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 30
     AttackDice: 4
@@ -108,8 +108,8 @@ MonoBehaviour:
     AttackDice: 5
     AttackBonus: 4
     ChargePerFrame: 0.3
-  - Name: Chcoloate Bear
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: 6e938f3baa3f01443a909d617b40b9ea,
+  - Name: Baby Brown's Mamma
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 80
     AttackDice: 5
@@ -122,15 +122,15 @@ MonoBehaviour:
     AttackDice: 5
     AttackBonus: 6
     ChargePerFrame: 0.6
-  - Name: Krisspy Kotton
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: 5f78226fe8007d546a4c007bb5fb5155,
+  - Name: Pincher The Pincer
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 14b40db3d4a2760479b6d689d223a0a4,
       type: 3}
     MaxHP: 150
     AttackDice: 5
     AttackBonus: 6
     ChargePerFrame: 0.8
-  - Name: The Dark One
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
+  - Name: Baby Brown's Dad
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
     MaxHP: 200
     AttackDice: 5
@@ -143,8 +143,8 @@ MonoBehaviour:
     AttackDice: 5
     AttackBonus: 7
     ChargePerFrame: 0.8
-  - Name: The Truth
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
+  - Name: The Light One
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: aec8fefc7f176fa4fb4deda0778fd777,
       type: 3}
     MaxHP: 300
     AttackDice: 6
