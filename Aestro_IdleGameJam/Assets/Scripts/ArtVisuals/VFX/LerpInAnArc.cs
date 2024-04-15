@@ -13,6 +13,8 @@ public class LerpInAnArc : MonoBehaviour
     // The target (cylinder) position.
     public Transform target;
     private Vector3 startPos;
+    public GameObject vfx_OnTrigger;
+
     private float dist_total, dist_current; // NOTE - get distance, then do some weird math to arc up when close to the middle
     private float curve = 0;
 
@@ -96,7 +98,12 @@ public class LerpInAnArc : MonoBehaviour
         {
             print("EXPLODE ON BOSS");
             // explode vfx
-
+            if (vfx_OnTrigger)
+            {
+                GameObject cloneVFX = Instantiate(vfx_OnTrigger, transform.position, vfx_OnTrigger.transform.rotation);
+                Destroy(cloneVFX, 3);
+            }
+                
 
             // turn off look at
             goUp = false;

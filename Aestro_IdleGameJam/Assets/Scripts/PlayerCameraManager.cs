@@ -20,6 +20,9 @@ public class PlayerCameraManager : MonoBehaviour
 
     public GameObject hiddencave;
 
+    private float lastCameraChange;
+    public float cameraChangeTimer = 8;
+
     void Awake()
     {
         if (instance == null)
@@ -33,29 +36,72 @@ public class PlayerCameraManager : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        if (Time.time > lastCameraChange + cameraChangeTimer)
+            PickARandomCamera();
+
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            ResetCameraTimer();
             SwitchToMainCam(); 
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            ResetCameraTimer();
            SwitchToDieCam();
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            ResetCameraTimer();
             SwitchToCaveCam();
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+            ResetCameraTimer();
             SwitchToWideCamera();
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
+            ResetCameraTimer();
             SwitchToFrontofPlayerCamera();  
         }
+    }
+
+    private void ResetCameraTimer()
+    {
+        lastCameraChange = Time.time;
+    }
+
+    private void PickARandomCamera()
+    {
+        ResetCameraTimer();
+
+        int randomCamID = Random.Range(0, 6);
+        switch (randomCamID)
+        {
+            case 1:
+                SwitchToDieCam();
+                break;
+            case 2:
+                SwitchToCaveCam();
+                break;
+            case 3:
+                SwitchToWideCamera();
+                break;
+            case 4:
+                SwitchToWideCamera();
+                break;
+            case 5:
+                SwitchToFrontofPlayerCamera();
+                break;
+            default:
+                SwitchToMainCam();
+                break;
+        }
+
     }
 
     public void SwitchToMainCam()

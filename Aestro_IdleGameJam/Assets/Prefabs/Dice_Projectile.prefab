@@ -86,3 +86,5 @@ MonoBehaviour:
   timeToRise: 1
   curveInfluence: 0.005
   target: {fileID: 0}
+  vfx_OnTrigger: {fileID: 4996078451535524689, guid: 47ca3149f794861418a1517948c2b106,
+    type: 3}
