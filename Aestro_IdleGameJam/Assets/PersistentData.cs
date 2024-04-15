@@ -69,6 +69,7 @@ public class PersistentData : MonoBehaviour
 
     public void Initialize()
     {
+        LevelNumber = 1;
         MaxHP = 50;//
         ChargePerFrame = 0.075f;//
         AttackBonus = 0;//
