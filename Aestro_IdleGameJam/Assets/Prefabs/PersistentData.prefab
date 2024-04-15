@@ -115,47 +115,47 @@ MonoBehaviour:
     AttackDice: 5
     AttackBonus: 5
     ChargePerFrame: 0.4
-  - Name: The Dark One
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
+  - Name: Krisspy Kotton
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 5f78226fe8007d546a4c007bb5fb5155,
       type: 3}
     MaxHP: 120
     AttackDice: 5
     AttackBonus: 6
     ChargePerFrame: 0.6
-  - Name: The Dark One
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
+  - Name: Krisspy Kotton
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: 5f78226fe8007d546a4c007bb5fb5155,
       type: 3}
     MaxHP: 150
     AttackDice: 5
     AttackBonus: 6
     ChargePerFrame: 0.8
-  - Name: The Truth
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
+  - Name: The Dark One
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
       type: 3}
     MaxHP: 200
     AttackDice: 5
     AttackBonus: 7
-    ChargePerFrame: 1
-  - Name: The Truth
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
+    ChargePerFrame: 0.7
+  - Name: The Dark One
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
       type: 3}
     MaxHP: 250
     AttackDice: 5
-    AttackBonus: 8
-    ChargePerFrame: 1
-  - Name: Krisspy Kotton
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: 5f78226fe8007d546a4c007bb5fb5155,
+    AttackBonus: 7
+    ChargePerFrame: 0.8
+  - Name: The Truth
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
       type: 3}
     MaxHP: 300
-    AttackDice: 5
-    AttackBonus: 9
-    ChargePerFrame: 1
-  - Name: Krisspy Kotton
-    BossMeshPrefab: {fileID: 6167768994667879822, guid: 5f78226fe8007d546a4c007bb5fb5155,
+    AttackDice: 6
+    AttackBonus: 8
+    ChargePerFrame: 0.9
+  - Name: The Truth
+    BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
       type: 3}
     MaxHP: 400
-    AttackDice: 5
-    AttackBonus: 10
+    AttackDice: 6
+    AttackBonus: 9
     ChargePerFrame: 1
   UpgradeConfig:
   - ID: 0
