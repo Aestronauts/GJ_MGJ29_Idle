@@ -35,7 +35,7 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void UpdatePlayerStats()
     {
         AttackSpeedStat.text = PersistentData.instance.ChargePerFrame.ToString("F2");
         AttackBonusStat.text = PersistentData.instance.AttackBonus.ToString("F2");

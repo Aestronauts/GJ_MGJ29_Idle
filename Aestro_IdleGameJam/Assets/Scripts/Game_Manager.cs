@@ -79,11 +79,12 @@ public class Game_Manager : MonoBehaviour
         PlayerDiceUI.Rolling = true;
         BossDiceUI.Rolling = true;
         UI_Manager.instance.UpdatePlayerHPText(HP, HP);
+        UI_Manager.instance.UpdatePlayerStats();
         //size
         PlayerAnimator.gameObject.transform.localScale = Vector3.one * PersistentData.instance.SizeBuff;
         PlayerAnimator.speed *= 1 + PersistentData.instance.ChargePerFrame*5;
-        Staff.transform.localScale *= 1+PersistentData.instance.AttackBonus/2;
-        Hat.transform.localScale *= 1 + (PersistentData.instance.Armor-0.2f)*3;
+        Staff.transform.localScale *= 1+PersistentData.instance.AttackBonus/4;
+        Hat.transform.localScale *= 1 + (PersistentData.instance.Armor-0.2f)*1.5f;
     }
 
     void Update()
@@ -220,7 +221,7 @@ public class Game_Manager : MonoBehaviour
         PlayerAnimator.SetTrigger("Attack");
         //BossAnimator.SetTrigger("Attack");
         //Vamp
-        HP += Outgoing_Damage * PersistentData.instance.Vamp;
+        HP = Mathf.Max(PersistentData.instance.MaxHP, Outgoing_Damage * PersistentData.instance.Vamp);
         BossBehavior.instance.ChangeHP(-(Outgoing_Damage + clickCharge), false);
         clickCharge = 0;
     }
