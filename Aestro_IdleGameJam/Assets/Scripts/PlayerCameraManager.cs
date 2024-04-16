@@ -44,40 +44,41 @@ public class PlayerCameraManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            ResetCameraTimer();
+            ResetCameraTimer(16);
             SwitchToMainCam(); 
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            ResetCameraTimer();
+            ResetCameraTimer(16);
            SwitchToDieCam();
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            ResetCameraTimer();
+            ResetCameraTimer(16);
             SwitchToCaveCam();
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            ResetCameraTimer();
+            ResetCameraTimer(16);
             SwitchToWideCamera();
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            ResetCameraTimer();
+            ResetCameraTimer(16);
             SwitchToFrontofPlayerCamera();  
         }
     }
 
-    private void ResetCameraTimer()
+    private void ResetCameraTimer(float _newwaittime)
     {
         lastCameraChange = Time.time;
+        cameraChangeTimer = _newwaittime;
     }
 
     private void PickARandomCamera()
     {
-        ResetCameraTimer();
+        ResetCameraTimer(8);
 
         int randomCamID = Random.Range(0, 6);
         switch (randomCamID)
