@@ -66,6 +66,8 @@ public class GameMusicManager : MonoBehaviour
                 nextSongId = Random.Range(songRange.x, songRange.y);
                 if (nextSongId <= 0)
                     nextSongId = 0;
+                if (nextSongId >= maxCount)
+                    nextSongId = maxCount-1;
                 nextClip = clips_incombat[nextSongId];
                 break;
             case GAMESTATE.POSTCOMBAT:
@@ -75,6 +77,8 @@ public class GameMusicManager : MonoBehaviour
                 nextSongId = Random.Range(songRange.x, songRange.y);
                 if (nextSongId <= 0)
                     nextSongId = 0;
+                if (nextSongId >= maxCount)
+                    nextSongId = maxCount-1;
                 nextClip = clips_postcombat[nextSongId];
                 break;
             case GAMESTATE.PRECOMBAT:
@@ -84,6 +88,8 @@ public class GameMusicManager : MonoBehaviour
                 nextSongId = Random.Range(songRange.x, songRange.y);
                 if (nextSongId <= 0)
                     nextSongId = 0;
+                if (nextSongId >= maxCount)
+                    nextSongId = maxCount-1;
                 nextClip = clips_precombat[nextSongId];
                 break;
             default:

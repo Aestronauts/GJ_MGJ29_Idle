@@ -80,10 +80,14 @@ public class UI_Manager : MonoBehaviour
     {
         if (UpgradePanel.transform.childCount > 0)
         {
-            foreach (GameObject g in UpgradePanel.transform)
+            if (UpgradePanel && UpgradePanel.transform.GetChild(0))
             {
-                Destroy(g);
+                foreach (GameObject g in UpgradePanel.transform)
+                {
+                    Destroy(g);
+                }
             }
+            
         }
         List<int> i = new List<int>();
         while (i.Count < 3)
