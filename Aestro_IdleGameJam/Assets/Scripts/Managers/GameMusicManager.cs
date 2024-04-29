@@ -98,7 +98,8 @@ public class GameMusicManager : MonoBehaviour
                 break;
         }
 
-        if (nextSongId == currentSongId)
+        // if we are changing songs but we're not changing GAME STATES then dont pick the same song
+        if (nextSongId == currentSongId && !aSource_Music.isPlaying)
         {
             ChangeSong();
             return;
@@ -133,7 +134,7 @@ public class GameMusicManager : MonoBehaviour
         for (float i = -50; i <= currentVolume; i++)
         {
             AMG_Master.SetFloat("VolumeMaster", i);
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(0.0025f);
         }
 
         lastGameState = refGameManager.GameState;
