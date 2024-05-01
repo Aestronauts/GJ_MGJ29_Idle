@@ -207,7 +207,7 @@ MonoBehaviour:
   - ID: 8
     Grade: 1
     Name: Disadvantage
-    Icon: {fileID: 21300000, guid: 6b34387e6afd02a4880bfcad9c853f26, type: 3}
+    Icon: {fileID: 21300000, guid: 809ff5ee02f94c24da03f6d27deadde9, type: 3}
     Description: The captured mushrooms will start jumping on the boss. All their
       rolls gain +1 disadvantage (can stack.)
   - ID: 9

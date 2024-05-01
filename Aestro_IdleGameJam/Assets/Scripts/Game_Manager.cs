@@ -184,8 +184,10 @@ public class Game_Manager : MonoBehaviour
     {
         // reset boss persistent progress
         PersistentData.instance.LevelNumber = 1;
+        // reset the persistent data
+        PersistentData.instance.Initialize();
         // load main menu
-        SceneLoader("MainMenu");
+        SceneLoader("TextScroll");//SceneLoader("MainMenu");
     }
 
     public void Click()

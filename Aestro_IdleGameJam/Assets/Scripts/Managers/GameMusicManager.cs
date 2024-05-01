@@ -32,12 +32,7 @@ public class GameMusicManager : MonoBehaviour
     }
 
     public void FixedUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.RightBracket))
-            Time.timeScale += 1;
-        if (Input.GetKeyDown(KeyCode.RightBracket))
-            Time.timeScale -= 1;
-
+    {     
         if (Time.time <= lastUpdateTime + 3 || changingSongNow) // check for song finished
             return;
 
