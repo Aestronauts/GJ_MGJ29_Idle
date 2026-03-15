@@ -53,6 +53,9 @@ public class PersistentData : MonoBehaviour
     public int RollwithAdvantage;
     public int RollwithDisadvantage;
 
+    [Header("Public Visual References")]
+    public Vector3 mouthPosition;
+
     private void Awake()
     {
         if (instance == null)

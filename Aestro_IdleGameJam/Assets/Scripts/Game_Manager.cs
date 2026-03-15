@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine.Playables;
+using UnityEngine.Events;
 
 
 
@@ -52,6 +53,9 @@ public class Game_Manager : MonoBehaviour
     public GameObject DiceProjectilePrefab;
     public GameObject Staff;
     public GameObject Hat;
+
+    public UnityEvent onDiceRollFinish; // NOT SETUP YET - noah
+    public UnityEvent onTakeDamage; // NOT SETUP YET - noah
 
     // Start is called before the first frame update
     void Awake()
@@ -207,7 +211,13 @@ public class Game_Manager : MonoBehaviour
         }
         Debug.Log("Value is:" + RollResult);
         //DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
+        CheckAttackVisuals();
         StartCoroutine(DiceStop(RollResult.ToString()));
+    }
+
+    public void CheckAttackVisuals()
+    {
+        print("DEV-NOTE: Here (spot 1) we can check what cards the player has unlocked and spawn visuals to support that.");
     }
 
     public float CalculateOutgoingDamage(int RNG_Value)

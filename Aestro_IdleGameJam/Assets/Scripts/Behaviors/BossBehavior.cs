@@ -117,11 +117,14 @@ public class BossBehavior : MonoBehaviour
         // play sounds
 
         // check if HP is too low or high
-        CheckHP();
+        if (StillAlive())
+        {
+            SpawnPlayersVisualEffects();
+        }
     }// end of HPChangeReact()
 
     // check if the hp is too low or high
-    private void CheckHP()
+    private bool StillAlive()
     {
         // give reward
         GiveReward();
@@ -132,9 +135,10 @@ public class BossBehavior : MonoBehaviour
             DeathCall();
             //trigger death
             //give extra reward?
+            return false;
         }
-
-    }// end of CheckHP()
+        return true;
+    }// end of StillAlive()
 
     //reward money message
     private void GiveReward() // maybe add a multiplier option
@@ -142,6 +146,11 @@ public class BossBehavior : MonoBehaviour
         print("gimme dat cash muneeee");
         MoneyManager.PlayerMoney += moneyValueOnHit;
     }// end of GiveReward()
+
+    public void SpawnPlayersVisualEffects()
+    {
+        print("DEV-NOTE: Here (spot 2) we can check what cards the player has unlocked and spawn visuals to support that.");
+    }
 
    
     // all actions related to dying
