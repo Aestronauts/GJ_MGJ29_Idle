@@ -17,6 +17,7 @@ public class PlayerCameraManager : MonoBehaviour
     public CinemachineVirtualCamera CaveCamera;
     public CinemachineVirtualCamera FrontofPlayerCamera;
     public CinemachineVirtualCamera WideCamera;
+    public CinemachineVirtualCamera vcamForDisadvantage;
 
     public GameObject hiddencave;
 
@@ -34,6 +35,11 @@ public class PlayerCameraManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    private void Start()
+    {
+        vcamForDisadvantage = BossBehavior.instance.vcamForDisadvantage;
     }
 
     void FixedUpdate()
@@ -84,7 +90,8 @@ public class PlayerCameraManager : MonoBehaviour
         switch (randomCamID)
         {
             case 1:
-                SwitchToDieCam();
+                //SwitchToDieCam();
+                SwitchToDisadvantageCam();
                 break;
             case 2:
                 SwitchToCaveCam();
@@ -105,14 +112,31 @@ public class PlayerCameraManager : MonoBehaviour
 
     }
 
+    public void SwitchToDisadvantageCam()
+    {
+        hiddencave.SetActive(false);
+
+
+        vcamForDisadvantage.Priority = 10;
+        MainCamera.Priority = 0;
+        DieCamera.Priority = 0;
+        CaveCamera.Priority = 0;
+        WideCamera.Priority = 0;
+        FrontofPlayerCamera.Priority = 0;
+    }
+
+
     public void SwitchToMainCam()
     {
         hiddencave.SetActive(false);
+
+       
         MainCamera.Priority = 10;
         DieCamera.Priority = 0;
         CaveCamera.Priority = 0;
         WideCamera.Priority = 0;
         FrontofPlayerCamera.Priority = 0;
+        vcamForDisadvantage.Priority = 0;
     }
 
     public void SwitchToDieCam()
@@ -124,6 +148,8 @@ public class PlayerCameraManager : MonoBehaviour
         CaveCamera.Priority = 0;
         WideCamera.Priority = 0;
         FrontofPlayerCamera.Priority = 0;
+        vcamForDisadvantage.Priority = 0;
+
     }
 
     public void SwitchToCaveCam()
@@ -135,6 +161,8 @@ public class PlayerCameraManager : MonoBehaviour
         MainCamera.Priority = 0;
         WideCamera.Priority = 0;
         FrontofPlayerCamera.Priority = 0;
+        vcamForDisadvantage.Priority = 0;
+
     }
 
     public void SwitchToFrontofPlayerCamera()
@@ -146,6 +174,8 @@ public class PlayerCameraManager : MonoBehaviour
         DieCamera.Priority = 0;
         MainCamera.Priority = 0;
         WideCamera.Priority = 0;
+        vcamForDisadvantage.Priority = 0;
+
     }
     public void SwitchToWideCamera()
     {
@@ -156,6 +186,8 @@ public class PlayerCameraManager : MonoBehaviour
         CaveCamera.Priority = 0;
         DieCamera.Priority = 0;
         MainCamera.Priority = 0;
+        vcamForDisadvantage.Priority = 0;
+
     }
 }
 

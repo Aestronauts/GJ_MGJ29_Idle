@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using Cinemachine;
 
 
 
@@ -23,6 +24,7 @@ public class BossBehavior : MonoBehaviour
     public int AttackDice;
     public float AttackBonus;
     public float ChargePerFrame;
+    public CinemachineVirtualCamera vcamForDisadvantage;
 
     public Animator BossAnimator;
 
