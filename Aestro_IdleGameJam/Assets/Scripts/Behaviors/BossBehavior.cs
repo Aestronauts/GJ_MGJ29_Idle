@@ -83,24 +83,25 @@ public class BossBehavior : MonoBehaviour
 
     public void BossRollDice()
     {
+        AttackEventReceipt attkReceipt = new AttackEventReceipt(AttackEventReceipt.SENDER.Boss, AttackEventReceipt.EVENT_DIRECTION.Attacking, false, PersistentData.instance.RollwithDisadvantage > 0, 0, 0, 0, false, healthPoints, healthPoints, false, 0, false, 0, 0);
 
         int Result = 1000;
         for (int i = 0; i < 1 + PersistentData.instance.RollwithDisadvantage; i++)
         {
             Result = Mathf.Min(Result, RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[AttackDice].NumberOfSides));
+            if (i == 0) { attkReceipt.highestDie = Result; attkReceipt.lowestDie = Result; }
+            if (i != 0 && Result > attkReceipt.highestDie) attkReceipt.highestDie = Result;
+            if (i != 0 && Result < attkReceipt.lowestDie) attkReceipt.lowestDie = Result;
         }
         BossAnimator.SetTrigger("Attack");
         LinkedEvents_OnAttack.Invoke();
-        StartCoroutine(BossDiceStop(Result.ToString()));
+        StartCoroutine(BossDiceStop(Result.ToString(), attkReceipt));
     }
 
-    public void DealDamageToPlayer(float Damage)
+    public void DealDamageToPlayer(float Damage, AttackEventReceipt _attkRcpt)
     {
-        Game_Manager.instance.TakeDamage(Damage);
-    }
-
-  
-
+        Game_Manager.instance.TakeDamage(Damage, _attkRcpt);
+    }   
 
     // decide if we gained health or lost it and what to do
     private void HPChangeReact(bool _lostHP)
@@ -149,7 +150,7 @@ public class BossBehavior : MonoBehaviour
         MoneyManager.PlayerMoney += moneyValueOnHit;
     }// end of GiveReward()
 
-    public void SpawnPlayersVisualEffects()
+    public void SpawnPlayersVisualEffects() // PersistentData.instance.RollwithDisadvantage
     {
         print("DEV-NOTE: Here (spot 2) we can check what cards the player has unlocked and spawn visuals to support that.");
     }
@@ -168,7 +169,7 @@ public class BossBehavior : MonoBehaviour
     }
 
 
-    private IEnumerator BossDiceStop(string _numberToShow)
+    private IEnumerator BossDiceStop(string _numberToShow, AttackEventReceipt _attkRcpt)
     {
         Game_Manager.instance.BossDiceUI.Rolling = false;
         foreach (Transform _child in Game_Manager.instance.BossDiceUI.transform.GetChild(0).transform.GetChild(0))
@@ -177,7 +178,7 @@ public class BossBehavior : MonoBehaviour
                 _child.GetComponent<TMP_Text>().text = _numberToShow;
         }
         yield return new WaitForSeconds(1);
-        DealDamageToPlayer(int.Parse(_numberToShow) + AttackBonus);
+        DealDamageToPlayer(int.Parse(_numberToShow) + AttackBonus, _attkRcpt);
         yield return new WaitForSeconds(1);
         Game_Manager.instance.BossDiceUI.Rolling = true;
     }

@@ -12,6 +12,7 @@ public class Boss
     public int AttackDice;
     public int AttackBonus;
     public float ChargePerFrame;
+    public Vector3 mouthPos;
 }
 
 [Serializable]
@@ -41,20 +42,18 @@ public class PersistentData : MonoBehaviour
     [SerializeField]
     public int LevelNumber = 1;
 
-    [Header("Public Player Stats")]
-    public float MaxHP;
-    public float ChargePerFrame;
-    public float AttackBonus;
-    public int Dice;
-    public float Vamp;
-    public float SizeBuff;
-    public float Armor;
-    public float ReturnDamage;
-    public int RollwithAdvantage;
-    public int RollwithDisadvantage;
+    [Header("Public Player Stats")] // These are the IDs that will be referenced
+    public float MaxHP; // 0
+    public float ChargePerFrame; // 1
+    public float AttackBonus; // 2
+    public int Dice; // 3
+    public float Vamp; // 4
+    public float SizeBuff; // 5
+    public float Armor; // 6
+    public float ReturnDamage; // 7
+    public int RollwithAdvantage; // 8
+    public int RollwithDisadvantage; // 9
 
-    [Header("Public Visual References")]
-    public Vector3 mouthPosition;
 
     private void Awake()
     {

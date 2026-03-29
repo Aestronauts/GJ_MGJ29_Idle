@@ -57,6 +57,10 @@ public class Game_Manager : MonoBehaviour
     public UnityEvent onDiceRollFinish; // NOT SETUP YET - noah
     public UnityEvent onTakeDamage; // NOT SETUP YET - noah
 
+    public List<AttackEventReceipt> attackReceiptsPlayer = new List<AttackEventReceipt>();
+    public List<AttackEventReceipt> attackReceiptsBoss = new List<AttackEventReceipt>();
+
+   
     // Start is called before the first frame update
     void Awake()
     {
@@ -89,6 +93,9 @@ public class Game_Manager : MonoBehaviour
         PlayerAnimator.speed *= 1 + PersistentData.instance.ChargePerFrame*5;
         Staff.transform.localScale *= 1+PersistentData.instance.AttackBonus/4;
         Hat.transform.localScale *= 1 + (PersistentData.instance.Armor-0.2f)*1.5f;
+        // receipt variables
+        attackReceiptsPlayer = new List<AttackEventReceipt>();
+        attackReceiptsBoss = new List<AttackEventReceipt>();
     }
 
     void Update()
@@ -159,7 +166,11 @@ public class Game_Manager : MonoBehaviour
         if (PersistentData.instance.LevelNumber > PersistentData.instance.LevelBossConfig.Count)
             PlayerWinState();
         else
+        {
+            attackReceiptsPlayer = null;
+            attackReceiptsBoss = null;
             SceneManager.LoadScene(1);
+        }
     }
 
     public void Tick()
@@ -168,13 +179,13 @@ public class Game_Manager : MonoBehaviour
         ThrowADice();
     }
 
-    public void TakeDamage(float Damage)
+    public void TakeDamage(float Damage, AttackEventReceipt _attkRcpt)
     {
         Debug.Log("Receive Damage!");
         PlayerAnimator.SetTrigger("Hit");
         if (PersistentData.instance.ReturnDamage > 0)
         {
-            Attack(Damage* PersistentData.instance.ReturnDamage);
+            Attack(Damage* PersistentData.instance.ReturnDamage, _attkRcpt);
         }
         HP -= (Damage*(1-PersistentData.instance.Armor));
         UI_Manager.instance.UpdatePlayerHPText(HP, PersistentData.instance.MaxHP);
@@ -204,15 +215,30 @@ public class Game_Manager : MonoBehaviour
     public void ThrowADice()
     {
         Debug.Log("Throw a dice!");
+        AttackEventReceipt attkReceipt = new AttackEventReceipt(AttackEventReceipt.SENDER.Player, AttackEventReceipt.EVENT_DIRECTION.Attacking, PersistentData.instance.RollwithAdvantage > 0, false, 0, 0, 0, false, HP, HP, false, 0, false, 0, 0);
+
         int RollResult = 0;
         for (int i = 0;  i < 1+PersistentData.instance.RollwithAdvantage; i++)
         {
+           
             RollResult = Mathf.Max(RollResult, RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].NumberOfSides));
+            print($"Dice Roll = {RollResult}");
+            if (i == 0) { attkReceipt.highestDie = RollResult; attkReceipt.lowestDie = RollResult; }
+            if (i != 0 && RollResult > attkReceipt.highestDie) attkReceipt.highestDie = RollResult;
+            if (i != 0 && RollResult < attkReceipt.lowestDie) attkReceipt.lowestDie = RollResult;
         }
         Debug.Log("Value is:" + RollResult);
         //DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
         CheckAttackVisuals();
-        StartCoroutine(DiceStop(RollResult.ToString()));
+        StartCoroutine(DiceStop(RollResult.ToString(), attkReceipt));
+    }
+
+    public void StoreAttackReceipt(AttackEventReceipt _attkRcpt)
+    {
+        if (_attkRcpt == null) return;
+        if (_attkRcpt.sender == AttackEventReceipt.SENDER.Player) attackReceiptsPlayer.Add(_attkRcpt);
+        if(_attkRcpt.sender == AttackEventReceipt.SENDER.Boss) attackReceiptsBoss.Add(_attkRcpt);
+        print($"Attack Receipt Added For: {_attkRcpt.sender.ToString()}");
     }
 
     public void CheckAttackVisuals()
@@ -228,17 +254,25 @@ public class Game_Manager : MonoBehaviour
         return final_value;
     }
 
-    public void Attack(float Outgoing_Damage)
+    public void Attack(float Outgoing_Damage, AttackEventReceipt _attkRcpt)
     {
         PlayerAnimator.SetTrigger("Attack");
         //BossAnimator.SetTrigger("Attack");
-        //Vamp
+        //Vamp       
         HP = Mathf.Max(PersistentData.instance.MaxHP, Outgoing_Damage * PersistentData.instance.Vamp);
+        _attkRcpt.healthChanged = PersistentData.instance.Vamp > 0;
+        _attkRcpt.newHealth = HP;
+        //dmg
         BossBehavior.instance.ChangeHP(-(Outgoing_Damage + clickCharge), false);
+        _attkRcpt.totalDamage = Outgoing_Damage;
         clickCharge = 0;
+
+        // final submission of attack
+        StoreAttackReceipt(_attkRcpt);
+
     }
 
-    private IEnumerator DiceStop(string _numberToShow)
+    private IEnumerator DiceStop(string _numberToShow, AttackEventReceipt _attkRcpt)
     {
         PlayerDiceUI.Rolling = false;
         foreach (Transform _child in PlayerDiceUI.transform.GetChild(0).transform.GetChild(0))
@@ -248,7 +282,7 @@ public class Game_Manager : MonoBehaviour
         }
         yield return new WaitForSeconds(1);
         StartCoroutine(AttackSequence(int.Parse(_numberToShow)));
-        Attack(CalculateOutgoingDamage(int.Parse(_numberToShow)));
+        Attack(CalculateOutgoingDamage(int.Parse(_numberToShow)), _attkRcpt);
         yield return new WaitForSeconds(1);
         PlayerDiceUI.Rolling = true;
     }
@@ -292,4 +326,51 @@ public class Game_Manager : MonoBehaviour
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene(_sceneToLoad);
     }
+}
+
+[System.Serializable]
+public class AttackEventReceipt
+{
+    public enum SENDER {None, Player, Boss}
+    public SENDER sender;
+
+    public enum EVENT_DIRECTION {None, Attacking, Attacked }
+    public EVENT_DIRECTION eventDirection;
+
+    public bool advantageUsed; // ID 8
+    public bool disadvantageUsed; // ID 9
+    public int highestDie, lowestDie;
+    public float totalDamage;
+
+    public bool healthChanged; // ID 0
+    public float oldHealth, newHealth;
+
+    public bool armorUsed; // ID 6
+    public int damageReduced;
+
+    public bool returnedDamage; // ID 7
+    public int damageTaken, damageReturned;
+
+    public AttackEventReceipt(SENDER _sndr, EVENT_DIRECTION _evntDir, bool _adv, bool _dsAdv, int firDie, int secDie, float _ttlDmg, bool hpChng, float oldHp, float newHp, bool armUse, int dmgRed, bool rtrnDmg, int dmgTkn, int dmgRtrn)
+    {
+        sender = _sndr;
+        eventDirection = _evntDir;
+
+        advantageUsed = _adv;
+        disadvantageUsed = _dsAdv;
+        highestDie = firDie;
+        lowestDie = secDie;
+        totalDamage = _ttlDmg;
+
+        healthChanged = hpChng;
+        oldHealth = oldHp;
+        newHealth = newHp;
+
+        armorUsed = armUse;
+        damageReduced = dmgRed;
+
+        returnedDamage = rtrnDmg;
+        damageTaken = dmgTkn;
+        damageReturned = dmgRtrn;
+}
 }

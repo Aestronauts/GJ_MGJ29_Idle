@@ -25,6 +25,8 @@ public class DiceShooter : MonoBehaviour
 
     public void ThrowDice(int _diceID, int _numberOfDice, int _diceLandsOn)// can add parameter to set what the dice will say
     {
+        AttackEventReceipt attkReceipt = new AttackEventReceipt(AttackEventReceipt.SENDER.None, AttackEventReceipt.EVENT_DIRECTION.None, false, false, 0, 0, 0, false, 0, 0, false, 0, false, 0, 0);
+
         if (_numberOfDice < 1)
             _numberOfDice = 1;
 
@@ -45,19 +47,19 @@ public class DiceShooter : MonoBehaviour
                 randomForceZ = Random.Range(0, 250);
 
                 diceThrown.transform.GetComponent<Rigidbody>().AddForce(transform.forward * diceForce);
-                StartCoroutine(DiceRollHandler(diceThrown, _diceLandsOn.ToString())); // dice details
+                StartCoroutine(DiceRollHandler(diceThrown, _diceLandsOn.ToString(), attkReceipt)); // dice details
             }
         }
 
     }// end of ThrowDice();
 
 
-    private IEnumerator DiceRollHandler(GameObject _diceObj, string _numberToShow)
+    private IEnumerator DiceRollHandler(GameObject _diceObj, string _numberToShow, AttackEventReceipt _attkRcpt)
     {
         PlayerCameraManager.instance.SwitchToDieCam();
         yield return new WaitForSeconds(3);
         PlayerCameraManager.instance.SwitchToMainCam();
-        Game_Manager.instance.Attack(Game_Manager.instance.CalculateOutgoingDamage(int.Parse(_numberToShow)));
+        Game_Manager.instance.Attack(Game_Manager.instance.CalculateOutgoingDamage(int.Parse(_numberToShow)), _attkRcpt);
 
         foreach (Transform _child in _diceObj.transform.GetChild(0))
         {
