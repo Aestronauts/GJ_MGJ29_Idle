@@ -8,6 +8,7 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine.Playables;
 using UnityEngine.Events;
+using Cinemachine; // for timeline animations
 
 
 
@@ -238,10 +239,23 @@ public class Game_Manager : MonoBehaviour
         if (_attkRcpt == null) return;
         if (_attkRcpt.sender == AttackEventReceipt.SENDER.Player) attackReceiptsPlayer.Add(_attkRcpt);
         if(_attkRcpt.sender == AttackEventReceipt.SENDER.Boss) attackReceiptsBoss.Add(_attkRcpt);
+
+        CallTimelineEvent(_attkRcpt);
         print($"Attack Receipt Added For: {_attkRcpt.sender.ToString()}");
     }
 
-    public void CheckAttackVisuals()
+    public void CallTimelineEvent(AttackEventReceipt _attkRcpt)
+    {
+        // if player
+        /// sub conditions (i.e. TimelineManager.Instance.PlayTimeline(string _name); ) 
+        /// 
+        //if boss
+        /// sub conditions (i.e. TimelineManager.Instance.Play("Losing Cutscene") )
+        ///  
+
+    }
+
+    public void CheckAttackVisuals() // NOTE: this can be our decidor, and then we can call TimelineEvent() ... or we can do it all in CallTimelineEvent()
     {
         print("DEV-NOTE: Here (spot 1) we can check what cards the player has unlocked and spawn visuals to support that.");
     }
