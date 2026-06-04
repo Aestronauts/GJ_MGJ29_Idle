@@ -79,6 +79,8 @@ public class Game_Manager : MonoBehaviour
 
     private void Start()
     {
+        TimelineManager.Instance.PlayTimeline("Opening Level Cinematic");
+        
         BossBehavior.instance.InitiateBossData(PersistentData.instance.ReturnBossData());
         BossDiceUI.Dice = Instantiate(PersistentData.instance.DiceConfig[BossBehavior.instance.AttackDice].Prefab, BossDiceUI.transform).transform;
         //BossDiceUI.Dice.gameObject.layer = 7;
@@ -305,9 +307,10 @@ public class Game_Manager : MonoBehaviour
     {
         PlayerAnimator.gameObject.SetActive(false);
         BossBehavior.instance.BossAnimator.SetTrigger("Die");
-        
-        SequenceObject.SetActive(true);
-        SequenceObject.GetComponent<PlayableDirector>().Play();
+
+        //SequenceObject.SetActive(true);
+        //SequenceObject.GetComponent<PlayableDirector>().Play();
+        TimelineManager.Instance.PlayTimeline("End of Level Cinematic");
         yield return new WaitForSeconds(10);
         UI_Manager.instance.SpawnUpgrades();
     }

@@ -32,6 +32,7 @@ public class TimelineManager : MonoBehaviour
 
     public void PlayTimeline(string timelineID)
     {
+        Debug.Log("Play TL");
         TimelineData timeline = System.Array.Find(timelines, t => t.timelineID == timelineID);
         if (timeline?.director == null)
         {
