@@ -328,8 +328,9 @@ public class Game_Manager : MonoBehaviour
     private IEnumerator DieSequence()
     {
         PlayerAnimator.gameObject.SetActive(false);
-        PlayerDeathSequenceObject.SetActive(true);
-        PlayerDeathSequenceObject.GetComponent<PlayableDirector>().Play();
+        //PlayerDeathSequenceObject.SetActive(true);
+        //PlayerDeathSequenceObject.GetComponent<PlayableDirector>().Play();
+        TimelineManager.Instance.PlayTimeline("Player Death Cinematic");
         GameState = GAMESTATE.PAUSECOMBAT;
         yield return new WaitForSeconds(10);
         PersistentData.instance.Initialize();

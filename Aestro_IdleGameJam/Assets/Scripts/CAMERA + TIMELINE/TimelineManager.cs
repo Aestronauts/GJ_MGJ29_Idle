@@ -19,6 +19,9 @@ public class TimelineManager : MonoBehaviour
         [Tooltip("Virtual cameras controlled by this timeline")]
         public CinemachineVirtualCamera[] timelineVCams;
 
+        [Tooltip("Objects active in this timeline")]
+        public CinemachineVirtualCamera[] timelineObjects;
+
         [Tooltip("Should gameplay pause during this timeline?")]
         public bool pauseGameplay = true;
     }
