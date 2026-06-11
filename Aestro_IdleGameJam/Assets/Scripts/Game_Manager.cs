@@ -305,7 +305,7 @@ public class Game_Manager : MonoBehaviour
 
     private IEnumerator EndOfLevelSequence()
     {
-        PlayerAnimator.gameObject.SetActive(false);
+        //PlayerAnimator.gameObject.SetActive(false);
         BossBehavior.instance.BossAnimator.SetTrigger("Die");
 
         //SequenceObject.SetActive(true);
@@ -327,7 +327,7 @@ public class Game_Manager : MonoBehaviour
 
     private IEnumerator DieSequence()
     {
-        PlayerAnimator.gameObject.SetActive(false);
+        //PlayerAnimator.gameObject.SetActive(false);
         //PlayerDeathSequenceObject.SetActive(true);
         //PlayerDeathSequenceObject.GetComponent<PlayableDirector>().Play();
         TimelineManager.Instance.PlayTimeline("Player Death Cinematic");
