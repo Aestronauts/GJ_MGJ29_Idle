@@ -232,7 +232,6 @@ public class Game_Manager : MonoBehaviour
         }
         Debug.Log("Value is:" + RollResult);
         //DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
-        CheckAttackVisuals();
         StartCoroutine(DiceStop(RollResult.ToString(), attkReceipt));
     }
 
@@ -255,11 +254,24 @@ public class Game_Manager : MonoBehaviour
         /// sub conditions (i.e. TimelineManager.Instance.Play("Losing Cutscene") )
         ///  
 
-    }
+        switch (_attkRcpt.sender)
+        {
+            case AttackEventReceipt.SENDER.Player:
+                if(_attkRcpt.highestDie > _attkRcpt.lowestDie)
+                { print($"Player Got {_attkRcpt.highestDie} instead of {_attkRcpt.lowestDie} - because of advantage"); } // if we rolled with advantage and got a higher result
 
-    public void CheckAttackVisuals() // NOTE: this can be our decidor, and then we can call TimelineEvent() ... or we can do it all in CallTimelineEvent()
-    {
-        print("DEV-NOTE: Here (spot 1) we can check what cards the player has unlocked and spawn visuals to support that.");
+                break;
+
+            case AttackEventReceipt.SENDER.Boss:
+                if (_attkRcpt.highestDie < _attkRcpt.lowestDie)
+                { print($"Boss Got {_attkRcpt.lowestDie} instead of {_attkRcpt.highestDie} - because of disadvantage"); } // if boss rolled with disadvantage and got a lower result
+
+                break;
+
+            default: // no sender involved
+                break;
+        }
+
     }
 
     public float CalculateOutgoingDamage(int RNG_Value)
