@@ -85,7 +85,7 @@ public class GameMusicManager : MonoBehaviour
                     nextSongId = 0;
                 if (nextSongId >= maxCount)
                     nextSongId = maxCount-1;
-                nextClip = clips_precombat[nextSongId];
+                nextClip = clips_precombat[nextSongId]; // TODO: fix - ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. Parameter name: index
                 break;
             default:
                 changingSongNow = false;
