@@ -257,17 +257,33 @@ public class Game_Manager : MonoBehaviour
         switch (_attkRcpt.sender)
         {
             case AttackEventReceipt.SENDER.Player:
-                if(_attkRcpt.highestDie > _attkRcpt.lowestDie)
-                { print($"Player Got {_attkRcpt.highestDie} instead of {_attkRcpt.lowestDie} - because of advantage"); } // if we rolled with advantage and got a higher result
+                {
+                    int diceNumSides = PersistentData.instance.DiceConfig[PersistentData.instance.Dice].NumberOfSides; // NOTE: could check this outside of sender and then make a choice to play inside of sender (in case we want to include boss highest and lowest etc...)
+                    if (_attkRcpt.highestDie == diceNumSides) // dice = highest possible
+                    {
+                        print("HIGHEST dice rolle attack!!!");
+                    }
+                    else if (_attkRcpt.highestDie == 1) // dice = lowest possible
+                    {
+                        print("LOWEST dice rolle attack =[");
+                    }
+                    else // dice = anything inbetween
+                    {
+                        print("NORMAL  dice rolle attack!!!");
+                    }
 
-                break;
+                    if (_attkRcpt.highestDie > _attkRcpt.lowestDie)
+                    { print($"Player Got {_attkRcpt.highestDie} instead of {_attkRcpt.lowestDie} - because of advantage"); } // if we rolled with advantage and got a higher result
 
+                    break;
+                }
             case AttackEventReceipt.SENDER.Boss:
-                if (_attkRcpt.highestDie < _attkRcpt.lowestDie)
-                { print($"Boss Got {_attkRcpt.lowestDie} instead of {_attkRcpt.highestDie} - because of disadvantage"); } // if boss rolled with disadvantage and got a lower result
+                {
+                    if (_attkRcpt.highestDie < _attkRcpt.lowestDie)
+                    { print($"Boss Got {_attkRcpt.lowestDie} instead of {_attkRcpt.highestDie} - because of disadvantage"); } // if boss rolled with disadvantage and got a lower result
 
-                break;
-
+                    break;
+                }
             default: // no sender involved
                 break;
         }
