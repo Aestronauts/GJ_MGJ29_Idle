@@ -267,12 +267,12 @@ public class Game_Manager : MonoBehaviour
                     else if (_attkRcpt.highestDie == 1) // dice = lowest possible
                     {
                         print("LOWEST dice rolle attack =[");
-                        TimelineManager.Instance.PlayTimeline("Lowest Roll Base Attack TL");
+                        //TimelineManager.Instance.PlayTimeline("Lowest Roll Base Attack TL");
                     }
                     else // dice = anything inbetween
                     {
                         print("NORMAL  dice rolle attack!!!");
-                        TimelineManager.Instance.PlayTimeline("Lowest Roll Base Attack TL");
+                        //TimelineManager.Instance.PlayTimeline("Lowest Roll Base Attack TL");
                     }
 
                     if (_attkRcpt.highestDie > _attkRcpt.lowestDie)
