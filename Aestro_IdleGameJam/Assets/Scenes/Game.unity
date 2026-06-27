@@ -738,6 +738,8 @@ PlayableDirector:
     value: {fileID: 1576468457}
   - key: {fileID: 2126352225703708910, guid: 6c091910fa4bc9b4789b9f62f8295c12, type: 2}
     value: {fileID: 519336949}
+  - key: {fileID: 6794744255487527093, guid: 6c091910fa4bc9b4789b9f62f8295c12, type: 2}
+    value: {fileID: 1610364640}
   m_ExposedReferences:
     m_References:
     - 80255546976377a4082ff69326036a6a: {fileID: 1094807946}
@@ -2028,8 +2030,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713320431}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.05477565, y: 0.85263467, z: 0.09129916, w: 0.511545}
-  m_LocalPosition: {x: -12.75, y: 1.24, z: -5.81}
+  m_LocalRotation: {x: 0.0677833, y: -0.94856536, z: -0.11492327, w: -0.28709206}
+  m_LocalPosition: {x: -4.864, y: 0.299, z: -3.987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3969,6 +3971,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1568441916350361616, guid: 24fc7d115192df44b8fcddb53d798208,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: efe5c40304caa114daef19b9d345e81e, type: 2}
     - target: {fileID: 5613349510134190687, guid: 24fc7d115192df44b8fcddb53d798208,
         type: 3}
       propertyPath: m_Name
