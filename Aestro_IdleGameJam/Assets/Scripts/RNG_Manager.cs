@@ -20,6 +20,6 @@ public class RNG_Manager : MonoBehaviour
 
     public int RNG (int NumberOfSides)
     {
-        return Random.Range(1, NumberOfSides);
+        return Random.Range(1, NumberOfSides+1);
     }
 }
