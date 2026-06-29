@@ -172,9 +172,23 @@ public class Game_Manager : MonoBehaviour
         {
             attackReceiptsPlayer = null;
             attackReceiptsBoss = null;
-            SceneManager.LoadScene(1);
+            int levelNum = PersistentData.instance.LevelNumber;
+            string nameOfScene = PersistentData.instance.LevelBossConfig[levelNum - 1].bossScene;
+            int validSceneInt = SceneUtility.GetBuildIndexByScenePath(nameOfScene);
+
+            if (string.IsNullOrEmpty(nameOfScene) || validSceneInt < 0) // we no scene name to load
+            {
+
+                print($"GOING BACK TO NORMAL LOADING PROCESS - LV {levelNum} - Scn {nameOfScene}");
+                SceneManager.LoadScene(1);
+            }
+            else // we had a scene name to load
+            {
+                SceneManager.LoadScene(PersistentData.instance.LevelBossConfig[levelNum].bossScene); // should have a test to make sure the scene name exists...
+            }
         }
     }
+
 
     public void Tick()
     {

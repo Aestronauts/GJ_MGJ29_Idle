@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3941029, g: 0.9560572, b: 1.0891426, a: 1}
+  m_IndirectSpecularColor: {r: 0.40028337, g: 0.9600978, b: 1.0909779, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -131,6 +131,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2935680234077810474, guid: d01356d6893e45043b68f0c88854d6df,
+        type: 3}
+      propertyPath: LevelBossConfig.Array.data[0].bossScene
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935680234077810474, guid: d01356d6893e45043b68f0c88854d6df,
+        type: 3}
+      propertyPath: LevelBossConfig.Array.data[2].bossScene
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3812958738877144396, guid: d01356d6893e45043b68f0c88854d6df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -912,14 +922,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212353716}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.024879958, y: 0.9592946, z: -0.08949273, w: 0.26669443}
-  m_LocalPosition: {x: 6.497734, y: 8.37, z: -17.90869}
+  m_LocalRotation: {x: -0.118306614, y: -0.0014257219, z: 0.0004709051, w: 0.992976}
+  m_LocalPosition: {x: 0.61, y: 0.82, z: -10.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1867614176}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -13.589, y: -0.173, z: 0.075}
 --- !u!114 &1212353720
 MonoBehaviour:
   m_ObjectHideFlags: 0
