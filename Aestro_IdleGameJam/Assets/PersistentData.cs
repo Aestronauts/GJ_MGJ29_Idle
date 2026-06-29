@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class Boss
 {
     public string Name;
     public GameObject BossMeshPrefab;
+    public string bossScene;
     public float MaxHP;
     public int AttackDice;
     public int AttackBonus;
