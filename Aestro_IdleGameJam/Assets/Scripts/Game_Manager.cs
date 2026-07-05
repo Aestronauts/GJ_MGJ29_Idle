@@ -46,6 +46,8 @@ public class Game_Manager : MonoBehaviour
     public UI_3D_Dice BossDiceUI;
     public Animator PlayerAnimator;
     public RuntimeAnimatorController BossAnimator;
+
+    private PlayerVisualUpdater _PlayerVisualUpdater;
     //public Animator BossAnimator;
 
     public GameObject SequenceObject;
@@ -87,6 +89,7 @@ public class Game_Manager : MonoBehaviour
         //BossDiceUI.Dice.gameObject.layer = 7;
         HP = PersistentData.instance.MaxHP;
         PlayerDiceUI.Dice = Instantiate(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].Prefab, PlayerDiceUI.transform).transform;
+        if (_PlayerVisualUpdater) _PlayerVisualUpdater.SetDiceMesh(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].Mesh); //assign dice visual to playerModel
         //PlayerDiceUI.Dice.gameObject.layer = 7;
         PlayerDiceUI.Rolling = true;
         BossDiceUI.Rolling = true;
@@ -128,6 +131,11 @@ public class Game_Manager : MonoBehaviour
         // at the end of update
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
             TogglePause();
+    }
+
+    public void InjectPVUcs(PlayerVisualUpdater _pvu)
+    {
+        _PlayerVisualUpdater = _pvu;
     }
 
     public void TogglePause()

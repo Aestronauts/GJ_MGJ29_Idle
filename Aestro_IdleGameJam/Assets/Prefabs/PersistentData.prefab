@@ -48,115 +48,147 @@ MonoBehaviour:
   - Name: Baby Brown
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
+    bossScene: 
     MaxHP: 10
     AttackDice: 0
     AttackBonus: 0
     ChargePerFrame: 0.05
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Baby Gray
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 8446f5a7d0118544aa25eb4a7a5a8d13,
       type: 3}
+    bossScene: 
     MaxHP: 12
     AttackDice: 0
     AttackBonus: 3
     ChargePerFrame: 0.055
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Hairy Horned Henry
     BossMeshPrefab: {fileID: 6167768994667879822, guid: e058394a61216724a84bdf2bb6131370,
       type: 3}
+    bossScene: 
     MaxHP: 18
     AttackDice: 1
     AttackBonus: 2
     ChargePerFrame: 0.06
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: King Horns
     BossMeshPrefab: {fileID: 6167768994667879822, guid: b2271536251ece94a9aa20b205862459,
       type: 3}
+    bossScene: 
     MaxHP: 20
     AttackDice: 0
     AttackBonus: 1
     ChargePerFrame: 0.085
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: The Metadron
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 9478b71f68c0fbc44a07d1160aca6b3e,
       type: 3}
+    bossScene: 
     MaxHP: 35
     AttackDice: 1
     AttackBonus: 5
     ChargePerFrame: 0.075
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Oh My GAWD Zilla
     BossMeshPrefab: {fileID: 6167768994667879822, guid: c490c3f07fad51849a2b68acc6c50d1f,
       type: 3}
+    bossScene: 
     MaxHP: 60
     AttackDice: 3
     AttackBonus: 5
     ChargePerFrame: 0.045
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Baby Brown's Big Brother
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
+    bossScene: 
     MaxHP: 40
     AttackDice: 2
     AttackBonus: 1
     ChargePerFrame: 0.0775
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Strawberry Milk
     BossMeshPrefab: {fileID: 6167768994667879822, guid: c674d4483da5d29478533e689e04fae7,
       type: 3}
+    bossScene: 
     MaxHP: 101
     AttackDice: 2
     AttackBonus: 1
     ChargePerFrame: 0.09
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Chcoloate Bear
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 6e938f3baa3f01443a909d617b40b9ea,
       type: 3}
+    bossScene: 
     MaxHP: 102
     AttackDice: 4
     AttackBonus: 4
     ChargePerFrame: 0.0675
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Baby Brown's Mamma
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
+    bossScene: 
     MaxHP: 65
     AttackDice: 0
     AttackBonus: 1
     ChargePerFrame: 0.175
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Krisspy Kotton
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 5f78226fe8007d546a4c007bb5fb5155,
       type: 3}
+    bossScene: 
     MaxHP: 133
     AttackDice: 2
     AttackBonus: 0
     ChargePerFrame: 0.8
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Pincher The Pincer
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 14b40db3d4a2760479b6d689d223a0a4,
       type: 3}
+    bossScene: 
     MaxHP: 140
     AttackDice: 4
     AttackBonus: 7
     ChargePerFrame: 0.07
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: Baby Brown's Dad
     BossMeshPrefab: {fileID: 6167768994667879822, guid: 84fdba8836a6292438061cf3a182558f,
       type: 3}
+    bossScene: 
     MaxHP: 100
     AttackDice: 3
     AttackBonus: 8
     ChargePerFrame: 0.2
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: The Dark One
     BossMeshPrefab: {fileID: 6167768994667879822, guid: da6f6ed8958bca341855fd07470e9e2b,
       type: 3}
+    bossScene: 
     MaxHP: 160
     AttackDice: 0
     AttackBonus: 20
     ChargePerFrame: 0.5
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: The Light One
     BossMeshPrefab: {fileID: 6167768994667879822, guid: aec8fefc7f176fa4fb4deda0778fd777,
       type: 3}
+    bossScene: 
     MaxHP: 200
     AttackDice: 5
     AttackBonus: 25
     ChargePerFrame: 0.55
+    mouthPos: {x: 0, y: 0, z: 0}
   - Name: The Truth
     BossMeshPrefab: {fileID: 6167768994667879822, guid: a26410e2dafd8694eba78c2669187798,
       type: 3}
+    bossScene: 
     MaxHP: 300
     AttackDice: 5
     AttackBonus: 30
     ChargePerFrame: 1
+    mouthPos: {x: 0, y: 0, z: 0}
   UpgradeConfig:
   - ID: 0
     Grade: 1
@@ -266,19 +298,25 @@ MonoBehaviour:
   - NumberOfSides: 4
     Prefab: {fileID: 6731961743414908288, guid: 9ce7babf59712064bbb5ac284a831ad3,
       type: 3}
+    Mesh: {fileID: 3466808378042760428, guid: 2b0815537d7f12048852942123c0163c, type: 3}
   - NumberOfSides: 6
     Prefab: {fileID: 471703649023812193, guid: cea6546c75a21ca4d8e53a07823d665e, type: 3}
+    Mesh: {fileID: 6553228938470455548, guid: 5ac8825abbacff047a4b42c834fcdd27, type: 3}
   - NumberOfSides: 8
     Prefab: {fileID: 2574780572168006038, guid: 5050e0f990d4ae94e8129aa24aaa7b1d,
       type: 3}
+    Mesh: {fileID: 2529367315072210540, guid: ebfa06b5563a4924a9cdadc759dacf98, type: 3}
   - NumberOfSides: 10
     Prefab: {fileID: 2709101202379397562, guid: 498211e9089ef41478d336844e7bb9fa,
       type: 3}
+    Mesh: {fileID: -6625111447927640162, guid: 86f824c9a3505894d9779c677b563540, type: 3}
   - NumberOfSides: 12
     Prefab: {fileID: 4235348378811493224, guid: eebe9ee08d52a37448c98085fd931c60,
       type: 3}
+    Mesh: {fileID: -8049292495768022167, guid: f5f5c2c7afe725141a44d65d47bc29b9, type: 3}
   - NumberOfSides: 20
     Prefab: {fileID: 332649561189206568, guid: 3a92407d58cb0394f97f8ec51b8c9fe5, type: 3}
+    Mesh: {fileID: 1783118940250960568, guid: 1e724778b29fb8240978492e760d3fad, type: 3}
   LevelNumber: 1
   MaxHP: 0
   ChargePerFrame: 0.35

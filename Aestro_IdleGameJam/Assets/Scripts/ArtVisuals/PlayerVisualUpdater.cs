@@ -7,10 +7,19 @@ using UnityEngine;
 /// </summary>
 public class PlayerVisualUpdater : MonoBehaviour
 {
+    public MeshFilter diceAboveWand;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (Game_Manager.instance) Game_Manager.instance.InjectPVUcs(this);
+    }
+
+    public void SetDiceMesh(Mesh _mesh)
+    {
+        if (!diceAboveWand) { Debug.LogWarning("PlayerVisualUpdater - missing mesh filter reference to dice"); return; }
+
+        diceAboveWand.mesh = _mesh;
     }
 
 

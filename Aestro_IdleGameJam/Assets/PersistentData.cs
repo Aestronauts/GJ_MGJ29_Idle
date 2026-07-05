@@ -32,6 +32,7 @@ public class Dice
 {
     public int NumberOfSides;
     public GameObject Prefab;
+    public Mesh Mesh;
 }
 
 
