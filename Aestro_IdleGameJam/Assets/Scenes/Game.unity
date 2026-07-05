@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003271496, g: 0.0023598217, b: 0.0013149488, a: 1}
+  m_IndirectSpecularColor: {r: 0.0032714217, g: 0.0023598012, b: 0.0013149319, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2301,8 +2301,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713320431}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0677833, y: -0.94856536, z: -0.11492327, w: -0.28709206}
-  m_LocalPosition: {x: -4.864, y: 0.299, z: -3.987}
+  m_LocalRotation: {x: -0.086574845, y: 0.88609874, z: 0.09722737, w: 0.4448378}
+  m_LocalPosition: {x: -5.234, y: 1.017, z: -5.924685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5646,6 +5646,11 @@ PrefabInstance:
       propertyPath: DiceShooter
       value: 
       objectReference: {fileID: 251237528}
+    - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
+        type: 3}
+      propertyPath: BossAnimator
+      value: 
+      objectReference: {fileID: 9100000, guid: a3a0ef971380c3447a116bb38dcfe143, type: 2}
     - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
         type: 3}
       propertyPath: PlayerDiceUI

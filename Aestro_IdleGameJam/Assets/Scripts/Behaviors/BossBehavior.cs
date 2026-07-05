@@ -56,6 +56,7 @@ public class BossBehavior : MonoBehaviour
     {
         GameObject g = Instantiate(data.BossMeshPrefab,this.transform);
         BossAnimator = g.GetComponent<Animator>();
+        BossAnimator.runtimeAnimatorController = Game_Manager.instance.BossAnimator;
         MaxHP = data.MaxHP;
         healthPoints = data.MaxHP;
         AttackDice = data.AttackDice;

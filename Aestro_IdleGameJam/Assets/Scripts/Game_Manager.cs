@@ -45,6 +45,7 @@ public class Game_Manager : MonoBehaviour
     public UI_3D_Dice PlayerDiceUI;
     public UI_3D_Dice BossDiceUI;
     public Animator PlayerAnimator;
+    public RuntimeAnimatorController BossAnimator;
     //public Animator BossAnimator;
 
     public GameObject SequenceObject;
