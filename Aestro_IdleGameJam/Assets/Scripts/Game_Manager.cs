@@ -89,7 +89,12 @@ public class Game_Manager : MonoBehaviour
         //BossDiceUI.Dice.gameObject.layer = 7;
         HP = PersistentData.instance.MaxHP;
         PlayerDiceUI.Dice = Instantiate(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].Prefab, PlayerDiceUI.transform).transform;
-        if (_PlayerVisualUpdater) _PlayerVisualUpdater.SetDiceMesh(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].Mesh); //assign dice visual to playerModel
+        if (_PlayerVisualUpdater)
+        {
+            _PlayerVisualUpdater.SetDiceMesh(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].Mesh); //assign dice visual to playerModel
+            _PlayerVisualUpdater.maxDiceOption = PersistentData.instance.DiceConfig[PersistentData.instance.Dice].NumberOfSides;
+            _PlayerVisualUpdater.SetDiceText("");
+        }
         //PlayerDiceUI.Dice.gameObject.layer = 7;
         PlayerDiceUI.Rolling = true;
         BossDiceUI.Rolling = true;
@@ -244,9 +249,9 @@ public class Game_Manager : MonoBehaviour
         AttackEventReceipt attkReceipt = new AttackEventReceipt(AttackEventReceipt.SENDER.Player, AttackEventReceipt.EVENT_DIRECTION.Attacking, PersistentData.instance.RollwithAdvantage > 0, false, 0, 0, 0, false, HP, HP, false, 0, false, 0, 0);
 
         int RollResult = 0;
-        for (int i = 0;  i < 1+PersistentData.instance.RollwithAdvantage; i++)
+        for (int i = 0; i < 1 + PersistentData.instance.RollwithAdvantage; i++)
         {
-           
+
             RollResult = Mathf.Max(RollResult, RNG_Manager.instance.RNG(PersistentData.instance.DiceConfig[PersistentData.instance.Dice].NumberOfSides));
             print($"Dice Roll = {RollResult}");
             if (i == 0) { attkReceipt.highestDie = RollResult; attkReceipt.lowestDie = RollResult; }
@@ -254,6 +259,12 @@ public class Game_Manager : MonoBehaviour
             if (i != 0 && RollResult < attkReceipt.lowestDie) attkReceipt.lowestDie = RollResult;
         }
         Debug.Log("Value is:" + RollResult);
+        if (_PlayerVisualUpdater)
+        {
+            _PlayerVisualUpdater.rollingDice = false;
+            _PlayerVisualUpdater.SetDiceText(RollResult.ToString());
+            _PlayerVisualUpdater.ChangeDiceSpeed(false);
+        }
         //DiceShooter.ThrowDice(PersistentData.instance.Dice, 1, RollResult);
         StartCoroutine(DiceStop(RollResult.ToString(), attkReceipt));
     }
@@ -355,6 +366,11 @@ public class Game_Manager : MonoBehaviour
         Attack(CalculateOutgoingDamage(int.Parse(_numberToShow)), _attkRcpt);
         yield return new WaitForSeconds(1);
         PlayerDiceUI.Rolling = true;
+        if (_PlayerVisualUpdater)
+        {
+            _PlayerVisualUpdater.rollingDice = true;            
+            _PlayerVisualUpdater.ChangeDiceSpeed(true);
+        }
     }
 
     private IEnumerator EndOfLevelSequence()
