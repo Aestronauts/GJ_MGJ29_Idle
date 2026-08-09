@@ -35,7 +35,7 @@ public class TimelineManager : MonoBehaviour
 
     public void PlayTimeline(string timelineID)
     {
-        Debug.Log("Play TL");
+        Debug.Log($"Play {timelineID}");
         TimelineData timeline = System.Array.Find(timelines, t => t.timelineID == timelineID);
         if (timeline?.director == null)
         {
@@ -50,7 +50,7 @@ public class TimelineManager : MonoBehaviour
     {
         // Activate timeline cameras
         foreach (var vcam in timeline.timelineVCams)
-            vcam.Priority = 100;
+            vcam.enabled = true;
 
         // Let the original director handle playback (with its own wrap mode)
         timeline.director.Play();
@@ -80,7 +80,7 @@ public class TimelineManager : MonoBehaviour
     {
         // Reset cameras
         foreach (var vcam in timeline.timelineVCams)
-            vcam.Priority = 0;
+            vcam.enabled = false;
 
         // Restore timescale
         if (timeline.pauseGameplay)
