@@ -24,6 +24,7 @@ public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager instance;
     public static bool GameIsPaused = false;
+    public UIDiceVisualCaller _UIDiceVisualCaller;
 
     [Header("Player Stats")]
     public float HP;
@@ -378,10 +379,14 @@ public class Game_Manager : MonoBehaviour
         //PlayerAnimator.gameObject.SetActive(false);
         BossBehavior.instance.BossAnimator.SetTrigger("Die");
 
+        // call dice visual
+        if (_UIDiceVisualCaller) _UIDiceVisualCaller.ShowDice(true);
+
         //SequenceObject.SetActive(true);
         //SequenceObject.GetComponent<PlayableDirector>().Play();
         TimelineManager.Instance.PlayTimeline("End of Level Cinematic");
         yield return new WaitForSeconds(10);
+        if (_UIDiceVisualCaller) _UIDiceVisualCaller.ShowDice(false);
         UI_Manager.instance.SpawnUpgrades();
     }
 

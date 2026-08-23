@@ -5678,6 +5678,11 @@ PrefabInstance:
       objectReference: {fileID: 336697470}
     - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
         type: 3}
+      propertyPath: _UIDiceVisualCaller
+      value: 
+      objectReference: {fileID: 7755484585548991070}
+    - target: {fileID: 1554525408957405813, guid: 0f9f69fb20964d742a4cd272dd8e62fd,
+        type: 3}
       propertyPath: PlayerDeathSequenceObject
       value: 
       objectReference: {fileID: 1774131031}
@@ -6563,6 +6568,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7755484585548991066}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7755484585548991070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4453842410642901089, guid: 250ac492eb4923f459a053c05fb43a59,
+    type: 3}
+  m_PrefabInstance: {fileID: 7755484585548991066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5e08b85cd2a57498a491577948da84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
